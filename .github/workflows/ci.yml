@@ -24,6 +24,8 @@ jobs:
         env:
           CYBERUI_CONSUMER_OFFLINE: '0'
       - run: pnpm test:registry
+        env:
+          CYBERUI_GITHUB_REF: ${{ github.sha }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
