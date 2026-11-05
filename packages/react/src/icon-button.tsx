@@ -1,0 +1,12 @@
+'use client';
+import { type ButtonProps, Button } from './button';
+import { forwardRef } from 'react';
+import { cx } from './shared';
+import s from './icon-button.module.css';
+export interface IconButtonProps extends Omit<ButtonProps, 'children' | 'icon'> {
+    icon: string;
+    'aria-label': string;
+}
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(function IconButton({ className, corners = 'none', ...props }, ref) {
+    return <Button {...props} ref={ref} corners={corners} className={cx(s.iconButton, className)}/>;
+});

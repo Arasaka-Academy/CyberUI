@@ -1,0 +1,9 @@
+.badge { display: inline-flex; align-items: center; gap: 6px; font: 12px/1.5 var(--cyber-font-mono); letter-spacing: .04em; padding: 3px 9px; background: var(--cyber-soft); color: var(--cyber-ink); overflow-wrap: anywhere; }
+.badge[data-tone='accent'] { color: var(--cyber-on-accent); background: var(--cyber-accent); }
+.badge[data-tone='success'] { color: var(--cyber-success); }
+.badge[data-tone='warning'] { color: var(--cyber-warning); }
+.badge[data-tone='danger'] { color: var(--cyber-danger); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

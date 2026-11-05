@@ -1,0 +1,39 @@
+{
+  "cli": "4.23.0",
+  "components": 65,
+  "githubRef": "84742e5a210c991e5f82ad5bf9c842f096daabd9",
+  "toolchainTarballCache": [],
+  "consumers": [
+    {
+      "framework": "vite",
+      "directory": "/tmp/cyberui-registry-consumers-W1GAWu/vite",
+      "components": 65,
+      "examples": 65,
+      "sourceConsistency": {
+        "files": 159,
+        "sha256": "193915a16b7c7279e3d5c6916f879964e515108f0e336622141ef8ceb062a50c"
+      },
+      "productionBuild": "passed",
+      "renderedExamples": 65,
+      "browser": "passed",
+      "customComponentsDirectory": "widgets",
+      "tailwindRequired": false
+    },
+    {
+      "framework": "next",
+      "directory": "/tmp/cyberui-registry-consumers-W1GAWu/next",
+      "components": 65,
+      "examples": 65,
+      "sourceConsistency": {
+        "files": 159,
+        "sha256": "193915a16b7c7279e3d5c6916f879964e515108f0e336622141ef8ceb062a50c"
+      },
+      "productionBuild": "passed",
+      "renderedExamples": 65,
+      "browser": "passed",
+      "customComponentsDirectory": "components",
+      "tailwindRequired": false
+    }
+  ],
+  "status": "passed"
+}

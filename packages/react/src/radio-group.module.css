@@ -1,0 +1,13 @@
+.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.label { display: block; color: var(--cyber-ink); font: 500 13px/1.5 var(--cyber-font-display); letter-spacing: .06em; text-transform: uppercase; }
+.error { color: var(--cyber-danger); font-size: 13px; }
+.choice { display: flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer; font-size: 15px; }
+.choice[data-disabled] { opacity: .45; cursor: not-allowed; }
+.checkBox { display: grid; place-items: center; width: 20px; height: 20px; border: 2px solid var(--cyber-ink); color: transparent; flex-shrink: 0; }
+.checkBox { pointer-events:none; }
+.choice[data-selected] .checkBox { background: var(--cyber-accent); border-color: var(--cyber-accent); color: var(--cyber-on-accent); }
+.radio[data-selected] .checkBox { box-shadow: inset 0 0 0 3px var(--cyber-bg); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

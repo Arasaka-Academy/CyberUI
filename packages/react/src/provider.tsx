@@ -1,3 +1,5 @@
+'use client';
+import './styles.css';
 import { createContext, useContext, useRef, useSyncExternalStore, useImperativeHandle, type CSSProperties, type HTMLAttributes, type ReactNode, type Ref } from 'react';
 import { I18nProvider } from 'react-aria-components';
 import { UNSAFE_PortalProvider } from 'react-aria';

@@ -1,0 +1,5 @@
+.divider { border: 0; border-top: 1px solid var(--cyber-line); margin: 22px 0; width: 100%; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

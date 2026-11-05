@@ -1,0 +1,8 @@
+'use client';
+import { type NativeProps, cx } from './shared';
+import { useCyberUI } from './provider';
+import s from './skeleton.module.css';
+export function Skeleton({ className, style, ...props }: NativeProps<HTMLDivElement>) {
+    const { t } = useCyberUI();
+    return <div {...props} role="status" aria-label={t('Loading content', '正在加载内容')} className={cx(s.skeleton, className)} style={style}/>;
+}

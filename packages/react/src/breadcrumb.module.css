@@ -1,0 +1,8 @@
+.breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; font: 12px var(--cyber-font-mono); }
+.breadcrumb li { display: flex; gap: 8px; align-items: center; }
+.breadcrumb a { color: var(--cyber-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--cyber-ink); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

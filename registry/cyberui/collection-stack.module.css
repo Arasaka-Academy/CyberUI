@@ -1,0 +1,8 @@
+/* Generated from packages/react/src/collection-stack.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.collection { background:transparent; color:var(--cyber-ink); border:0; padding:10px 0 0; text-align:left; font-size:15px; }
+.stackArt { display:block; position:relative; margin-right:10px; margin-top:8px; }
+.stackArt:before,.stackArt:after { content:''; position:absolute; inset:-7px -7px 7px 7px; border:2px solid var(--cyber-muted); background:var(--cyber-soft); z-index:0; }
+.stackArt:after { inset:-13px -13px 13px 13px; z-index:-1; }
+.stackArt > div { position:relative; }
+.stackLabel { display:flex; align-items:center; justify-content:center; gap:4px; padding:5px; background:var(--cyber-ink); color:var(--cyber-on-ink); font:12px var(--cyber-font-display); }
+.collection > span:last-child { display:block; margin-top:8px; }

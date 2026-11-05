@@ -1,0 +1,8 @@
+/* Generated from packages/react/src/tag.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.tag { display: inline-flex; align-items: center; gap: 6px; font: 12px/1.5 var(--cyber-font-mono); letter-spacing: .04em; padding: 3px 9px; background: var(--cyber-soft); color: var(--cyber-ink); overflow-wrap: anywhere; }
+.tag { border: 1px solid var(--cyber-ink); background: transparent; }
+.tag button { border: 0; color: inherit; background: transparent; padding: 4px; display: flex; cursor: pointer; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

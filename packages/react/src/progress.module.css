@@ -1,0 +1,10 @@
+.progress { display: flex; gap: 3px; height: 12px; width: 100%; }
+.progressCell { flex: 1; border: 1px solid var(--cyber-ink); min-width: 1px; }
+.progressCell[data-filled='true'] { background: var(--cyber-ink); }
+.progressAscii { font: 16px var(--cyber-font-mono); white-space: nowrap; overflow: hidden; }
+.progressAscii span:first-child { color: var(--cyber-accent); }
+.progressWave { width: 100%; height: 44px; display: block; overflow: visible; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

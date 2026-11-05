@@ -1,0 +1,2 @@
+.operatorMark { display:grid; place-items:center; border:2px solid var(--cyber-ink); width:80px; min-width:70px; height:90px; font:900 84px/1 var(--cyber-font-display); clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px); }
+.operatorMark img { width:100%; height:100%; object-fit:cover; }

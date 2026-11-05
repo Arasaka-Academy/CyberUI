@@ -1,0 +1,6 @@
+.micro { color:var(--cyber-muted); font:12px/1.5 var(--cyber-font-mono); letter-spacing:.06em; text-transform:uppercase; }
+.shardHead { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font:11px var(--cyber-font-mono); letter-spacing:.07em; }
+.shardHead > span:last-child { color:var(--cyber-accent-text); }
+.gig h3 { font-size:20px; margin:18px 0 4px; }
+.gig p { color:var(--cyber-muted); font-size:13px; margin-bottom:22px; }
+.gigFoot { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:16px; }

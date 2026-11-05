@@ -1,0 +1,8 @@
+.bottomNav { display: flex; border-top: 2px solid var(--cyber-ink); }
+.bottomNav a { flex: 1; display: flex; justify-content: center; align-items: center; gap: 10px; padding: 16px 6px; text-decoration: none; text-transform: uppercase; font-size: 13px; font-weight: 600; }
+.bottomNav a[aria-current='page'] { color: var(--cyber-on-accent); background: var(--cyber-accent); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@media(max-width:600px) { .bottomNav a { flex-direction: column; gap: 4px; font-size: 10px; } }

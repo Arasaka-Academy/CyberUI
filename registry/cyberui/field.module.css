@@ -1,0 +1,9 @@
+/* Generated from packages/react/src/field.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.label { display: block; color: var(--cyber-ink); font: 500 13px/1.5 var(--cyber-font-display); letter-spacing: .06em; text-transform: uppercase; }
+.helper { color: var(--cyber-muted); font-size: 12px; }
+.error { color: var(--cyber-danger); font-size: 13px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
