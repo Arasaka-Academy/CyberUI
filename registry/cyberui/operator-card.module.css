@@ -1,0 +1,35 @@
+/* Generated from packages/react/src/operator-card.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.micro { color:var(--cyber-muted); font:12px/1.5 var(--cyber-font-mono); letter-spacing:.06em; text-transform:uppercase; }
+.operatorCompact { display:flex; align-items:center; gap:18px; }
+.operatorCompact h2 { font-size:22px; margin:0 0 6px; letter-spacing:.08em; }
+.operatorCompact > [data-slot='barcode'] { margin-left:auto; max-width:100px; overflow:hidden; }
+.operatorCompact > div { flex:1; min-width:0; }
+.operatorCompact h2 { overflow-wrap:anywhere; }
+.operator { border:2px solid var(--cyber-ink); min-width:0; }
+.operator > header { display:flex; justify-content:space-between; gap:16px; background:var(--cyber-ink); color:var(--cyber-on-ink); padding:9px 12px; font:600 14px var(--cyber-font-display); letter-spacing:.08em; }
+.hazard { padding:16px; background:repeating-linear-gradient(135deg,var(--cyber-accent) 0 5px,var(--cyber-bg) 5px 9px); }
+.operatorBody { position:relative; padding:16px; background:var(--cyber-bg); border:2px solid var(--cyber-ink); overflow:hidden; isolation:isolate; }
+.operatorIdentity { display:flex; align-items:flex-start; gap:18px; margin-bottom:26px; }
+.operatorIdentity [data-slot='operator-mark'] { width:105px; height:120px; font-size:106px; }
+.operatorIdentity h2 { font-size:clamp(24px,4vw,38px); margin:8px 0 16px; letter-spacing:.1em; overflow-wrap:anywhere; }
+.flair { display:inline-block; color:var(--cyber-on-accent); background:var(--cyber-accent); font-family:var(--cyber-font-mono); line-height:1; padding:6px 10px; }
+.rankProgress { display:flex; justify-content:space-between; font:12px var(--cyber-font-mono); margin-bottom:6px; }
+.statGrid,.statGridTwo { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin-top:12px; }
+.statGridTwo { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.statGrid section,.statGridTwo section { padding:10px 12px !important; }
+.statGrid strong,.statGridTwo strong { display:block; font:30px/1.2 var(--cyber-font-mono); letter-spacing:.04em; }
+.operatorFoot { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-top:16px; font:11px var(--cyber-font-mono); }
+.actions { display:flex; flex-wrap:wrap; justify-content:space-around; gap:8px; margin-top:20px; }
+.operator[data-frame='standard'] .hazard { background:var(--cyber-bg); padding:4px; }
+.operator[data-frame='notch'] .operatorBody { outline:2px solid var(--cyber-accent); outline-offset:-8px; clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px); }
+.operator[data-frame='circuit'] .hazard { background:repeating-linear-gradient(90deg,var(--cyber-ink) 0 2px,transparent 2px 12px); }
+.operator[data-frame='glitch'] .operatorBody { outline:3px dashed var(--cyber-accent); outline-offset:-8px; }
+.operator[data-backdrop='scanlines'] .operatorBody { background-image:repeating-linear-gradient(0deg,var(--cyber-soft) 0 1px,transparent 1px 5px); }
+.operator[data-backdrop='traces'] .operatorBody { background-image:linear-gradient(90deg,transparent 35%,var(--cyber-line) 35% 35.5%,transparent 35.5%),linear-gradient(0deg,transparent 60%,var(--cyber-line) 60% 60.5%,transparent 60.5%); background-size:60px 45px; }
+.operator[data-backdrop='grid'] .operatorBody { background-image:linear-gradient(var(--cyber-line) 1px,transparent 1px),linear-gradient(90deg,var(--cyber-line) 1px,transparent 1px); background-size:32px 32px; }
+.operator[data-backdrop='plain'] [data-slot='skyline'],.operator[data-backdrop='grid'] [data-slot='skyline'],.operator[data-backdrop='scanlines'] [data-slot='skyline'],.operator[data-backdrop='traces'] [data-slot='skyline'] { display:none; }
+.operator[data-backdrop='sunset'] .operatorBody:before { content:''; position:absolute; z-index:-1; top:40px; right:35px; width:170px; height:170px; border-radius:50%; background:repeating-linear-gradient(0deg,var(--cyber-soft) 0 9px,transparent 9px 13px); }
+@media(max-width:600px) {
+ .operatorCompact { padding:16px !important; gap:10px; }.operatorCompact h2 { font-size:16px; }.operatorCompact > [data-slot='barcode'] { display:none; }.operatorCompact [data-slot='operator-mark'] { width:60px; min-width:60px; height:68px; font-size:60px; }
+ .hazard { padding:9px; }.operatorBody { padding:12px; }.operatorIdentity { gap:12px; }.operatorIdentity [data-slot='operator-mark'] { width:70px; min-width:70px; height:90px; font-size:80px; }.operatorIdentity h2 { font-size:25px; }.operator > header { font-size:11px; }.statGrid strong,.statGridTwo strong { font-size:23px; }.statGrid .micro { font-size:9px; }.operatorFoot [data-slot='barcode'] { max-width:130px; overflow:hidden; }.operatorFoot { font-size:9px; }
+}

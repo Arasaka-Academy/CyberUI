@@ -6,7 +6,7 @@ CyberUI 是一套 React 组件库与中英双语展示站，采用硬边、切�
 
 ## 本地启动
 
-使用 Node.js 22.12+ 和 pnpm 11；本次验证使用 Node.js 22.22。
+使用 Node.js 22.13+ 和 pnpm 11；本次验证使用 Node.js 22.22。
 
 ```sh
 pnpm install --frozen-lockfile
@@ -30,6 +30,7 @@ pnpm dev --port 5174
 | `apps/docs` | React + Vite 展示站、组件参数预览、代码复制、属性和键盘文档 |
 | `apps/docs/src/replica` | 30 个场景的注册与总览、27 个阅读场景、19 张参考图和 31 个分区映射 |
 | `apps/docs/src/web-scenes` | ORBIT 项目管理、PULSE AI 产品官网、NOVA Agent 聊天；独立画布与本地演示状态 |
+| `registry.json`、`registry/cyberui` | GitHub Registry 清单与自动生成的可复制组件源码 |
 | `public` | 本地字体、SVG 图标、品牌素材和视觉参考图 |
 | `design-system/cyberui` | 设计规范与 token 约定 |
 | `artifacts` | 浏览器截图、逐图对照、打包接入结果和无障碍扫描记录 |
@@ -48,7 +49,19 @@ pnpm dev --port 5174
 
 任务管理、试用表单、聊天流式回复、工具记录和成果下载均可实际操作。项目与会话单独保存、独立重置，支持中英文及七套明暗主题。详细交互和本地模型边界见 [Web 场景说明](docs/web-scenes.md)。
 
-## 独立项目接入
+## 从 GitHub 按需加入源码
+
+全部 65 类组件支持 shadcn GitHub Registry，无需发布或安装 CyberUI npm 包。组件、CSS Modules 和必要公共源码进入你的项目，之后可以直接修改。
+
+```sh
+pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button
+```
+
+不带 ref 的命令读取默认分支，需该分支已包含 registry；也可在组件地址后追加 `#` 与包含 registry 的完整提交 SHA。已验证的固定版本命令见展示站组件页。React 19 的 Vite 与 Next.js 接入、手动复制、可选字体和更新方式见 [源码接入指南](docs/source-installation.md) 或展示站 `/#/installation`。
+
+维护原始组件后运行 `pnpm registry:build`，再运行 `pnpm registry:check` 检查生成源码；`pnpm test:registry` 验证独立项目安装。
+
+## 本地组件包接入
 
 先构建本地包：
 

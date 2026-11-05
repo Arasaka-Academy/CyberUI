@@ -1,0 +1,14 @@
+.micro { color:var(--cyber-muted); font:12px/1.5 var(--cyber-font-mono); letter-spacing:.06em; text-transform:uppercase; }
+.book { min-width:0; }
+.bookOpen { display:block; width:100%; padding:0; color:var(--cyber-ink); border:0; background:transparent; text-align:left; }
+.bookOpen:hover [data-slot='ascii-cover'] { filter:brightness(1.15); }
+.bookTitle { display:block; font-size:15px; font-weight:500; padding-top:9px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.book .micro { display:block; padding:4px 0 10px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.book > [role='progressbar'] { margin-top:8px; height:5px; gap:1px; }
+.book[data-compact='true'] .bookOpen { display:grid; grid-template-columns:54px 1fr; column-gap:14px; }
+.book[data-compact='true'] [data-slot='ascii-cover'] { grid-row:span 2; }
+.book[data-compact='true'] [data-slot='cover-decor'] { min-height:0; font-size:6px; padding:6px 3px; }
+.book[data-compact='true'] [data-slot='ascii-cover'] pre { font-size:2px; }
+.book[data-compact='true'] [data-slot='cover-badge'] { display:none; }
+.book[data-compact='true'] .bookTitle { align-self:end; }
+.book[data-compact='true'] > [role='progressbar'] { display:none; }

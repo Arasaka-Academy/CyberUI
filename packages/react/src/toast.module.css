@@ -1,0 +1,5 @@
+.toast { display: flex; align-items: center; justify-content: space-between; gap: 14px; border: 1px solid var(--cyber-ink); border-left: 4px solid var(--cyber-accent); padding: 14px 16px; background: var(--cyber-bg); box-shadow: 4px 4px 0 var(--cyber-line); animation: lift 180ms ease-out; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

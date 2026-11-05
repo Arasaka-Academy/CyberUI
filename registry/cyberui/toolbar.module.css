@@ -1,0 +1,6 @@
+/* Generated from packages/react/src/toolbar.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

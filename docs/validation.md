@@ -10,12 +10,13 @@
 | --- | --- | --- |
 | `pnpm typecheck` | 通过 | 工作区 TypeScript，无编译错误 |
 | `pnpm lint` | 通过 | ESLint，无错误 |
-| `pnpm test` | 28 / 28 通过 | 5 个测试文件；主题对比度、公共控件合同、焦点、演示事务及 Web 场景状态与取消计时 |
+| `pnpm test` | 31 / 31 通过 | 6 个测试文件；Registry 格式及依赖闭包、主题对比度、公共控件合同、焦点、演示事务及 Web 场景状态与取消计时 |
 | `pnpm build` | 通过 | tokens、React 库和静态展示站全部构建成功 |
-| 生产预览 Playwright | 39 / 39 通过 | 基址 `http://127.0.0.1:4175`，测试实际 `apps/docs/dist`；另复跑截图用例以确认内容就绪后再捕获 |
+| 生产预览 Playwright | 43 / 43 通过 | 基址 `http://127.0.0.1:4179`，测试实际 `apps/docs/dist`；包含 65 页源码查看、剪贴板失败、移动接入指南和 ColorPicker 样式回归 |
 | axe 自动扫描 | 329 / 329 无违规 | 通用页面 161 次、Web 场景 168 次；WCAG 2 A/AA、2.1 AA、2.2 AA 标签，未关闭规则 |
 | 375px 全量布局 | 99 / 99 通过 | 全部 65 个组件页、30 个场景及 4 个主页面，无页面级横向溢出 |
 | 独立打包接入 | 通过 | 工作区外的临时 React 项目安装两个真实 `.tgz`，全部 65 份代码示例通过类型检查，并完成生产构建和浏览器交互 |
+| 独立源码接入 | 通过本地 fixture | 真实 shadcn CLI 在独立 Vite、Next.js 项目中安装全部 65 项，逐字节比较 159 份文件，编译及渲染全部示例，完成生产构建和代表性交互 |
 | 视觉对照档案 | 31 对 | 全部 19 张参考图；组合图分区分别生成 600 × 800 的参考图／Web 对照 |
 
 本地生产浏览器检查使用：
@@ -30,6 +31,16 @@ CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
 ```
 
 已提供 [GitHub Actions 配置](../.github/workflows/ci.yml)。表中结果均为本地生产构建的验证证据；远端 CI 结果以 GitHub Actions 的对应提交记录为准。
+
+## GitHub 源码分发
+
+65 个 registry 项通过 shadcn 4.23.0 官方格式校验，全部使用明确的文件目标和自身完整依赖闭包。生成一致性检查已加入 `pnpm test`，独立源码接入检查已加入 CI。原始组件为唯一维护来源，生成源码随 registry.json 一并纳入 Git。
+
+独立项目采用 React 19.3.1、Vite 7 和 Next.js 16.4.5 App Router，没有安装 CyberUI npm 包或 Tailwind。两边均通过全部 65 份示例的类型检查、生产构建与实际渲染；浏览器验证输入 ref、弹窗 Escape／焦点恢复、选择器、明暗主题、进度和图表。Vite 将安装目录改为 `src/widgets/cyberui`，验证了重复添加时拒绝覆盖可保留本地修改，以及显式覆盖后恢复上游源码。
+
+159 份源码和许可文件安装后逐字节一致，摘要为 `193915a16b7c7279e3d5c6916f879964e515108f0e336622141ef8ceb062a50c`。采用 `registry:file` 避免 CLI 的 Tailwind 处理改写 SVG、空格及其他文本。
+
+首次下载 Next 和 SWC 大包多次超时，因此从官方 npm 分段下载并验证 SHA512，再通过测试专用的 `CYBERUI_TEST_TARBALLS` 映射复用这两个框架包；组件仍经真实 CLI 安装，其余第三方依赖由包管理器安装。默认测试使用临时 HTTP fixture，真实 GitHub commit 安装验收在源码推送后执行，结果记录于 [源码接入结果](../artifacts/registry-consumer-result.json)。
 
 ## 交互覆盖
 
@@ -84,4 +95,4 @@ CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
 
 ORBIT、PULSE、NOVA 使用三个独立产品内容和本地演示模型。PULSE 不创建真实账户、订阅或付款；NOVA 不连接真实模型、网络工具或执行代码，消息内容作为结构化文本安全渲染。项目与聊天使用独立的 `cyberui-web-scenes-v1` 存储，各场景可分别重置；既有阅读数据及全局主题设置保留。详见 [Web 场景说明](web-scenes.md)。
 
-交付为本地工作区、组件打包产物和静态站点构建。npm 发布与公共网站部署另行处理；本次没有执行公开发布。
+交付包含工作区源码、GitHub Registry、本地组件打包产物和静态站点构建。本次未向 npm 发布 CyberUI，也未部署公共网站或独立 registry 服务。

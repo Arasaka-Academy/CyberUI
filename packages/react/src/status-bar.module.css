@@ -1,0 +1,5 @@
+.status { display:flex; align-items:center; gap:14px; font:12px/1.4 var(--cyber-font-mono); letter-spacing:.07em; white-space:nowrap; padding:8px 0; }
+.ticks { flex:1; height:7px; background:repeating-linear-gradient(90deg,var(--cyber-muted) 0 1px,transparent 1px 18px); margin:0 8px; }
+@media(max-width:600px) {
+ .status { gap:8px; font-size:10px; }.status > span:nth-last-child(-n+2) { display:none; }
+}

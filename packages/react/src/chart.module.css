@@ -1,0 +1,8 @@
+.label { display: block; color: var(--cyber-ink); font: 500 13px/1.5 var(--cyber-font-display); letter-spacing: .06em; text-transform: uppercase; }
+.chart { width: 100%; min-width: 0; }
+.chart details { margin-top: 12px; font-size: 12px; color: var(--cyber-muted); }
+.chart summary { cursor: pointer; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

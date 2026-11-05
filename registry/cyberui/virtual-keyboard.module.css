@@ -1,0 +1,4 @@
+/* Generated from packages/react/src/virtual-keyboard.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.keyboard { display:grid; gap:6px; min-width:0; }
+.keyboard > div { display:flex; justify-content:center; gap:2px; min-width:0; }
+.keyboard button[data-size] { min-width:24px; flex:1 1 0; padding:8px 2px; letter-spacing:0; gap:0; }

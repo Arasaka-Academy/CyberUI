@@ -1,0 +1,5 @@
+.popover { z-index: 60; max-width: min(420px,calc(100vw - 32px)); min-width: var(--trigger-width,180px); padding: 6px; border: 1px solid var(--cyber-ink); background: var(--cyber-bg); color: var(--cyber-ink); box-shadow: 5px 5px 0 var(--cyber-line); font-family: var(--cyber-font-body); animation: appear 180ms ease-out; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

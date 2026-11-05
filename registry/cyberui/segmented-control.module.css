@@ -1,0 +1,8 @@
+/* Generated from packages/react/src/segmented-control.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.segmented { display: flex; flex-wrap: wrap; border: 1px solid var(--cyber-ink); padding: 3px; width: fit-content; }
+.segment { min-height: 38px; padding: 9px 18px; border: 0; background: transparent; color: var(--cyber-ink); font: 500 12px var(--cyber-font-display); text-transform: uppercase; cursor: pointer; }
+.segment[aria-checked='true'] { background: var(--cyber-ink); color: var(--cyber-on-ink); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

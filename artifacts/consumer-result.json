@@ -2,7 +2,7 @@
   "status": "passed",
   "packageVersion": "0.1.0",
   "examplesTypechecked": 65,
-  "consumerDirectory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-independent-consumer-82UBtD",
+  "consumerDirectory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-independent-consumer-KKRmGd",
   "checks": [
     "packed artifacts installed outside workspace",
     "all copyable examples typechecked",

@@ -1,0 +1,8 @@
+.micro { color:var(--cyber-muted); font:12px/1.5 var(--cyber-font-mono); letter-spacing:.06em; text-transform:uppercase; }
+.shard { display:flex; align-items:center; gap:16px; }
+.shard > div { flex:1; min-width:0; }
+.shardHead { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font:11px var(--cyber-font-mono); letter-spacing:.07em; }
+.shardHead > span:last-child { color:var(--cyber-accent-text); }
+.shard blockquote { margin:10px 0; font-size:16px; line-height:1.5; }
+@media(max-width:600px) {.shard { gap:10px; padding:18px !important; }.shard > svg { display:none; }
+}

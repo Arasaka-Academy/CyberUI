@@ -1,0 +1,11 @@
+/* Generated from packages/react/src/switch.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.choice { display: flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer; font-size: 15px; }
+.choice[data-disabled] { opacity: .45; cursor: not-allowed; }
+.switchTrack,.switchKnob { pointer-events:none; }
+.switchTrack { display: flex; align-items: center; width: 66px; height: 30px; padding: 3px; border: 2px solid var(--cyber-ink); }
+.switchKnob { width: 25px; height: 20px; background: var(--cyber-ink); transition: transform 120ms; }
+.choice[data-selected] .switchKnob { transform: translateX(31px); background: var(--cyber-accent); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

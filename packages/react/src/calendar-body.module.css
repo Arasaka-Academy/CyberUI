@@ -1,0 +1,13 @@
+.calendarHead { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+.calendarHead h2 { font-size: 15px; margin: 0; }
+.calendarGrid { border-collapse: separate; border-spacing: 3px; }
+.calendarGrid th { font: 11px var(--cyber-font-mono); color: var(--cyber-muted); height: 30px; }
+.calendarCell { width: 36px; height: 36px; display: grid; place-items: center; font: 13px var(--cyber-font-mono); cursor: pointer; outline: 0; }
+.calendarCell[data-selected] { color: var(--cyber-on-accent); background: var(--cyber-accent); }
+.calendarCell[data-outside-month] { color: var(--cyber-muted); }
+.calendarCell[data-disabled] { opacity: .3; cursor: not-allowed; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@media(max-width:600px) { .calendarCell { width: 32px; height: 36px; } }

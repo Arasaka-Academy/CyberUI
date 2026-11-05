@@ -1,0 +1,7 @@
+.sideNav { display: flex; flex-direction: column; gap: 4px; }
+.sideNav a { display: flex; align-items: center; gap: 12px; padding: 10px 14px; color: var(--cyber-muted); text-decoration: none; font-size: 14px; border-left: 2px solid transparent; }
+.sideNav a[aria-current='page'] { border-color: var(--cyber-accent); color: var(--cyber-ink); background: var(--cyber-soft); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

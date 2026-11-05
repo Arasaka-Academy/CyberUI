@@ -1,0 +1,42 @@
+{
+  "cli": "4.23.0",
+  "components": 65,
+  "githubRef": null,
+  "toolchainTarballCache": [
+    "next",
+    "@next/swc-darwin-arm64"
+  ],
+  "consumers": [
+    {
+      "framework": "vite",
+      "directory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-registry-consumers-xhatYz/vite",
+      "components": 65,
+      "examples": 65,
+      "sourceConsistency": {
+        "files": 159,
+        "sha256": "193915a16b7c7279e3d5c6916f879964e515108f0e336622141ef8ceb062a50c"
+      },
+      "productionBuild": "passed",
+      "renderedExamples": 65,
+      "browser": "passed",
+      "customComponentsDirectory": "widgets",
+      "tailwindRequired": false
+    },
+    {
+      "framework": "next",
+      "directory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-registry-consumers-xhatYz/next",
+      "components": 65,
+      "examples": 65,
+      "sourceConsistency": {
+        "files": 159,
+        "sha256": "193915a16b7c7279e3d5c6916f879964e515108f0e336622141ef8ceb062a50c"
+      },
+      "productionBuild": "passed",
+      "renderedExamples": 65,
+      "browser": "passed",
+      "customComponentsDirectory": "components",
+      "tailwindRequired": false
+    }
+  ],
+  "status": "passed"
+}

@@ -1,0 +1,3 @@
+.barcode { display:inline-flex; height:32px; align-items:stretch; flex-shrink:0; }
+.barcode i { display:block; background:currentColor; }
+.barcode i { flex-shrink:0; }

@@ -1,0 +1,5 @@
+.spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid var(--cyber-line); border-top-color: var(--cyber-ink); animation: spin 800ms linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

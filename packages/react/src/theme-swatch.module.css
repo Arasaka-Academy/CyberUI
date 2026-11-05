@@ -1,0 +1,8 @@
+.themeSwatch { display:flex; flex-wrap:wrap; align-items:center; gap:12px; width:100%; min-height:58px; padding:10px; border:1px solid var(--cyber-line); color:var(--cyber-ink); background:transparent; font:13px var(--cyber-font-display); text-transform:uppercase; text-align:left; }
+.themeSwatch > span:nth-child(2) { min-width:0; overflow-wrap:anywhere; }
+.themeSwatch > span:last-child { margin-left:auto; }
+.themeSwatch[aria-pressed='true'] { border:2px solid var(--cyber-ink); padding:9px; }
+.swatchColors { display:flex; flex-shrink:0; border:1px solid var(--cyber-muted); }
+.swatchColors i { width:18px; height:28px; background:var(--swatch-bg); }
+.swatchColors i:nth-child(2) { background:var(--swatch-ink); }
+.swatchColors i:nth-child(3) { background:var(--swatch-accent); }

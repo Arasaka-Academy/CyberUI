@@ -224,3 +224,22 @@ button,a { touch-action:manipulation; }
   .origin-strip .origin-number { grid-column:1; grid-row:1; }
   .origin-strip .link-button { grid-column:2; margin-left:0; width:fit-content; }
 }
+
+/* Source installation follows the existing document surfaces. */
+.component-source { margin-top: 28px; min-width: 0; }
+.component-source p, .installation-guide p { color: var(--cyber-muted); }
+.component-source .code-block { margin-top: 16px; }
+.component-source .code-block pre { max-height: 480px; overflow: auto; }
+.component-source [role='tabpanel'] { min-width: 0; }
+.source-destination { overflow-wrap: anywhere; font-size: 12px; }
+.source-dependencies { margin: 18px 0; }
+.source-dependencies summary { cursor: pointer; color: var(--cyber-ink); }
+.installation-guide { max-width: 900px; min-width: 0; }
+.installation-guide section { margin: 36px 0; }
+.installation-guide h2 { font-size: 22px; }
+.installation-guide .code-block { margin: 20px 0; }
+.installation-guide code { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .component-source .section-heading { align-items: flex-start; flex-wrap: wrap; gap: 12px; }
+  .component-source .code-block > div { gap: 8px; flex-wrap: wrap; }
+}

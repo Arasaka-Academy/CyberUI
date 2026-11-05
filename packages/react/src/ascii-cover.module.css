@@ -1,0 +1,9 @@
+.cover { position:relative; aspect-ratio:2/3; background:var(--cyber-bg); border:2px solid var(--cyber-ink); overflow:hidden; min-width:0; display:flex; flex-direction:column; clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%); }
+.cover pre { margin:0; padding:5px; flex:1; font:clamp(5px,.7vw,8px)/1.27 var(--cyber-font-mono); letter-spacing:.08em; white-space:pre; width:100%; text-align:center; overflow:hidden; display:flex; flex-direction:column; justify-content:space-around; }
+.cover pre span { display:block; white-space:pre; }
+.coverDecor { display:flex; flex-direction:column; padding:12px 8px 8px; border-bottom:1px solid var(--cyber-line); font:600 13px/1.2 var(--cyber-font-display); text-align:left; letter-spacing:.12em; min-height:50px; overflow-wrap:anywhere; }
+.coverDecor span:last-child { font:8px/1.5 var(--cyber-font-mono); color:var(--cyber-muted); letter-spacing:.1em; margin-top:6px; }
+.coverBadge { position:absolute; right:0; top:0; padding:1px 7px; background:var(--cyber-accent); color:var(--cyber-on-accent); font:12px var(--cyber-font-mono); }
+@media(max-width:600px) {
+ .cover pre { font-size:6px; }.coverDecor { font-size:11px; }
+}

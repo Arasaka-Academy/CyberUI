@@ -1,0 +1,9 @@
+/* Generated from packages/react/src/tabs.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.tabList { display: flex; border-bottom: 1px solid var(--cyber-line); gap: 4px; overflow-x: auto; }
+.tab { flex-shrink: 0; padding: 13px 19px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; border-bottom: 2px solid transparent; outline-offset: -3px !important; }
+.tab[data-selected] { border-color: var(--cyber-accent); color: var(--cyber-accent-text); background: var(--cyber-soft); }
+.tabPanel { padding-top: 22px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

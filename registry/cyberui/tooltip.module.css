@@ -1,0 +1,6 @@
+/* Generated from packages/react/src/tooltip.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.tooltip { z-index: 120; padding: 7px 11px; background: var(--cyber-ink); color: var(--cyber-on-ink); font: 12px/1.5 var(--cyber-font-body); max-width: 260px; box-shadow: 3px 3px 0 var(--cyber-line); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

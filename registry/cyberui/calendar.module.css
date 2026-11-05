@@ -1,0 +1,6 @@
+/* Generated from packages/react/src/calendar.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.calendar { width: fit-content; max-width: 100%; padding: 8px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { opacity: .45; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }

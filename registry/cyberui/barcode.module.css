@@ -1,0 +1,4 @@
+/* Generated from packages/react/src/barcode.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+.barcode { display:inline-flex; height:32px; align-items:stretch; flex-shrink:0; }
+.barcode i { display:block; background:currentColor; }
+.barcode i { flex-shrink:0; }
