@@ -12,7 +12,7 @@ try{
   await page.goto(base);await page.getByRole('button',{name:'Switch to English'}).click();
   for(const reference of references)for(let i=0;i<reference.parts.length;i++){
     const part=reference.parts[i];const id=String(reference.id).padStart(2,'0')+'-'+i;
-    const route=`#/replica/${part.scene}?view=compare&ref=${reference.id}&part=${i}&${part.query??''}`;
+    const route=`#/replica/reader/${part.scene}?view=compare&ref=${reference.id}&part=${i}&${part.query??''}`;
     await page.goto(new URL(route,base).href);await page.locator('.fixed-reference').waitFor();await page.evaluate(()=>document.fonts.ready);
     await page.locator('.fixed-reference').screenshot({path:`${out}/${id}-web.png`});
     await page.locator('.source-image').screenshot({path:`${out}/${id}-source.png`});

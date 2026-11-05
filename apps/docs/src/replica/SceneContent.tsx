@@ -4,8 +4,9 @@ import * as C from '@cyberui/react';
 import { fontSets, schemes, type Scheme, type ThemeMode } from '@cyberui/tokens';
 import { useDemo } from '../demo/store';
 import { dailyPages, shopItems, type Book, type DemoSettings, type ShopCategory } from '../demo/model';
-import { scenes, type SceneId } from './scenes';
-const useGo=()=>{const navigate=useNavigate();return (id:SceneId,query='')=>navigate(`/replica/${id}${query?'?'+query:''}`);};
+import { readerScenes as scenes, type ReaderSceneId as SceneId } from './scenes';
+import { useReaderPath } from './routes';
+const useGo=()=>{const navigate=useNavigate();const path=useReaderPath();return (id:SceneId,query='')=>navigate(path(id,query));};
 export function SceneContent({id}:{id:SceneId}) {
   switch(id){
     case 'home':return <HomeScene/>;
@@ -34,13 +35,13 @@ function HomeScene(){
   </>;
 }
 function LibraryScene({scene}:{scene:'library'|'search'|'trash'|'history'}) {
-  const {state,dispatch}=useDemo();const {t}=C.useCyberUI();const go=useGo();const [params,setParams]=useSearchParams();const [filter,setFilter]=useState('all');const [page,setPage]=useState(1);const [layout,setLayout]=useState('grid');const query=params.get('q')??'';const collection=params.get('collection');const [sort,setSort]=useState('title');
+  const {state,dispatch}=useDemo();const {t}=C.useCyberUI();const go=useGo();const path=useReaderPath();const [params,setParams]=useSearchParams();const [filter,setFilter]=useState('all');const [page,setPage]=useState(1);const [layout,setLayout]=useState('grid');const query=params.get('q')??'';const collection=params.get('collection');const [sort,setSort]=useState('title');
   let books=state.books.filter(b=>(scene==='trash'?b.trashed:!b.trashed)&&(!collection||b.collections.includes(collection))&&`${b.title} ${b.author}`.toLowerCase().includes(query.toLowerCase())&&(filter==='reading'?b.progress>0&&b.progress<100:filter==='unread'?b.progress===0:filter==='done'?b.progress===100:true));
   books=[...books].sort((a,b)=>scene==='history'||sort==='recent'?b.lastRead.localeCompare(a.lastRead):sort==='progress'?b.progress-a.progress:a.title.localeCompare(b.title));
   const pages=Math.max(1,Math.ceil(books.length/4));const current=Math.min(page,pages);const shown=books.slice((current-1)*4,current*4);
   const title=scene==='search'?t('SEARCH','搜索'):scene==='trash'?t('TRASH','回收站'):scene==='history'?t('HISTORY','历史'):t('LIBRARY','书库');
   return <><DeckHeading title={title} path={scene==='search'?'/GREP/ARCHIVE':`/ARCHIVE/${scene.toUpperCase()}`}><C.IconButton icon="search" aria-label={t('Search archive','搜索档案')} onPress={()=>go('search')}/><C.DropdownMenu trigger={<C.IconButton icon="sort" aria-label={t('Sort files','排序文件')}/>} items={[{id:'title',label:t('Title A–Z','标题 A–Z')},{id:'progress',label:t('Progress','阅读进度')},{id:'recent',label:t('Recent first','最近阅读优先')}]} onAction={setSort}/></DeckHeading>
-    <C.Panel shape="chamfer" className="archive-path"><C.Breadcrumb items={[{label:t('Library','书库'),href:'#/replica/library'},...(collection?[{label:collection,href:'#/replica/library?collection='+collection}]:[]),...(scene!=='library'?[{label:title,href:'#/replica/'+scene}]:[])]}/></C.Panel>
+    <C.Panel shape="chamfer" className="archive-path"><C.Breadcrumb items={[{label:t('Library','书库'),href:'#'+path('library')},...(collection?[{label:collection,href:'#'+path('library','collection='+collection)}]:[]),...(scene!=='library'?[{label:title,href:'#'+path(scene)}]:[])]}/></C.Panel>
     <div className="archive-toolbar"><C.SegmentedControl label={t('Reading status','阅读状态')} value={filter} onChange={v=>{setFilter(v);setPage(1);}} options={[{id:'all',label:t('All','全部')},{id:'reading',label:t('Reading','在读')},{id:'unread',label:t('Unread','未读')},{id:'done',label:t('Done','完成')}]}/><C.SegmentedControl label={t('Layout','布局')} value={layout} onChange={setLayout} options={[{id:'grid',label:t('Grid','网格')},{id:'list',label:t('List','列表')}]}/></div>
     <C.Input label={t('Search files','搜索文件')} type="search" value={query} onChange={e=>{const next=new URLSearchParams(params);next.set('q',e.target.value);setParams(next,{replace:true});setPage(1);}} placeholder={t('Title or author…','书名或作者…')}/>
     {scene==='search'&&<C.Accordion items={[{id:'keyboard',title:t('Virtual keyboard','虚拟键盘'),content:<C.VirtualKeyboard value={query} onChange={v=>setParams({q:v},{replace:true})}/>}]}/>}

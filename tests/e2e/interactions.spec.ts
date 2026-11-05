@@ -19,7 +19,7 @@ test('montage selection updates the scene and appearance and keeps comparison mo
   await page.getByRole('button',{name:/Montage panel/}).click();await page.getByRole('option',{name:'Backdrops',exact:true}).click();
   await expect(page).toHaveURL(/category=backdrops/);await expect(page.getByRole('radio',{name:'Backdrops',exact:true})).toBeChecked();
   await page.getByRole('button',{name:/Reference image/}).click();await page.getByRole('option',{name:'15 / Four jack-in styles',exact:true}).click();
-  await expect(page).toHaveURL(/replica\/jackin/);await expect(page).toHaveURL(/style=terminal/);await expect(page.locator('[data-variant="terminal"]')).toBeVisible();
+  await expect(page).toHaveURL(/replica\/reader\/jackin/);await expect(page).toHaveURL(/style=terminal/);await expect(page.locator('[data-variant="terminal"]')).toBeVisible();
   await page.getByRole('button',{name:/Montage panel/}).click();await page.getByRole('option',{name:'Scanner',exact:true}).click();await expect(page).toHaveURL(/style=scanner/);await expect(page.locator('[data-variant="scanner"]')).toBeVisible();
   await page.getByRole('radio',{name:'3:4',exact:true}).click();await expect(page).toHaveURL(/view=reference/);await page.reload();await expect(page.locator('.fixed-reference')).toBeVisible();await expect(page.locator('.source-image')).toHaveCount(0);
 });

@@ -1,6 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 import { components } from '../../apps/docs/src/catalogue';
-import { references, scenes } from '../../apps/docs/src/replica/scenes';
+import { references, readerScenes } from '../../apps/docs/src/replica/scenes';
+import { products } from '../../apps/docs/src/products';
 import { resolve } from 'node:path';
 import { mkdirSync, writeFileSync } from 'node:fs';
 
@@ -19,8 +20,9 @@ test('65 component documents render live examples, public APIs and copyable code
 });
 test('all registered scenes and all 19 reference mappings are reachable',async({page})=>{
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await english(page);
-  for(const scene of scenes){await page.goto('/#/replica/'+scene.id);await expect(page.getByRole('heading',{level:1,name:scene.en+'_',exact:true})).toBeVisible();await expect(page.getByRole('region',{name:scene.kind==='web'?'Interactive Web application':'Interactive cyberdeck'})).toBeVisible();}
-  await page.goto('/#/replica');await expect(page.locator('.reference-card')).toHaveCount(19);
+  for(const product of products){await page.goto('/#/replica/'+product.id);await expect(page.getByRole('heading',{level:1,name:product.en+'_',exact:true})).toBeVisible();await expect(page.locator('[data-product-scene]')).toHaveAttribute('data-product-scene',product.id);}
+  for(const scene of readerScenes){await page.goto('/#/replica/reader/'+scene.id);await expect(page.locator('[data-reader-page]')).toHaveAttribute('data-reader-page',scene.id);await expect(page.getByRole('region',{name:'Interactive cyberdeck'})).toBeVisible();}
+  await page.goto('/#/replica/reader/references');await expect(page.locator('.reference-card')).toHaveCount(19);
   for(const ref of references){for(let i=0;i<ref.parts.length;i++){const part=ref.parts[i];await page.goto(`/#/replica/${part.scene}?view=compare&ref=${ref.id}&part=${i}&${part.query??''}`);await expect(page.locator('.source-image img')).toHaveAttribute('src',new RegExp(ref.file));await expect(page.locator('.fixed-reference')).toBeVisible();}}
   expect(errors).toEqual([]);
 });
@@ -71,7 +73,7 @@ for(const width of [375,768,1024,1440])test(`Chinese and English layouts fit ${w
 test('every component document and replica scene fits a 375px viewport',async({page})=>{
   await page.setViewportSize({width:375,height:812});await page.emulateMedia({reducedMotion:'reduce'});await english(page);
   const results:{route:string;width:number;scrollWidth:number}[]=[];
-  for(const route of ['/','/components','/foundations','/themes',...components.map(c=>'/components/'+c.name),...scenes.map(s=>'/replica/'+s.id)]){
+  for(const route of ['/','/components','/foundations','/themes',...components.map(c=>'/components/'+c.name),...products.map(p=>'/replica/'+p.id),...readerScenes.map(s=>'/replica/reader/'+s.id)]){
     await page.goto('/#'+route);await expect(page.locator('h1')).toBeVisible();await page.evaluate(()=>document.fonts.ready);
     const layout=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth}));results.push({route,...layout});
     expect(layout.scrollWidth,route).toBeLessThanOrEqual(layout.width+1);

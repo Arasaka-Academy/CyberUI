@@ -30,8 +30,9 @@ pnpm dev --port 5174
 | `packages/tokens` | `@cyberui/tokens`：七套主题配色、明暗模式、几何、间距、字体配置及可读性派生色 |
 | `packages/react` | `@cyberui/react`：65 类组件，ESM、TypeScript 声明、独立 CSS 与可选字体样式 |
 | `apps/docs` | React + Vite 展示站、组件参数预览、代码复制、属性和键盘文档 |
-| `apps/docs/src/replica` | 30 个场景的注册与总览、27 个阅读场景、19 张参考图和 31 个分区映射 |
-| `apps/docs/src/web-scenes` | ORBIT 项目管理、PULSE AI 产品官网、NOVA Agent 聊天；独立画布与本地演示状态 |
+| `apps/docs/src/products.ts` | 六类产品注册表，统一驱动总览、产品切换、搜索和导航计数 |
+| `apps/docs/src/replica` | 阅读器内部的 27 个页面、19 张参考图和 31 个分区映射 |
+| `apps/docs/src/web-scenes` | 六类产品共享预览工具栏；ORBIT、PULSE、NOVA、FREQ、RELAY 的独立内容与本地状态 |
 | `registry.json`、`registry/cyberui` | GitHub Registry 清单与自动生成的可复制组件源码 |
 | `public` | 本地字体、SVG 图标、品牌素材和视觉参考图 |
 | `design-system/cyberui` | 设计规范与 token 约定 |
@@ -41,15 +42,18 @@ pnpm dev --port 5174
 
 演示区包含首页、书库、详情、搜索、收藏、历史、回收站，阅读日志、统计、连续阅读、日历、目标、诊断，系统、配色、字体、封面、休眠，身份卡、顶部菜单身份／控制页，任务、收益、碎片、四类共 20 种商店外观，以及五种 Jack-in 卡片。
 
-新增的三个 Web 演示支持内嵌预览与独立打开：
+场景总览固定提供六个平级产品入口，均支持内嵌预览与独立打开：
 
 | 场景 | 内嵌预览 | 独立页面 |
 | --- | --- | --- |
+| CYBERDECK 阅读器 | `/#/replica/reader` | `/#/preview/reader` |
 | ORBIT 项目管理 Dashboard | `/#/replica/dashboard` | `/#/preview/dashboard` |
 | PULSE AI 产品官网 | `/#/replica/product-home` | `/#/preview/product-home` |
 | NOVA Agent 聊天工作台 | `/#/replica/agent-chat` | `/#/preview/agent-chat` |
+| FREQ 移动音乐 App | `/#/replica/mobile-app` | `/#/preview/mobile-app` |
+| RELAY 产品团队博客 | `/#/replica/blog` | `/#/preview/blog` |
 
-任务管理、试用表单、聊天流式回复、工具记录和成果下载均可实际操作。项目与会话单独保存、独立重置，支持中英文及七套明暗主题。详细交互和本地模型边界见 [Web 场景说明](docs/web-scenes.md)。
+阅读器默认进入首页，全部子页面及视觉参考收在产品内部；旧阅读器链接会保留查询参数并跳转到新地址。FREQ 提供六首虚构曲目、三个歌单和无声播放交互，不创建音频实例。RELAY 提供六篇完整中英文文章、收藏、文章目录和本地订阅反馈。所有产品支持中英文及七套明暗主题，详细路由、交互和状态边界见 [产品场景说明](docs/web-scenes.md)。
 
 ## 从 GitHub 按需加入源码
 
@@ -167,4 +171,4 @@ CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
 
 书籍封面采用本地原创 ASCII 图案；浏览器字体度量、翻译文本、初始装备和演示数据会造成视觉差异。Web 控件的焦点、点击区域、可读性和滚动也有适配。因此对照档案用于逐项复核，不代表逐像素一致。
 
-For English readers: use **EN** in the live site. All 65 component pages and all 30 scene interfaces are available in English. This repository delivers local packages and a static documentation build; it does not publish to npm or operate reader hardware.
+For English readers: use **EN** in the live site. All 65 component pages and six product scenes are available in English. The reader contains 27 internal pages. FREQ is a silent music interaction demo; RELAY contains six complete bilingual articles. This repository distributes source through GitHub Registry and a static site without publishing to npm.

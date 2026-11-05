@@ -1,0 +1,786 @@
+[
+  {
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "en",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "en",
+    "route": "/preview/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/replica/reader/references",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/home",
+    "violations": []
+  },
+  {
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "zh-CN",
+    "route": "/preview/reader/references",
+    "violations": []
+  }
+]
