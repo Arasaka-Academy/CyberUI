@@ -51,7 +51,13 @@ pnpm dev --port 5174
 
 ## 从 GitHub 按需加入源码
 
-全部 65 类组件支持 shadcn GitHub Registry，无需发布或安装 CyberUI npm 包。组件、CSS Modules 和必要公共源码进入你的项目，之后可以直接修改。
+全部 65 类组件支持 shadcn GitHub Registry，无需发布或安装 CyberUI npm 包。组件、CSS Modules 和必要公共源码进入你的项目，之后可以直接修改。已通过真实 GitHub 安装验收的稳定版本：
+
+```sh
+pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#84742e5a210c991e5f82ad5bf9c842f096daabd9
+```
+
+合并到默认分支后，可使用跟随默认分支的尝鲜命令：
 
 ```sh
 pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button

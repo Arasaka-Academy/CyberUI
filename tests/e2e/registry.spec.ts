@@ -1,6 +1,23 @@
 import { test, expect } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 const registry = JSON.parse(readFileSync(new URL('../../registry.json', import.meta.url), 'utf8')) as { items: { name: string; meta: { componentName: string } }[] };
+const verifiedRef = JSON.parse(readFileSync(new URL('../../apps/docs/src/registry-version.json', import.meta.url), 'utf8')).ref;
+
+test('verified commit and default branch commands pin every example dependency consistently', async ({ page }) => {
+  expect(verifiedRef).toMatch(/^[0-9a-f]{40}$/);
+  await page.goto('/#/components/Dialog');
+  const source = page.getByRole('region', { name: '获取组件源码' });
+  const command = source.locator('.code-block code').first();
+  await expect(command).toContainText('CyberUI/dialog#' + verifiedRef);
+  await expect(command).toContainText('CyberUI/button#' + verifiedRef);
+  await expect(command).toContainText('CyberUI/input#' + verifiedRef);
+  await source.getByRole('radio', { name: '默认分支', exact: true }).click();
+  await expect(command).not.toContainText('#');
+  await source.getByRole('radio', { name: '已验证提交', exact: true }).click();
+  await expect(command).toContainText('CyberUI/dialog#' + verifiedRef);
+  await page.goto('/#/installation');
+  await expect(page.locator('.installation-guide .code-block code').nth(1)).toContainText('CyberUI/button#' + verifiedRef);
+});
 
 test('all 65 component pages load their actual distributable source', async ({ page }) => {
   await page.goto('/'); await page.getByRole('button', { name: 'Switch to English' }).click();

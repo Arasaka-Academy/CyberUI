@@ -1,15 +1,12 @@
 {
   "cli": "4.23.0",
   "components": 65,
-  "githubRef": null,
-  "toolchainTarballCache": [
-    "next",
-    "@next/swc-darwin-arm64"
-  ],
+  "githubRef": "84742e5a210c991e5f82ad5bf9c842f096daabd9",
+  "toolchainTarballCache": [],
   "consumers": [
     {
       "framework": "vite",
-      "directory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-registry-consumers-xhatYz/vite",
+      "directory": "/tmp/cyberui-registry-consumers-W1GAWu/vite",
       "components": 65,
       "examples": 65,
       "sourceConsistency": {
@@ -24,7 +21,7 @@
     },
     {
       "framework": "next",
-      "directory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-registry-consumers-xhatYz/next",
+      "directory": "/tmp/cyberui-registry-consumers-W1GAWu/next",
       "components": 65,
       "examples": 65,
       "sourceConsistency": {

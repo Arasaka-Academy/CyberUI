@@ -34,6 +34,12 @@ Vite 创建 src/styles.css 并在 main.tsx 导入。Next.js 使用 src/ 时将 `
 
 ## 加入组件
 
+已通过 [真实 GitHub 安装验收](https://github.com/Arasaka-Academy/CyberUI/actions/runs/41994368802) 的固定版本，可立即使用：
+
+```sh
+pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#84742e5a210c991e5f82ad5bf9c842f096daabd9
+```
+
 默认分支包含 registry 后，可执行：
 
 ```sh
@@ -70,6 +76,8 @@ Next.js 建议在带 `'use client'` 的 providers.tsx 中声明 Provider 包装�
 
 字体可选。从相同提交复制 public/fonts.css 和 public/fonts/ 到宿主 public/，保留字体 OFL 文件，然后在页面 head 加入 `<link rel="stylesheet" href="/fonts.css">`。不加载字体时使用系统回退。
 
+稳定版本的 [字体样式](https://github.com/Arasaka-Academy/CyberUI/blob/84742e5a210c991e5f82ad5bf9c842f096daabd9/public/fonts.css) 与 [字体资源及许可证](https://github.com/Arasaka-Academy/CyberUI/tree/84742e5a210c991e5f82ad5bf9c842f096daabd9/public/fonts) 可单独获取，无需加入字体 npm 包。
+
 组件不会自动更新。需要更新时先检查新版本，再执行 add 并逐项审阅覆盖提示。CLI 默认会询问是否覆盖修改过的文件；只有明确希望覆盖时才使用 --overwrite。
 
 ## 仓库维护与验证
@@ -85,3 +93,5 @@ pnpm test:registry
 文件使用带明确 target 的 registry:file 类型，CLI 会原样复制，避免将 SVG 路径、空格和文本误当成 Tailwind 类名处理；源码本身已包含相对导入及客户端声明。
 
 test:registry 在工作区外新建 Vite、Next.js 项目，通过真实 CLI 安装全部 65 项，逐字节比较全部 159 份源码和许可文件，编译并实际渲染全部使用示例，验证生产构建、浏览器交互、自定义目录和覆盖行为。设置 CYBERUI_GITHUB_REF 为具体提交 SHA 后，可验证真实 GitHub 路径；默认使用测试期间的本机 HTTP fixture，不需要部署 registry 服务。依赖默认从官方 npm 下载，可通过 CYBERUI_TEST_REGISTRY 选择镜像。
+
+GitHub Actions 自动将 CYBERUI_GITHUB_REF 设为当前验收提交，持续验证真实 GitHub 安装及固定版本源码一致性。
