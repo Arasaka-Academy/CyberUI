@@ -28,7 +28,8 @@ pnpm dev --port 5174
 | `packages/tokens` | `@cyberui/tokens`：七套主题配色、明暗模式、几何、间距、字体配置及可读性派生色 |
 | `packages/react` | `@cyberui/react`：65 类组件，ESM、TypeScript 声明、独立 CSS 与可选字体样式 |
 | `apps/docs` | React + Vite 展示站、组件参数预览、代码复制、属性和键盘文档 |
-| `apps/docs/src/replica` | 27 个演示场景，19 张参考图和 31 个独立分区映射 |
+| `apps/docs/src/replica` | 30 个场景的注册与总览、27 个阅读场景、19 张参考图和 31 个分区映射 |
+| `apps/docs/src/web-scenes` | ORBIT 项目管理、PULSE AI 产品官网、NOVA Agent 聊天；独立画布与本地演示状态 |
 | `public` | 本地字体、SVG 图标、品牌素材和视觉参考图 |
 | `design-system/cyberui` | 设计规范与 token 约定 |
 | `artifacts` | 浏览器截图、逐图对照、打包接入结果和无障碍扫描记录 |
@@ -36,6 +37,16 @@ pnpm dev --port 5174
 组件按基础与容器 10、表单 16、导航 9、反馈与浮层 11、数据展示 6、特色组件 13 分类。外观变体单独展示，不计入 65 类的数量。
 
 演示区包含首页、书库、详情、搜索、收藏、历史、回收站，阅读日志、统计、连续阅读、日历、目标、诊断，系统、配色、字体、封面、休眠，身份卡、顶部菜单身份／控制页，任务、收益、碎片、四类共 20 种商店外观，以及五种 Jack-in 卡片。
+
+新增的三个 Web 演示支持内嵌预览与独立打开：
+
+| 场景 | 内嵌预览 | 独立页面 |
+| --- | --- | --- |
+| ORBIT 项目管理 Dashboard | `/#/replica/dashboard` | `/#/preview/dashboard` |
+| PULSE AI 产品官网 | `/#/replica/product-home` | `/#/preview/product-home` |
+| NOVA Agent 聊天工作台 | `/#/replica/agent-chat` | `/#/preview/agent-chat` |
+
+任务管理、试用表单、聊天流式回复、工具记录和成果下载均可实际操作。项目与会话单独保存、独立重置，支持中英文及七套明暗主题。详细交互和本地模型边界见 [Web 场景说明](docs/web-scenes.md)。
 
 ## 独立项目接入
 
@@ -125,4 +136,4 @@ CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
 
 书籍封面采用本地原创 ASCII 图案；浏览器字体度量、翻译文本、初始装备和演示数据会造成视觉差异。Web 控件的焦点、点击区域、可读性和滚动也有适配。因此对照档案用于逐项复核，不代表逐像素一致。
 
-For English readers: use **EN** in the live site. All 65 component pages and all 27 scene interfaces are available in English. This repository delivers local packages and a static documentation build; it does not publish to npm or operate reader hardware.
+For English readers: use **EN** in the live site. All 65 component pages and all 30 scene interfaces are available in English. This repository delivers local packages and a static documentation build; it does not publish to npm or operate reader hardware.

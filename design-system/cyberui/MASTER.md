@@ -81,3 +81,19 @@ ui-ux-pro-max style search matched Cyberpunk UI and HUD/Sci-Fi FUI. Their genera
 neon/glow recommendations yield to the system's flat, hard-edged rendering.
 React guidance: typed reusable controls, shared state hooks, accessible test queries.
 UX guidance: visible/unobscured focus; focusable error summaries and inline errors.
+
+## Web application scenes
+
+ORBIT (project workspace), PULSE (AI productivity landing page) and NOVA (Agent chat)
+are independent product examples composed from the same public components. Their
+canvas uses container queries so embedded and standalone views adapt to available
+width. Preserve the master palette and fonts; differentiate products through layout,
+type scale, information density and composition. New scenes do not use reader status
+bars, bottom navigation or image-reference controls.
+
+Keep primary project progress visible across widths. Use menus as the pointer and
+keyboard alternative to dragging task cards. Keep chat controls reachable as the
+message log scrolls; never force a user away from an earlier message. Live status
+announces generation start/finish rather than every streamed chunk. Tool decorations
+must not change accessible control names. Selected navigation uses readable text on
+the soft surface, including its nested labels and counts.

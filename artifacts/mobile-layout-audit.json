@@ -478,5 +478,20 @@
     "route": "/replica/languages",
     "width": 375,
     "scrollWidth": 375
+  },
+  {
+    "route": "/replica/dashboard",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/product-home",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/agent-chat",
+    "width": 375,
+    "scrollWidth": 375
   }
 ]

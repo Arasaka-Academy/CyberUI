@@ -672,6 +672,27 @@
     "violations": []
   },
   {
+    "route": "/replica/dashboard",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/product-home",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/agent-chat",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
     "route": "/themes",
     "scheme": "neon",
     "mode": "light",

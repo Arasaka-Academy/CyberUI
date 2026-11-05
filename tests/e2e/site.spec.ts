@@ -17,9 +17,9 @@ test('65 component documents render live examples, public APIs and copyable code
   }
   expect(errors).toEqual([]);
 });
-test('all 27 scenes and all 19 reference mappings are reachable',async({page})=>{
+test('all registered scenes and all 19 reference mappings are reachable',async({page})=>{
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await english(page);
-  for(const scene of scenes){await page.goto('/#/replica/'+scene.id);await expect(page.getByRole('heading',{level:1,name:scene.en+'_',exact:true})).toBeVisible();await expect(page.getByRole('region',{name:'Interactive cyberdeck'})).toBeVisible();}
+  for(const scene of scenes){await page.goto('/#/replica/'+scene.id);await expect(page.getByRole('heading',{level:1,name:scene.en+'_',exact:true})).toBeVisible();await expect(page.getByRole('region',{name:scene.kind==='web'?'Interactive Web application':'Interactive cyberdeck'})).toBeVisible();}
   await page.goto('/#/replica');await expect(page.locator('.reference-card')).toHaveCount(19);
   for(const ref of references){for(let i=0;i<ref.parts.length;i++){const part=ref.parts[i];await page.goto(`/#/replica/${part.scene}?view=compare&ref=${ref.id}&part=${i}&${part.query??''}`);await expect(page.locator('.source-image img')).toHaveAttribute('src',new RegExp(ref.file));await expect(page.locator('.fixed-reference')).toBeVisible();}}
   expect(errors).toEqual([]);

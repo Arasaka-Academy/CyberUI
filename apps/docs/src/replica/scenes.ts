@@ -1,4 +1,4 @@
-export const scenes=[
+const readerScenes=[
   {id:'home',en:'Cyberdeck home',zh:'阅读终端首页',icon:'home',group:'archive',reference:1},
   {id:'library',en:'Library',zh:'书库',icon:'library',group:'archive',reference:4},
   {id:'book',en:'Book dossier',zh:'书籍详情',icon:'book',group:'archive',reference:16},
@@ -27,7 +27,15 @@ export const scenes=[
   {id:'jackin',en:'Jack-in sequence',zh:'Jack-in 连接卡',icon:'network',group:'network',reference:19},
   {id:'languages',en:'Language specimens',zh:'其他语言样本',icon:'book',group:'identity',reference:17},
 ] as const;
+export const webScenes = [
+  { id:'dashboard',en:'Project dashboard',zh:'项目管理 Dashboard',icon:'stats',group:'web',kind:'web',brand:'ORBIT',description:{en:'A mission control for projects, people and the work that matters.',zh:'管理项目、协调团队，让每一项工作有序推进。'} },
+  { id:'product-home',en:'AI product homepage',zh:'AI 产品官网',icon:'network',group:'web',kind:'web',brand:'PULSE',description:{en:'A complete product story. From first impression to the next step.',zh:'从第一眼的产品印象，到开始试用的完整旅程。'} },
+  { id:'agent-chat',en:'Agent chat workspace',zh:'Agent 聊天工作台',icon:'code',group:'web',kind:'web',brand:'NOVA',description:{en:'Conversations that become plans, insights and tangible results.',zh:'让对话成为计划、洞察与可以交付的成果。'} },
+] as const;
+export const scenes = [...readerScenes.map(scene=>({...scene,kind:'reader' as const})),...webScenes];
 export type SceneId=(typeof scenes)[number]['id'];
+export type ReaderSceneId=(typeof readerScenes)[number]['id'];
+export type ReaderScene=Extract<(typeof scenes)[number],{kind:'reader'}>;
 export interface ReferencePart {scene:SceneId;en:string;zh:string;query?:string;quadrant?:0|1|2|3}
 export interface Reference {id:number;file:string;en:string;zh:string;parts:ReferencePart[]}
 export const references:Reference[]=[
