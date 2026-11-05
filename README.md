@@ -2,6 +2,8 @@
 
 CyberUI 是一套 React 组件库与中英双语展示站，采用硬边、切角、开放角框、条码和七套明暗配色，提供完整的 Web 表单、键盘、焦点和响应式交互。
 
+[在线展示站](https://arasaka-academy.github.io/CyberUI/) · [组件目录](https://arasaka-academy.github.io/CyberUI/#/components) · [源码接入指南](https://arasaka-academy.github.io/CyberUI/#/installation)
+
 设计与交互规范使用 `ui-ux-pro-max` 辅助制定。
 
 ## 本地启动
@@ -57,7 +59,7 @@ pnpm dev --port 5174
 pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#84742e5a210c991e5f82ad5bf9c842f096daabd9
 ```
 
-合并到默认分支后，可使用跟随默认分支的尝鲜命令：
+也可使用跟随默认分支的尝鲜命令：
 
 ```sh
 pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button
@@ -138,7 +140,7 @@ pnpm preview --port 4175
 `test:consumer` 在系统临时目录创建独立 React 项目，安装真实打包产物，编译全部 65 份文档示例，运行 Vite 构建和浏览器交互测试。它优先使用本机 pnpm 离线缓存；新环境需要先完成一次依赖安装以填充缓存。
 也可用 `CYBERUI_CONSUMER_OFFLINE=0 pnpm test:consumer` 允许独立项目在线安装依赖。
 
-静态产物在 `apps/docs/dist`，可部署到任意支持静态文件的服务器。使用相对资源路径和 HashRouter，支持子目录托管，无需服务端路由回退。通过 HTTP 预览，避免直接以 `file://` 打开模块。公共发布另行处理。
+静态产物在 `apps/docs/dist`，可部署到任意支持静态文件的服务器。使用相对资源路径和 HashRouter，支持子目录托管，无需服务端路由回退。通过 HTTP 预览，避免直接以 `file://` 打开模块。
 
 可对生产预览执行同一组测试，或重新生成逐图对照：
 
@@ -148,6 +150,16 @@ CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
 ```
 
 详细证据见 [验收记录](docs/validation.md)、[场景参考与视觉差异](docs/reference-map.md) 和 [设计规范](design-system/cyberui/MASTER.md)。逐图图片见 [本地对照档案](artifacts/reference-comparisons/index.html)。
+
+## GitHub Pages
+
+展示站发布于 **[arasaka-academy.github.io/CyberUI](https://arasaka-academy.github.io/CyberUI/)**。仓库 Settings → Pages 的 Source 使用 **GitHub Actions**。
+
+`main` 上的 **Verify CyberUI** 工作流成功后，[Pages 工作流](.github/workflows/pages.yml) 会构建同一提交，将 `apps/docs/dist` 发布到 `github-pages` 环境。检查失败或 PR 检查不会触发发布。
+
+需要重新发布时，在 Actions 中打开 **Deploy CyberUI to GitHub Pages**，选择 **Run workflow → main**。字体、图标和参考图随静态站点一同发布；组件源码仍通过 GitHub Registry 分发。
+
+组件页和场景使用 `/#/...` 路由，例如 [Button](https://arasaka-academy.github.io/CyberUI/#/components/Button) 和 [NOVA](https://arasaka-academy.github.io/CyberUI/#/preview/agent-chat)。刷新或直接打开这些链接无需配置服务端路由。
 
 ## 许可与使用边界
 
