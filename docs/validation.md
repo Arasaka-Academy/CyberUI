@@ -44,6 +44,12 @@ CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
 
 推送后，Linux CI 从 `84742e5a210c991e5f82ad5bf9c842f096daabd9` 真实读取全部 GitHub 源码，Vite 和 Next.js 均通过完整验收，第三方依赖直接从 npm 安装，未使用框架 tarball 映射或临时 DNS 设置。[验收工作流](https://github.com/Arasaka-Academy/CyberUI/actions/runs/41994368802) 全部通过；原始 [源码接入结果](../artifacts/registry-consumer-result.json) 随工作流产物保存。组件页及接入指南默认提供这一固定 SHA，并可切换到默认分支命令。
 
+## GitHub Pages
+
+生产构建在本地挂载到 `/CyberUI/` 子目录，验证首页、Button 源码页、参考图对照、接入指南和 NOVA 独立场景五个路由。字体、参考图、favicon、CSS 和动态模块均正常加载；源码复制、中英文切换、Hash 路由刷新及 375px 接入指南布局通过，未出现浏览器运行错误或资源加载错误。
+
+[Pages 工作流](../.github/workflows/pages.yml) 在 `main` 的完整检查成功后检出已通过的提交，构建并上传展示站，再通过 GitHub Pages 的 OIDC 部署。PR 和失败的检查不会触发自动发布，也可以从 `main` 手动重新发布。
+
 ## 交互覆盖
 
 组件文档逐页检查了标题、实际预览、代码复制入口和公共属性表；65 份可复制代码另外在已安装的打包产物上编译。Button、IconButton 和 Avatar 展示独立尺寸示例；颜色与外观变体独立展示。
@@ -97,4 +103,4 @@ CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
 
 ORBIT、PULSE、NOVA 使用三个独立产品内容和本地演示模型。PULSE 不创建真实账户、订阅或付款；NOVA 不连接真实模型、网络工具或执行代码，消息内容作为结构化文本安全渲染。项目与聊天使用独立的 `cyberui-web-scenes-v1` 存储，各场景可分别重置；既有阅读数据及全局主题设置保留。详见 [Web 场景说明](web-scenes.md)。
 
-交付包含工作区源码、GitHub Registry、本地组件打包产物和静态站点构建。本次未向 npm 发布 CyberUI，也未部署公共网站或独立 registry 服务。
+交付包含工作区源码、GitHub Registry、本地组件打包产物和静态站点构建。展示站通过 [GitHub Pages](https://arasaka-academy.github.io/CyberUI/) 发布；Pages 工作流在主分支检查成功后构建并部署同一提交，支持手动重发。CyberUI 未向 npm 发布，也不需要独立 registry 服务。
