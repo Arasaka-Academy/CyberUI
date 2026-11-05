@@ -1,0 +1,10 @@
+export const products = [
+  { id: 'reader', en: 'Reader', zh: '阅读器', icon: 'library', kind: 'reader', brand: 'CYBERDECK', description: { en: 'A reading terminal with 27 connected pages and an archive of visual references.', zh: '从书库到阅读遥测，27 个交互页面与完整视觉参考。' }, tags: [{ en: 'Library', zh: '书库' }, { en: 'Reading', zh: '阅读' }, { en: '27 pages', zh: '27 个页面' }] },
+  { id: 'dashboard', en: 'Project dashboard', zh: '项目管理 Dashboard', icon: 'stats', kind: 'web', brand: 'ORBIT', description: { en: 'A mission control for projects, people and the work that matters.', zh: '管理项目、协调团队，让每一项工作有序推进。' }, tags: [{ en: 'Projects', zh: '项目' }, { en: 'Kanban', zh: '看板' }, { en: 'Tasks', zh: '任务' }] },
+  { id: 'product-home', en: 'AI product homepage', zh: 'AI 产品官网', icon: 'network', kind: 'web', brand: 'PULSE', description: { en: 'A complete product story. From first impression to the next step.', zh: '从第一眼的产品印象，到开始试用的完整旅程。' }, tags: [{ en: 'Product', zh: '产品' }, { en: 'Pricing', zh: '套餐' }, { en: 'Trial', zh: '试用' }] },
+  { id: 'agent-chat', en: 'Agent chat workspace', zh: 'Agent 聊天工作台', icon: 'code', kind: 'web', brand: 'NOVA', description: { en: 'Conversations that become plans, insights and tangible results.', zh: '让对话成为计划、洞察与可以交付的成果。' }, tags: [{ en: 'Chat', zh: '对话' }, { en: 'Tools', zh: '工具' }, { en: 'Artifacts', zh: '成果' }] },
+  { id: 'mobile-app', en: 'Mobile music app', zh: '移动音乐 App', icon: 'deck', kind: 'web', brand: 'FREQ', description: { en: 'Find your frequency. A pocket music player with a silent interactive playback demo.', zh: '找到你的频率。装进口袋的音乐播放器，体验无声交互演示。' }, tags: [{ en: 'Discover', zh: '发现' }, { en: 'Playlists', zh: '歌单' }, { en: 'Player', zh: '播放器' }] },
+  { id: 'blog', en: 'Product team blog', zh: '产品团队博客', icon: 'book', kind: 'web', brand: 'RELAY', description: { en: 'Notes on making things better. Product updates, engineering and life on the team.', zh: '记录每一次更好的改变。产品更新、工程实践与团队故事。' }, tags: [{ en: 'Articles', zh: '文章' }, { en: 'Stories', zh: '故事' }, { en: 'Bookmarks', zh: '收藏' }] },
+] as const;
+export type Product = typeof products[number];
+export type ProductId = Product['id'];

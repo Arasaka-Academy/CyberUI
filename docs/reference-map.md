@@ -1,6 +1,6 @@
 # 视觉参考与场景映射
 
-19 张视觉参考图保存在 `public/reference`，对应 27 个应用场景与 31 个独立预览分区。
+19 张视觉参考图保存在 `public/reference`，对应阅读器内部的 27 个页面与 31 个独立预览分区。入口为 `/#/replica/reader/references`，独立预览为 `/#/preview/reader/references`，参考图不再占用顶层产品入口。
 
 `artifacts/reference-comparisons/index.html` 收录 31 对独立分区图片。每对左侧是参考图或参考图的一个四分区，右侧是使用公共组件组合的 Web 画布。画布为 600 × 800，保持 3:4 比例，内容超出时内部滚动；响应式模式则重排实际 HTML。
 

@@ -2,9 +2,9 @@ import { test, expect } from '@playwright/test';
 import { resolve } from 'node:path';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { components } from '../../apps/docs/src/catalogue';
-import { scenes } from '../../apps/docs/src/replica/scenes';
+import { readerScenes } from '../../apps/docs/src/replica/scenes';
 
-test('all documents, scenes and fourteen palettes have no automated WCAG A/AA violations', async ({page}) => {
+test('all component documents, reader pages and fourteen palettes have no automated WCAG A/AA violations', async ({page}) => {
   test.setTimeout(180000);
   const results: {route:string;scheme:string;mode:string;locale:string;violations:unknown[]}[]=[];
   const audit=async(route:string)=>{
@@ -22,7 +22,7 @@ test('all documents, scenes and fourteen palettes have no automated WCAG A/AA vi
   };
   await page.goto('/');
   await page.getByRole('button',{name:'Switch to English'}).click();
-  for(const route of ['/','/components','/foundations','/themes',...components.map(c=>'/components/'+c.name),...scenes.map(s=>'/replica/'+s.id)])await audit(route);
+  for(const route of ['/','/components','/foundations','/themes',...components.map(c=>'/components/'+c.name),...readerScenes.map(s=>'/replica/reader/'+s.id)])await audit(route);
   for(const scheme of ['neon','mono','graphite','synthwave','bloodline','terminal','amber'])for(const mode of ['Light','Dark']){
     await page.goto('/#/themes');await page.getByRole('button',{name:scheme,exact:true}).click();await page.getByRole('radio',{name:mode,exact:true}).click();
     for(const route of ['/themes','/components/Button','/replica/operator','/replica/calendar'])await audit(route);

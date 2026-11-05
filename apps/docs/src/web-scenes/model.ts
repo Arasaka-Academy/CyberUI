@@ -1,11 +1,13 @@
 import type { Locale } from '@cyberui/tokens';
+import { initialMusic, musicReducer, hydrateMusic, type MusicAction, type MusicState } from './music-model';
+import { initialBlog, blogReducer, hydrateBlog, type BlogAction, type BlogState } from './blog-model';
 
 export type Text = string | { en: string; zh: string };
 export const text = (value: Text, locale: Locale) => typeof value === 'string' ? value : locale === 'en' ? value.en : value.zh;
 export const sampleDate = '2026-10-30';
 export const statuses = ['todo', 'progress', 'review', 'done'] as const;
 export type TaskStatus = typeof statuses[number];
-export type WebSceneId = 'dashboard' | 'product-home' | 'agent-chat';
+export type WebSceneId = 'dashboard' | 'product-home' | 'agent-chat' | 'mobile-app' | 'blog';
 export const statusLabels: Record<TaskStatus, Text> = {
   todo: { en: 'To do', zh: '待办' }, progress: { en: 'In progress', zh: '进行中' },
   review: { en: 'In review', zh: '待审核' }, done: { en: 'Done', zh: '已完成' },
@@ -72,16 +74,19 @@ export function initialChats() {
     seedConversation('code-sample', 'code', { en: 'Understand cancellation', zh: '理解异步取消' }),
   ] };
 }
-export interface WebState { version: 1; dashboard: ReturnType<typeof initialDashboard>; chats: ReturnType<typeof initialChats>; resets: Record<WebSceneId, number> }
-export function initialWebState(): WebState { return { version: 1, dashboard: initialDashboard(), chats: initialChats(), resets: { dashboard: 0, 'product-home': 0, 'agent-chat': 0 } }; }
+export interface WebState { version: 1; dashboard: ReturnType<typeof initialDashboard>; chats: ReturnType<typeof initialChats>; music: MusicState; blog: BlogState; resets: Record<WebSceneId, number> }
+export function initialWebState(): WebState { return { version: 1, dashboard: initialDashboard(), chats: initialChats(), music: initialMusic(), blog: initialBlog(), resets: { dashboard: 0, 'product-home': 0, 'agent-chat': 0, 'mobile-app': 0, blog: 0 } }; }
 export type WebAction =
+  | { type: 'music'; action: MusicAction } | { type: 'blog'; action: BlogAction }
   | { type: 'save-task'; task: Task } | { type: 'delete-task'; id: string } | { type: 'task-status'; id: string; status: TaskStatus }
   | { type: 'new-chat'; id: string } | { type: 'select-chat'; id: string } | { type: 'delete-chat'; id: string } | { type: 'rename-chat'; id: string; title: string }
   | { type: 'draft'; id: string; value: string } | { type: 'send'; id: string; messageId: string; prompt: string; scenario: Scenario; locale: Locale; fail: boolean }
   | { type: 'tick' | 'stop' | 'retry'; id: string; messageId: string } | { type: 'reset-scene'; scene: WebSceneId };
 const stopMessages = (messages: ChatMessage[]) => messages.map(m => m.status === 'running' ? { ...m, status: 'stopped' as const } : m);
 export function webReducer(state: WebState, action: WebAction): WebState {
-  if (action.type === 'reset-scene') return { ...state, ...(action.scene === 'dashboard' ? { dashboard: initialDashboard() } : action.scene === 'agent-chat' ? { chats: initialChats() } : {}), resets: { ...state.resets, [action.scene]: state.resets[action.scene] + 1 } };
+  if (action.type === 'music') { const music = musicReducer(state.music, action.action); return music === state.music ? state : { ...state, music }; }
+  if (action.type === 'blog') { const blog = blogReducer(state.blog, action.action); return blog === state.blog ? state : { ...state, blog }; }
+  if (action.type === 'reset-scene') return { ...state, ...(action.scene === 'dashboard' ? { dashboard: initialDashboard() } : action.scene === 'agent-chat' ? { chats: initialChats() } : action.scene === 'mobile-app' ? { music: initialMusic() } : action.scene === 'blog' ? { blog: initialBlog() } : {}), resets: { ...state.resets, [action.scene]: state.resets[action.scene] + 1 } };
   if (action.type === 'save-task' || action.type === 'delete-task' || action.type === 'task-status') {
     const current = state.dashboard.tasks.find(t => t.id === (action.type === 'save-task' ? action.task.id : action.id));
     const task = action.type === 'save-task' ? { ...action.task, title: typeof action.task.title === 'string' ? action.task.title.trim().slice(0, 120) : action.task.title } : current;
@@ -128,6 +133,6 @@ export function hydrateWebState(raw: string | null): WebState {
     if (!saved || saved.version !== 1 || !Array.isArray(saved.dashboard?.tasks) || !Array.isArray(saved.dashboard.activities) || !Array.isArray(saved.chats?.conversations) || !saved.chats.conversations.length) return initialWebState();
     if (!saved.dashboard.tasks.every(t => typeof t.id === 'string' && isText(t.title) && statuses.includes(t.status) && projects.some(p => p.id === t.project) && members.some(m => m.id === t.assignee) && ['high', 'medium', 'low'].includes(t.priority) && typeof t.due === 'string') || !saved.dashboard.activities.every(a => typeof a.id === 'string' && isText(a.title) && isText(a.detail))) return initialWebState();
     if (!saved.chats.conversations.every(c => typeof c.id === 'string' && isText(c.title) && typeof c.draft === 'string' && Array.isArray(c.messages) && c.messages.every(m => typeof m.id === 'string' && ['user', 'assistant'].includes(m.role) && isText(m.content) && ['running', 'completed', 'stopped', 'error'].includes(m.status) && Number.isFinite(m.visible) && Number.isFinite(m.step) && Array.isArray(m.tools) && m.tools.every(t => typeof t.id === 'string' && isText(t.name) && isText(t.input) && isText(t.output)) && (!m.artifact || typeof m.artifact.name === 'string' && ['markdown', 'typescript'].includes(m.artifact.language) && isText(m.artifact.content))))) return initialWebState();
-    return { version: 1, dashboard: saved.dashboard, chats: { activeId: saved.chats.conversations.some(c => c.id === saved.chats.activeId) ? saved.chats.activeId : saved.chats.conversations[0].id, conversations: saved.chats.conversations.map(c => ({ ...c, messages: stopMessages(c.messages) })) }, resets: initialWebState().resets };
+    return { version: 1, dashboard: saved.dashboard, music: hydrateMusic(saved.music), blog: hydrateBlog(saved.blog), chats: { activeId: saved.chats.conversations.some(c => c.id === saved.chats.activeId) ? saved.chats.activeId : saved.chats.conversations[0].id, conversations: saved.chats.conversations.map(c => ({ ...c, messages: stopMessages(c.messages) })) }, resets: initialWebState().resets };
   } catch { return initialWebState(); }
 }

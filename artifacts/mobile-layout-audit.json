@@ -345,137 +345,7 @@
     "scrollWidth": 375
   },
   {
-    "route": "/replica/home",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/library",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/book",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/search",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/collections",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/history",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/trash",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/log",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/stats",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/streaks",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/calendar",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/goals",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/diagnostics",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/settings",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/colors",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/fonts",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/covers",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/sleep",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/operator",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/menu",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/identity",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/gigs",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/payouts",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/shards",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/shop",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/jackin",
-    "width": 375,
-    "scrollWidth": 375
-  },
-  {
-    "route": "/replica/languages",
+    "route": "/replica/reader",
     "width": 375,
     "scrollWidth": 375
   },
@@ -491,6 +361,151 @@
   },
   {
     "route": "/replica/agent-chat",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/mobile-app",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/blog",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/home",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/library",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/book",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/search",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/collections",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/history",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/trash",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/log",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/stats",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/streaks",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/calendar",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/goals",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/diagnostics",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/settings",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/colors",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/fonts",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/covers",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/sleep",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/operator",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/menu",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/identity",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/gigs",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/payouts",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/shards",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/shop",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/jackin",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/languages",
     "width": 375,
     "scrollWidth": 375
   }

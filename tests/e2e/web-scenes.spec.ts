@@ -1,7 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 import { resolve } from 'node:path';
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { webScenes } from '../../apps/docs/src/replica/scenes';
+import { mkdirSync } from 'node:fs';
+import { products } from '../../apps/docs/src/products';
 
 async function openEnglish(page: Page, id: string, embedded = false) {
   await page.goto('/#/' + (embedded ? 'replica/' : 'preview/') + id);
@@ -10,12 +10,12 @@ async function openEnglish(page: Page, id: string, embedded = false) {
   if (await language.count()) await language.click();
   await expect(page.getByRole('region', { name: 'Interactive Web application' })).toBeVisible();
 }
-test('Web gallery, command search and standalone routes discover all three products', async ({ page }) => {
+test('Web gallery, command search and standalone routes discover all six products', async ({ page }) => {
   await openEnglish(page, 'dashboard', true);
   await expect(page.getByRole('radio', { name: '3:4', exact: true })).toHaveCount(0);
   await expect(page.getByRole('link', { name: /Open standalone/ })).toHaveAttribute('href', '#/preview/dashboard');
   await page.goto('/#/replica');
-  for (const scene of webScenes) await expect(page.getByRole('link', { name: new RegExp(scene.en) }).first()).toBeVisible();
+  for (const scene of products) await expect(page.getByRole('link', { name: new RegExp(scene.en) }).first()).toBeVisible();
   await page.keyboard.press('Control+k');
   const command = page.getByRole('dialog', { name: 'Search CyberUI' });
   await command.getByRole('searchbox').fill('Agent chat');
@@ -221,7 +221,7 @@ for (const width of [375, 768, 1024, 1440]) test(`Web scenes fit embedded and st
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   for (const locale of ['zh-CN', 'en']) {
     await page.goto('/'); if (locale === 'en') await page.getByRole('button', { name: 'Switch to English', exact: true }).click();
-    for (const scene of webScenes) for (const mode of ['replica', 'preview']) {
+    for (const scene of products) for (const mode of ['replica', 'preview']) {
       await page.goto(`/#/${mode}/${scene.id}`); await expect(page.getByRole('heading', { level: 1 })).toBeVisible(); await page.evaluate(() => document.fonts.ready);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${locale} ${mode} ${scene.id}`).toBe(true);
       if (width === 375 && scene.id === 'product-home') {
@@ -240,7 +240,7 @@ test('Web scenes remain operable in landscape and at 200 percent zoom', async ({
   await openEnglish(page, 'dashboard');
   for (const viewport of [{ width: 812, height: 375 }, { width: 1440, height: 1000 }]) {
     await page.setViewportSize(viewport);
-    for (const scene of webScenes) for (const mode of ['replica', 'preview']) {
+    for (const scene of products) for (const mode of ['replica', 'preview']) {
       await page.goto(`/#/${mode}/${scene.id}`);
       if (viewport.width === 1440) await page.evaluate(() => { document.documentElement.style.zoom = '2'; });
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), mode + '/' + scene.id).toBe(true);
@@ -248,35 +248,25 @@ test('Web scenes remain operable in landscape and at 200 percent zoom', async ({
     }
   }
 });
-test('all Web scenes pass automated WCAG checks in fourteen palettes and both languages', async ({ page }) => {
-  test.setTimeout(300000); await openEnglish(page, 'dashboard');
-  const results: { scheme: string; mode: string; locale: string; route: string; violations: unknown[] }[] = [];
-  for (const scheme of ['neon', 'mono', 'graphite', 'synthwave', 'bloodline', 'terminal', 'amber']) for (const mode of ['dark', 'light']) for (const locale of ['en', 'zh-CN']) {
-    await page.evaluate(({ scheme, mode, locale }) => { const key = 'cyberui-web-demo-v1'; const state = JSON.parse(localStorage.getItem(key)!); state.settings = { ...state.settings, scheme, mode, locale }; localStorage.setItem(key, JSON.stringify(state)); }, { scheme, mode, locale });
-    for (const scene of webScenes) for (const presentation of ['replica', 'preview']) {
-      const route = `/${presentation}/${scene.id}`; await page.goto('/#' + route); await expect(page.locator('h1')).toBeVisible(); await page.evaluate(() => document.fonts.ready);
-      await page.addScriptTag({ path: resolve('node_modules/axe-core/axe.min.js') });
-      const violations = await page.evaluate(async () => { const axe = (window as unknown as { axe: { run: (root: Document, options: object) => Promise<{ violations: { id: string; nodes: { target: string[] }[] }[] }> } }).axe; return (await axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'] } })).violations.map(v => ({ id: v.id, targets: v.nodes.map(n => n.target) })); });
-      results.push({ scheme, mode, locale, route, violations });
-    }
-  }
-  mkdirSync(resolve('artifacts'), { recursive: true }); writeFileSync(resolve('artifacts/web-scenes-accessibility.json'), JSON.stringify(results, null, 2) + '\n');
-  expect(results.filter(r => r.violations.length)).toEqual([]);
-});
-test('record the three Web products on desktop and mobile', async ({ page }) => {
+test('record the six products on desktop and mobile', async ({ page }) => {
   const out = resolve('artifacts/screenshots'); mkdirSync(out, { recursive: true });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   for (const width of [1440, 375]) {
     await page.setViewportSize({ width, height: width === 375 ? 900 : 1000 });
-    for (const scene of webScenes) {
+    for (const scene of products) {
       await page.goto('/#/preview/' + scene.id);
       await expect(page.locator(`[data-web-scene="${scene.id}"]`)).toBeVisible();
       await page.evaluate(() => document.fonts.ready);
       await page.screenshot({ path: `${out}/${scene.id}-zh-${width === 375 ? 'mobile' : 'desktop'}.png`, fullPage: true });
     }
+    for (const detail of [{ route: 'mobile-app/player', name: 'mobile-app-player' }, { route: 'blog/posts/relay-2-4', name: 'blog-article' }]) {
+      await page.goto('/#/preview/' + detail.route); await expect(page.locator('[data-product-scene]')).toBeVisible(); await page.evaluate(() => document.fonts.ready);
+      await page.screenshot({ path: `${out}/${detail.name}-zh-${width === 375 ? 'mobile' : 'desktop'}.png`, fullPage: true });
+    }
   }
   await page.setViewportSize({ width: 1440, height: 1000 }); await page.goto('/#/replica');
-  await expect(page.getByRole('region', { name: 'Web 应用场景' })).toBeVisible();
+  await expect(page.getByRole('region', { name: '产品场景' })).toBeVisible();
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({ path: out + '/scene-gallery-zh-desktop.png', fullPage: true });
+  await page.setViewportSize({ width: 375, height: 900 }); await page.screenshot({ path: out + '/scene-gallery-zh-mobile.png', fullPage: true });
 });

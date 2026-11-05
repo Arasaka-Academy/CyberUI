@@ -4,22 +4,23 @@ import { CyberUIProvider, ToastProvider, Button, Icon, IconButton, CommandPalett
 import { fontSets } from '@cyberui/tokens';
 import { useDemo } from './demo/store';
 import { components } from './catalogue';
-import { scenes } from './replica/scenes';
+import { readerScenes } from './replica/scenes';
+import { products } from './products';
 import { HomePage, CataloguePage, ComponentPage, FoundationsPage, ThemesPage, NotFoundPage } from './Pages';
 const InstallationPage=lazy(()=>import('./InstallationPage'));
 const ReplicaPage=lazy(()=>import('./replica/ReplicaPage'));
 const StandaloneScene=lazy(()=>import('./web-scenes/WebScenePage').then(m=>({default:m.StandaloneScene})));
 export function App(){
   const {state}=useDemo();const font=fontSets.find(f=>f.id===state.settings.font)??fontSets[0];
-  return <CyberUIProvider scheme={state.settings.scheme} mode={state.settings.mode} locale={state.settings.locale} customColors={state.settings.colors} style={{'--cyber-font-display':`'${font.display}', 'PingFang SC', sans-serif`,'--cyber-font-body':`'${font.body}', 'PingFang SC', 'Microsoft YaHei', sans-serif`} as React.CSSProperties}><ToastProvider><Suspense fallback={<Spinner label="CyberUI"/>}><Routes><Route path="/preview/:sceneId" element={<StandaloneScene/>}/><Route path="*" element={<Shell/>}/></Routes></Suspense></ToastProvider></CyberUIProvider>;
+  return <CyberUIProvider scheme={state.settings.scheme} mode={state.settings.mode} locale={state.settings.locale} customColors={state.settings.colors} style={{'--cyber-font-display':`'${font.display}', 'PingFang SC', sans-serif`,'--cyber-font-body':`'${font.body}', 'PingFang SC', 'Microsoft YaHei', sans-serif`} as React.CSSProperties}><ToastProvider><Suspense fallback={<Spinner label="CyberUI"/>}><Routes><Route path="/preview/:sceneId/*" element={<StandaloneScene/>}/><Route path="*" element={<Shell/>}/></Routes></Suspense></ToastProvider></CyberUIProvider>;
 }
 function Shell(){
   const {t,locale,mode}=useCyberUI();const {dispatch}=useDemo();const navigate=useNavigate();const location=useLocation();const main=useRef<HTMLElement>(null);const [command,setCommand]=useState(false);const [mobile,setMobile]=useState(false);const first=useRef(true);
-  const links=[{to:'/',en:'Overview',zh:'概览',icon:'home',code:'00'},{to:'/installation',en:'Installation',zh:'接入指南',icon:'code',code:'01'},{to:'/components',en:'Components',zh:'组件',icon:'deck',code:'65'},{to:'/replica',en:'Application scenes',zh:'场景演示',icon:'library',code:String(scenes.length)},{to:'/foundations',en:'Foundations',zh:'设计基础',icon:'controls',code:'07'},{to:'/themes',en:'Theme lab',zh:'主题实验室',icon:'image',code:'14'}];
+  const links=[{to:'/',en:'Overview',zh:'概览',icon:'home',code:'00'},{to:'/installation',en:'Installation',zh:'接入指南',icon:'code',code:'01'},{to:'/components',en:'Components',zh:'组件',icon:'deck',code:'65'},{to:'/replica',en:'Application scenes',zh:'场景演示',icon:'library',code:String(products.length)},{to:'/foundations',en:'Foundations',zh:'设计基础',icon:'controls',code:'07'},{to:'/themes',en:'Theme lab',zh:'主题实验室',icon:'image',code:'14'}];
   useEffect(()=>{const handler=(e:KeyboardEvent)=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();setCommand(v=>!v);}};window.addEventListener('keydown',handler);return()=>window.removeEventListener('keydown',handler);},[]);
   useEffect(()=>{setMobile(false);if(first.current){first.current=false;return;}main.current?.focus();window.scrollTo({top:0});},[location.pathname]);
   useEffect(()=>{document.documentElement.lang=locale;document.title=`CyberUI — ${t('An interface from another world','来自另一个世界的界面')}`;},[locale,t]);
-  const navigation=<><div className="rail-group-label">SYSTEM DIRECTORY</div><nav aria-label={t('Main navigation','主导航')} className="primary-nav">{links.map(link=><NavLink key={link.to} to={link.to} end={link.to==='/'}><Icon name={link.icon}/><span>{t(link.en,link.zh)}</span><small>{link.code}</small></NavLink>)}</nav><div className="rail-rule"/><div className="rail-group-label">QUICK ACCESS</div><nav className="secondary-nav" aria-label={t('Quick access','快速访问')}><Link to="/components/Button">{t('Button','按钮')}<span>↗</span></Link><Link to="/components/OperatorCard">{t('Operator card','操作员卡')}<span>↗</span></Link><Link to="/replica/home">{t('Open cyberdeck','进入阅读终端')}<span>↗</span></Link></nav></>;
+  const navigation=<><div className="rail-group-label">SYSTEM DIRECTORY</div><nav aria-label={t('Main navigation','主导航')} className="primary-nav">{links.map(link=><NavLink key={link.to} to={link.to} end={link.to==='/'}><Icon name={link.icon}/><span>{t(link.en,link.zh)}</span><small>{link.code}</small></NavLink>)}</nav><div className="rail-rule"/><div className="rail-group-label">QUICK ACCESS</div><nav className="secondary-nav" aria-label={t('Quick access','快速访问')}><Link to="/components/Button">{t('Button','按钮')}<span>↗</span></Link><Link to="/components/OperatorCard">{t('Operator card','操作员卡')}<span>↗</span></Link><Link to="/replica/reader/home">{t('Open cyberdeck','进入阅读终端')}<span>↗</span></Link></nav></>;
   const title=location.pathname.startsWith('/components/')?location.pathname.split('/').pop():links.find(l=>l.to!=='/'&&location.pathname.startsWith(l.to));
   return <div className="app-shell">
     <a href="#main-content" className="skip-link" onClick={e=>{e.preventDefault();main.current?.focus();}}>{t('Skip to content','跳至内容')}</a>
@@ -29,6 +30,6 @@ function Shell(){
       <footer className="app-footer"><span>CYBERUI / <span className="muted">{t('CRAFTED FOR THE WEB','为 WEB 而构建')}</span></span><span>01 — 65 <span className="footer-ticks" aria-hidden>▏▏▏▏▏▏▏▏▏▏</span> <Badge>V 0.1.0</Badge></span></footer>
     </div>
     <Drawer title={t('Directory','目录')} isOpen={mobile} onOpenChange={setMobile}>{navigation}</Drawer>
-    <CommandPalette label={t('Search CyberUI','搜索 CyberUI')} isOpen={command} onOpenChange={setCommand} items={[...links.map(l=>({id:l.to,label:t(l.en,l.zh),icon:l.icon,onAction:()=>navigate(l.to)})),...scenes.map(s=>({id:'scene-'+s.id,label:`${t('Scene','场景')} / ${t(s.en,s.zh)}`,icon:s.icon,onAction:()=>navigate('/replica/'+s.id)})),...components.map(c=>({id:c.name,label:`${c.name} / ${t(c.enDescription,c.zh)}`,icon:'code',onAction:()=>navigate(`/components/${c.name}`)}))]}/>
+    <CommandPalette label={t('Search CyberUI','搜索 CyberUI')} isOpen={command} onOpenChange={setCommand} items={[...links.map(l=>({id:l.to,label:t(l.en,l.zh),icon:l.icon,onAction:()=>navigate(l.to)})),...products.map(p=>({id:'product-'+p.id,label:`${t('Product','产品')} / ${t(p.en,p.zh)}`,icon:p.icon,onAction:()=>navigate('/replica/'+p.id)})),...readerScenes.map(s=>({id:'reader-'+s.id,label:`${t('Reader','阅读器')} / ${t(s.en,s.zh)}`,icon:s.icon,onAction:()=>navigate('/replica/reader/'+s.id)})),...components.map(c=>({id:c.name,label:`${c.name} / ${t(c.enDescription,c.zh)}`,icon:'code',onAction:()=>navigate(`/components/${c.name}`)}))]}/>
   </div>;
 }
