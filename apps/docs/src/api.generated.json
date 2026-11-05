@@ -1,0 +1,3485 @@
+{
+  "CyberUIProvider": {
+    "source": "provider.tsx",
+    "props": [
+      {
+        "name": "scheme",
+        "optional": true,
+        "type": "\"neon\" | \"mono\" | \"graphite\" | \"synthwave\" | \"bloodline\" | \"terminal\" | \"amber\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "mode",
+        "optional": true,
+        "type": "ThemeMode | undefined",
+        "description": ""
+      },
+      {
+        "name": "locale",
+        "optional": true,
+        "type": "Locale | undefined",
+        "description": ""
+      },
+      {
+        "name": "customColors",
+        "optional": true,
+        "type": "Partial<Palette> | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": false,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Icon": {
+    "source": "foundation.tsx",
+    "props": [
+      {
+        "name": "name",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "size",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "ButtonGroup": {
+    "source": "foundation.tsx",
+    "props": [
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Badge": {
+    "source": "foundation.tsx",
+    "props": [
+      {
+        "name": "tone",
+        "optional": true,
+        "type": "\"default\" | \"accent\" | \"success\" | \"warning\" | \"danger\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "dot",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLSpanElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Tag": {
+    "source": "foundation.tsx",
+    "props": [
+      {
+        "name": "onRemove",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "removeLabel",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLSpanElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Avatar": {
+    "source": "foundation.tsx",
+    "props": [
+      {
+        "name": "src",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "name",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "size",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLSpanElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Divider": {
+    "source": "foundation.tsx",
+    "props": [
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLHRElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Panel": {
+    "source": "foundation.tsx",
+    "props": [
+      {
+        "name": "shape",
+        "optional": true,
+        "type": "PanelShape | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "title",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "titleRight",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Card": {
+    "source": "foundation.tsx",
+    "props": [
+      {
+        "name": "title",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "footer",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Toolbar": {
+    "source": "foundation.tsx",
+    "props": [
+      {
+        "name": "children",
+        "optional": false,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Button": {
+    "source": "foundation.tsx",
+    "props": [
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "style",
+        "optional": true,
+        "type": "CSSProperties | undefined",
+        "description": ""
+      },
+      {
+        "name": "variant",
+        "optional": true,
+        "type": "\"danger\" | \"primary\" | \"secondary\" | \"accent2\" | \"soft\" | \"ghost\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "size",
+        "optional": true,
+        "type": "\"sm\" | \"md\" | \"lg\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "corners",
+        "optional": true,
+        "type": "\"none\" | \"tr-bl\" | \"tl-br\" | \"tr\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "icon",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "disabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "isPending",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": "Whether the button is in a pending state. This disables press and hover events\nwhile retaining focusability, and announces the pending state to screen readers."
+      }
+    ]
+  },
+  "IconButton": {
+    "source": "foundation.tsx",
+    "props": [
+      {
+        "name": "icon",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "aria-label",
+        "optional": false,
+        "type": "string",
+        "description": "Defines a string value that labels the current element."
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "style",
+        "optional": true,
+        "type": "CSSProperties | undefined",
+        "description": ""
+      },
+      {
+        "name": "isPending",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": "Whether the button is in a pending state. This disables press and hover events\nwhile retaining focusability, and announces the pending state to screen readers."
+      },
+      {
+        "name": "variant",
+        "optional": true,
+        "type": "\"danger\" | \"primary\" | \"secondary\" | \"accent2\" | \"soft\" | \"ghost\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "size",
+        "optional": true,
+        "type": "\"sm\" | \"md\" | \"lg\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "corners",
+        "optional": true,
+        "type": "\"none\" | \"tr-bl\" | \"tl-br\" | \"tr\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "disabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Field": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "error",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "isRequired",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": false,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "htmlFor",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "NumberInput": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "inputRef",
+        "optional": true,
+        "type": "Ref<HTMLInputElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "RadioGroup": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "options",
+        "optional": false,
+        "type": "Option[]",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Select": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "options",
+        "optional": false,
+        "type": "Option[]",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((value: string) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "placeholder",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "isDisabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "name",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "buttonRef",
+        "optional": true,
+        "type": "Ref<HTMLButtonElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Combobox": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "inputRef",
+        "optional": true,
+        "type": "Ref<HTMLInputElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "options",
+        "optional": false,
+        "type": "Option[]",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((value: string) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "placeholder",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "isDisabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "name",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "buttonRef",
+        "optional": true,
+        "type": "Ref<HTMLButtonElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "MultiSelect": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string[] | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string[] | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((value: string[]) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "isDisabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "name",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "placeholder",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "options",
+        "optional": false,
+        "type": "Option[]",
+        "description": ""
+      },
+      {
+        "name": "buttonRef",
+        "optional": true,
+        "type": "Ref<HTMLButtonElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Slider": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Input": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "error",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "wrapperClassName",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Textarea": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "error",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "PasswordInput": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "error",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "wrapperClassName",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Checkbox": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Switch": {
+    "source": "forms.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "DatePicker": {
+    "source": "date-fields.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | null | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((date: string | null) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "isDisabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "isRequired",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "name",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Calendar": {
+    "source": "date-fields.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | null | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((date: string | null) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "isDisabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "isRequired",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "name",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "TimePicker": {
+    "source": "date-fields.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | null | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((date: string | null) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "isDisabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "isRequired",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "name",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "ColorPicker": {
+    "source": "date-fields.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((value: string) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "isDisabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "inputRef",
+        "optional": true,
+        "type": "Ref<HTMLInputElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "FileUpload": {
+    "source": "date-fields.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "File[] | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "File[] | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((files: File[]) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "isDisabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLInputElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Tabs": {
+    "source": "navigation.tsx",
+    "props": [
+      {
+        "name": "items",
+        "optional": false,
+        "type": "TabItem[]",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((value: string) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "SegmentedControl": {
+    "source": "navigation.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "options",
+        "optional": false,
+        "type": "Option[]",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((value: string) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Breadcrumb": {
+    "source": "navigation.tsx",
+    "props": [
+      {
+        "name": "items",
+        "optional": false,
+        "type": "Omit<NavItem, \"id\">[]",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Pagination": {
+    "source": "navigation.tsx",
+    "props": [
+      {
+        "name": "page",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultPage",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "totalPages",
+        "optional": false,
+        "type": "number",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((page: number) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Sidebar": {
+    "source": "navigation.tsx",
+    "props": [
+      {
+        "name": "items",
+        "optional": false,
+        "type": "NavItem[]",
+        "description": ""
+      },
+      {
+        "name": "activeId",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onNavigate",
+        "optional": true,
+        "type": "((item: NavItem) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "BottomNavigation": {
+    "source": "navigation.tsx",
+    "props": [
+      {
+        "name": "items",
+        "optional": false,
+        "type": "NavItem[]",
+        "description": ""
+      },
+      {
+        "name": "activeId",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onNavigate",
+        "optional": true,
+        "type": "((item: NavItem) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "NavigationMenu": {
+    "source": "navigation.tsx",
+    "props": [
+      {
+        "name": "items",
+        "optional": false,
+        "type": "NavItem[]",
+        "description": ""
+      },
+      {
+        "name": "activeId",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onNavigate",
+        "optional": true,
+        "type": "((item: NavItem) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "DropdownMenu": {
+    "source": "navigation.tsx",
+    "props": [
+      {
+        "name": "trigger",
+        "optional": true,
+        "type": "ReactElement<unknown, string | JSXElementConstructor<any>> | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "items",
+        "optional": false,
+        "type": "MenuItem[]",
+        "description": ""
+      },
+      {
+        "name": "onAction",
+        "optional": true,
+        "type": "((id: string) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "CommandPalette": {
+    "source": "navigation.tsx",
+    "props": [
+      {
+        "name": "trigger",
+        "optional": true,
+        "type": "ReactElement<unknown, string | JSXElementConstructor<any>> | undefined",
+        "description": ""
+      },
+      {
+        "name": "isOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "onOpenChange",
+        "optional": true,
+        "type": "((open: boolean) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "items",
+        "optional": false,
+        "type": "MenuItem[]",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onAction",
+        "optional": true,
+        "type": "((id: string) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Dialog": {
+    "source": "overlays.tsx",
+    "props": [
+      {
+        "name": "title",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "trigger",
+        "optional": true,
+        "type": "ReactElement<unknown, string | JSXElementConstructor<any>> | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": false,
+        "type": "ReactNode | ((close: () => void) => ReactNode)",
+        "description": ""
+      },
+      {
+        "name": "isOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "onOpenChange",
+        "optional": true,
+        "type": "((open: boolean) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "role",
+        "optional": true,
+        "type": "\"dialog\" | \"alertdialog\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Drawer": {
+    "source": "overlays.tsx",
+    "props": [
+      {
+        "name": "title",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "trigger",
+        "optional": true,
+        "type": "ReactElement<unknown, string | JSXElementConstructor<any>> | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": false,
+        "type": "ReactNode | ((close: () => void) => ReactNode)",
+        "description": ""
+      },
+      {
+        "name": "isOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "onOpenChange",
+        "optional": true,
+        "type": "((open: boolean) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "role",
+        "optional": true,
+        "type": "\"dialog\" | \"alertdialog\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "AlertDialog": {
+    "source": "overlays.tsx",
+    "props": [
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "confirmLabel",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onConfirm",
+        "optional": true,
+        "type": "(() => void | Promise<void>) | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "title",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "trigger",
+        "optional": true,
+        "type": "ReactElement<unknown, string | JSXElementConstructor<any>> | undefined",
+        "description": ""
+      },
+      {
+        "name": "isOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "onOpenChange",
+        "optional": true,
+        "type": "((open: boolean) => void) | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Popover": {
+    "source": "overlays.tsx",
+    "props": [
+      {
+        "name": "trigger",
+        "optional": false,
+        "type": "ReactElement<unknown, string | JSXElementConstructor<any>>",
+        "description": ""
+      },
+      {
+        "name": "title",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": false,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "placement",
+        "optional": true,
+        "type": "A.Placement | undefined",
+        "description": ""
+      },
+      {
+        "name": "isOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "onOpenChange",
+        "optional": true,
+        "type": "((open: boolean) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Tooltip": {
+    "source": "overlays.tsx",
+    "props": [
+      {
+        "name": "children",
+        "optional": false,
+        "type": "ReactElement<unknown, string | JSXElementConstructor<any>>",
+        "description": ""
+      },
+      {
+        "name": "content",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "isOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultOpen",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "onOpenChange",
+        "optional": true,
+        "type": "((open: boolean) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Toast": {
+    "source": "overlays.tsx",
+    "props": [
+      {
+        "name": "message",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "onDismiss",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "duration",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "action",
+        "optional": true,
+        "type": "{ label: string; onAction: () => void; } | undefined",
+        "description": ""
+      },
+      {
+        "name": "tone",
+        "optional": true,
+        "type": "\"default\" | \"success\" | \"danger\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "ToastProvider": {
+    "source": "overlays.tsx",
+    "props": [
+      {
+        "name": "children",
+        "optional": false,
+        "type": "ReactNode",
+        "description": ""
+      }
+    ]
+  },
+  "Alert": {
+    "source": "feedback.tsx",
+    "props": [
+      {
+        "name": "title",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "tone",
+        "optional": true,
+        "type": "\"success\" | \"warning\" | \"danger\" | \"info\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Progress": {
+    "source": "feedback.tsx",
+    "props": [
+      {
+        "name": "value",
+        "optional": false,
+        "type": "number",
+        "description": ""
+      },
+      {
+        "name": "variant",
+        "optional": true,
+        "type": "ProgressVariant | undefined",
+        "description": ""
+      },
+      {
+        "name": "segments",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "showValue",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Skeleton": {
+    "source": "feedback.tsx",
+    "props": [
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Spinner": {
+    "source": "feedback.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLSpanElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "EmptyState": {
+    "source": "feedback.tsx",
+    "props": [
+      {
+        "name": "title",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "icon",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "action",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Table": {
+    "source": "data.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "rows",
+        "optional": false,
+        "type": "T[]",
+        "description": ""
+      },
+      {
+        "name": "columns",
+        "optional": false,
+        "type": "TableColumn<T>[]",
+        "description": ""
+      },
+      {
+        "name": "emptyMessage",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "DataTable": {
+    "source": "data.tsx",
+    "props": [
+      {
+        "name": "pageSize",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "selection",
+        "optional": true,
+        "type": "string[] | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultSelection",
+        "optional": true,
+        "type": "string[] | undefined",
+        "description": ""
+      },
+      {
+        "name": "onSelectionChange",
+        "optional": true,
+        "type": "((ids: string[]) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "rows",
+        "optional": false,
+        "type": "T[]",
+        "description": ""
+      },
+      {
+        "name": "columns",
+        "optional": false,
+        "type": "TableColumn<T>[]",
+        "description": ""
+      },
+      {
+        "name": "emptyMessage",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Accordion": {
+    "source": "data.tsx",
+    "props": [
+      {
+        "name": "items",
+        "optional": false,
+        "type": "AccordionItem[]",
+        "description": ""
+      },
+      {
+        "name": "allowsMultipleExpanded",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string[] | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string[] | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((value: string[]) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "TreeView": {
+    "source": "data.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "items",
+        "optional": false,
+        "type": "TreeNode[]",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((value: string) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultExpanded",
+        "optional": true,
+        "type": "string[] | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Chart": {
+    "source": "data.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "data",
+        "optional": false,
+        "type": "ChartDatum[]",
+        "description": ""
+      },
+      {
+        "name": "variant",
+        "optional": true,
+        "type": "\"line\" | \"bar\" | \"sparkline\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "height",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "unit",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "Barcode": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "StatusBar": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "time",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "battery",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "cpu",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "memory",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "OperatorCard": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "handle",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "rank",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "level",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "hours",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "pages",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "books",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "streak",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "balance",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "frame",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "backdrop",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "flair",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "compact",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "preview",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "portrait",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "actions",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "AsciiCover": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "title",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "seed",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "variant",
+        "optional": true,
+        "type": "AsciiVariant | undefined",
+        "description": ""
+      },
+      {
+        "name": "color",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "artwork",
+        "optional": true,
+        "type": "\"city\" | \"orbit\" | \"pyramid\" | \"circuit\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "badge",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "BookCard": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "title",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "author",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "progress",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "seed",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "artwork",
+        "optional": true,
+        "type": "\"city\" | \"orbit\" | \"pyramid\" | \"circuit\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "coverVariant",
+        "optional": true,
+        "type": "AsciiVariant | undefined",
+        "description": ""
+      },
+      {
+        "name": "coverColor",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "favorite",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "onOpen",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFavorite",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "compact",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "CollectionStack": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLButtonElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "title",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "count",
+        "optional": false,
+        "type": "number",
+        "description": ""
+      },
+      {
+        "name": "seed",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "onOpen",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "DataShard": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "code",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "quote",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "source",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "fragment",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "recovered",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "onRecover",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "GigCard": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "title",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "author",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "progress",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "reward",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "active",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "completed",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "onAccept",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "onAdvance",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "ThemeSwatch": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLButtonElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "scheme",
+        "optional": false,
+        "type": "\"neon\" | \"mono\" | \"graphite\" | \"synthwave\" | \"bloodline\" | \"terminal\" | \"amber\"",
+        "description": ""
+      },
+      {
+        "name": "mode",
+        "optional": true,
+        "type": "\"light\" | \"dark\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "selected",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "onSelect",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "LauncherTile": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLButtonElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "title",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "subtitle",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "icon",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onPress",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "disabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "TelemetryPanel": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "title",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "metrics",
+        "optional": false,
+        "type": "TelemetryMetric[]",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "children",
+        "optional": true,
+        "type": "ReactNode",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "JackInCard": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "handle",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "title",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "author",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "progress",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "variant",
+        "optional": true,
+        "type": "\"terminal\" | \"standard\" | \"poster\" | \"ticket\" | \"scanner\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "onConnect",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "connected",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "SkylineCalendar": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "label",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "days",
+        "optional": false,
+        "type": "SkylineDay[]",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((day: number) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  },
+  "VirtualKeyboard": {
+    "source": "original.tsx",
+    "props": [
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((value: string) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "onSubmit",
+        "optional": true,
+        "type": "(() => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "layout",
+        "optional": true,
+        "type": "\"alpha\" | \"numeric\" | undefined",
+        "description": ""
+      },
+      {
+        "name": "isDisabled",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "ref",
+        "optional": true,
+        "type": "Ref<HTMLDivElement> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onFocus",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "onBlur",
+        "optional": true,
+        "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      }
+    ]
+  }
+}

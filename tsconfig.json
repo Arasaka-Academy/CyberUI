@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext", "moduleResolution": "Bundler", "jsx": "react-jsx",
+    "strict": true, "esModuleInterop": true, "skipLibCheck": true,
+    "resolveJsonModule": true, "allowImportingTsExtensions": true, "noEmit": true,
+    "baseUrl": ".", "paths": {
+      "@cyberui/tokens": ["packages/tokens/src/index.ts"],
+      "@cyberui/react": ["packages/react/src/index.ts"],
+      "@cyberui/react/styles.css": ["packages/react/src/styles.css"]
+    },
+    "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom", "node"]
+  },
+  "include": ["packages", "apps", "tests", "*.ts"]
+}

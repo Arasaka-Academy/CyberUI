@@ -1,0 +1,312 @@
+[
+  {
+    "id": "01-0",
+    "reference": 1,
+    "file": "01-home.png",
+    "part": "Home",
+    "scene": "home",
+    "route": "#/replica/home?view=compare&ref=1&part=0&",
+    "web": "01-0-web.png",
+    "original": "01-0-source.png"
+  },
+  {
+    "id": "02-0",
+    "reference": 2,
+    "file": "02-gigs.png",
+    "part": "Open gigs",
+    "scene": "gigs",
+    "route": "#/replica/gigs?view=compare&ref=2&part=0&",
+    "web": "02-0-web.png",
+    "original": "02-0-source.png"
+  },
+  {
+    "id": "03-0",
+    "reference": 3,
+    "file": "03-card.png",
+    "part": "Identity card",
+    "scene": "operator",
+    "route": "#/replica/operator?view=compare&ref=3&part=0&",
+    "web": "03-0-web.png",
+    "original": "03-0-source.png"
+  },
+  {
+    "id": "04-0",
+    "reference": 4,
+    "file": "04-library.png",
+    "part": "Archive grid",
+    "scene": "library",
+    "route": "#/replica/library?view=compare&ref=4&part=0&",
+    "web": "04-0-web.png",
+    "original": "04-0-source.png"
+  },
+  {
+    "id": "05-0",
+    "reference": 5,
+    "file": "05-menu.png",
+    "part": "Controls",
+    "scene": "menu",
+    "route": "#/replica/menu?view=compare&ref=5&part=0&",
+    "web": "05-0-web.png",
+    "original": "05-0-source.png"
+  },
+  {
+    "id": "06-0",
+    "reference": 6,
+    "file": "06-collections.png",
+    "part": "Caches",
+    "scene": "collections",
+    "route": "#/replica/collections?view=compare&ref=6&part=0&",
+    "web": "06-0-web.png",
+    "original": "06-0-source.png"
+  },
+  {
+    "id": "07-0",
+    "reference": 7,
+    "file": "07-log.png",
+    "part": "Skyline",
+    "scene": "calendar",
+    "route": "#/replica/calendar?view=compare&ref=7&part=0&",
+    "web": "07-0-web.png",
+    "original": "07-0-source.png"
+  },
+  {
+    "id": "08-0",
+    "reference": 8,
+    "file": "08-diagnostics.png",
+    "part": "System readouts",
+    "scene": "diagnostics",
+    "route": "#/replica/diagnostics?view=compare&ref=8&part=0&",
+    "web": "08-0-web.png",
+    "original": "08-0-source.png"
+  },
+  {
+    "id": "09-0",
+    "reference": 9,
+    "file": "09-look.png",
+    "part": "Color scheme",
+    "scene": "colors",
+    "route": "#/replica/colors?view=compare&ref=9&part=0&",
+    "web": "09-0-web.png",
+    "original": "09-0-source.png"
+  },
+  {
+    "id": "10-0",
+    "reference": 10,
+    "file": "10-covers.png",
+    "part": "Cover settings",
+    "scene": "covers",
+    "route": "#/replica/covers?view=compare&ref=10&part=0&",
+    "web": "10-0-web.png",
+    "original": "10-0-source.png"
+  },
+  {
+    "id": "11-0",
+    "reference": 11,
+    "file": "11-sleep.png",
+    "part": "Sleep preview",
+    "scene": "sleep",
+    "route": "#/replica/sleep?view=compare&ref=11&part=0&",
+    "web": "11-0-web.png",
+    "original": "11-0-source.png"
+  },
+  {
+    "id": "12-0",
+    "reference": 12,
+    "file": "12-shards.png",
+    "part": "Recovered fragments",
+    "scene": "shards",
+    "route": "#/replica/shards?view=compare&ref=12&part=0&",
+    "web": "12-0-web.png",
+    "original": "12-0-source.png"
+  },
+  {
+    "id": "13-0",
+    "reference": 13,
+    "file": "13-shop.png",
+    "part": "Frames",
+    "scene": "shop",
+    "route": "#/replica/shop?view=compare&ref=13&part=0&category=frames",
+    "web": "13-0-web.png",
+    "original": "13-0-source.png"
+  },
+  {
+    "id": "14-0",
+    "reference": 14,
+    "file": "14-styles.png",
+    "part": "Frames",
+    "scene": "shop",
+    "route": "#/replica/shop?view=compare&ref=14&part=0&category=frames",
+    "web": "14-0-web.png",
+    "original": "14-0-source.png"
+  },
+  {
+    "id": "14-1",
+    "reference": 14,
+    "file": "14-styles.png",
+    "part": "Backdrops",
+    "scene": "shop",
+    "route": "#/replica/shop?view=compare&ref=14&part=1&category=backdrops",
+    "web": "14-1-web.png",
+    "original": "14-1-source.png"
+  },
+  {
+    "id": "14-2",
+    "reference": 14,
+    "file": "14-styles.png",
+    "part": "Flairs",
+    "scene": "shop",
+    "route": "#/replica/shop?view=compare&ref=14&part=2&category=flairs",
+    "web": "14-2-web.png",
+    "original": "14-2-source.png"
+  },
+  {
+    "id": "14-3",
+    "reference": 14,
+    "file": "14-styles.png",
+    "part": "Jack-ins",
+    "scene": "shop",
+    "route": "#/replica/shop?view=compare&ref=14&part=3&category=jackins",
+    "web": "14-3-web.png",
+    "original": "14-3-source.png"
+  },
+  {
+    "id": "15-0",
+    "reference": 15,
+    "file": "15-jackin.png",
+    "part": "Terminal",
+    "scene": "jackin",
+    "route": "#/replica/jackin?view=compare&ref=15&part=0&style=terminal",
+    "web": "15-0-web.png",
+    "original": "15-0-source.png"
+  },
+  {
+    "id": "15-1",
+    "reference": 15,
+    "file": "15-jackin.png",
+    "part": "Poster",
+    "scene": "jackin",
+    "route": "#/replica/jackin?view=compare&ref=15&part=1&style=poster",
+    "web": "15-1-web.png",
+    "original": "15-1-source.png"
+  },
+  {
+    "id": "15-2",
+    "reference": 15,
+    "file": "15-jackin.png",
+    "part": "Ticket",
+    "scene": "jackin",
+    "route": "#/replica/jackin?view=compare&ref=15&part=2&style=ticket",
+    "web": "15-2-web.png",
+    "original": "15-2-source.png"
+  },
+  {
+    "id": "15-3",
+    "reference": 15,
+    "file": "15-jackin.png",
+    "part": "Scanner",
+    "scene": "jackin",
+    "route": "#/replica/jackin?view=compare&ref=15&part=3&style=scanner",
+    "web": "15-3-web.png",
+    "original": "15-3-source.png"
+  },
+  {
+    "id": "16-0",
+    "reference": 16,
+    "file": "16-gigs.png",
+    "part": "Active gig",
+    "scene": "gigs",
+    "route": "#/replica/gigs?view=compare&ref=16&part=0&",
+    "web": "16-0-web.png",
+    "original": "16-0-source.png"
+  },
+  {
+    "id": "16-1",
+    "reference": 16,
+    "file": "16-gigs.png",
+    "part": "Payouts",
+    "scene": "payouts",
+    "route": "#/replica/payouts?view=compare&ref=16&part=1&",
+    "web": "16-1-web.png",
+    "original": "16-1-source.png"
+  },
+  {
+    "id": "16-2",
+    "reference": 16,
+    "file": "16-gigs.png",
+    "part": "Book dossier",
+    "scene": "book",
+    "route": "#/replica/book?view=compare&ref=16&part=2&",
+    "web": "16-2-web.png",
+    "original": "16-2-source.png"
+  },
+  {
+    "id": "16-3",
+    "reference": 16,
+    "file": "16-gigs.png",
+    "part": "Home payout",
+    "scene": "home",
+    "route": "#/replica/home?view=compare&ref=16&part=3&",
+    "web": "16-3-web.png",
+    "original": "16-3-source.png"
+  },
+  {
+    "id": "17-0",
+    "reference": 17,
+    "file": "17-languages.png",
+    "part": "German",
+    "scene": "languages",
+    "route": "#/replica/languages?view=compare&ref=17&part=0&sample=de",
+    "web": "17-0-web.png",
+    "original": "17-0-source.png"
+  },
+  {
+    "id": "17-1",
+    "reference": 17,
+    "file": "17-languages.png",
+    "part": "Russian",
+    "scene": "languages",
+    "route": "#/replica/languages?view=compare&ref=17&part=1&sample=ru",
+    "web": "17-1-web.png",
+    "original": "17-1-source.png"
+  },
+  {
+    "id": "17-2",
+    "reference": 17,
+    "file": "17-languages.png",
+    "part": "Turkish",
+    "scene": "languages",
+    "route": "#/replica/languages?view=compare&ref=17&part=2&sample=tr",
+    "web": "17-2-web.png",
+    "original": "17-2-source.png"
+  },
+  {
+    "id": "17-3",
+    "reference": 17,
+    "file": "17-languages.png",
+    "part": "Greek",
+    "scene": "languages",
+    "route": "#/replica/languages?view=compare&ref=17&part=3&sample=el",
+    "web": "17-3-web.png",
+    "original": "17-3-source.png"
+  },
+  {
+    "id": "18-0",
+    "reference": 18,
+    "file": "18-idtab.png",
+    "part": "ID tab",
+    "scene": "identity",
+    "route": "#/replica/identity?view=compare&ref=18&part=0&",
+    "web": "18-0-web.png",
+    "original": "18-0-source.png"
+  },
+  {
+    "id": "19-0",
+    "reference": 19,
+    "file": "19-jackin.png",
+    "part": "Standard",
+    "scene": "jackin",
+    "route": "#/replica/jackin?view=compare&ref=19&part=0&style=standard",
+    "web": "19-0-web.png",
+    "original": "19-0-source.png"
+  }
+]

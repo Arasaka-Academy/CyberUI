@@ -1,0 +1,31 @@
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { Link, NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { CyberUIProvider, ToastProvider, Button, Icon, IconButton, CommandPalette, Drawer, Badge, Barcode, Spinner, useCyberUI } from '@cyberui/react';
+import { fontSets } from '@cyberui/tokens';
+import { useDemo } from './demo/store';
+import { components } from './catalogue';
+import { HomePage, CataloguePage, ComponentPage, FoundationsPage, ThemesPage, NotFoundPage } from './Pages';
+const ReplicaPage=lazy(()=>import('./replica/ReplicaPage'));
+export function App(){
+  const {state}=useDemo();const font=fontSets.find(f=>f.id===state.settings.font)??fontSets[0];
+  return <CyberUIProvider scheme={state.settings.scheme} mode={state.settings.mode} locale={state.settings.locale} customColors={state.settings.colors} style={{'--cyber-font-display':`'${font.display}', 'PingFang SC', sans-serif`,'--cyber-font-body':`'${font.body}', 'PingFang SC', 'Microsoft YaHei', sans-serif`} as React.CSSProperties}><ToastProvider><Shell/></ToastProvider></CyberUIProvider>;
+}
+function Shell(){
+  const {t,locale,mode}=useCyberUI();const {dispatch}=useDemo();const navigate=useNavigate();const location=useLocation();const main=useRef<HTMLElement>(null);const [command,setCommand]=useState(false);const [mobile,setMobile]=useState(false);const first=useRef(true);
+  const links=[{to:'/',en:'Overview',zh:'概览',icon:'home',code:'00'},{to:'/components',en:'Components',zh:'组件',icon:'deck',code:'65'},{to:'/replica',en:'Application scenes',zh:'场景演示',icon:'library',code:'27'},{to:'/foundations',en:'Foundations',zh:'设计基础',icon:'controls',code:'07'},{to:'/themes',en:'Theme lab',zh:'主题实验室',icon:'image',code:'14'}];
+  useEffect(()=>{const handler=(e:KeyboardEvent)=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();setCommand(v=>!v);}};window.addEventListener('keydown',handler);return()=>window.removeEventListener('keydown',handler);},[]);
+  useEffect(()=>{setMobile(false);if(first.current){first.current=false;return;}main.current?.focus();window.scrollTo({top:0});},[location.pathname]);
+  useEffect(()=>{document.documentElement.lang=locale;document.title=`CyberUI — ${t('An interface from another world','来自另一个世界的界面')}`;},[locale,t]);
+  const navigation=<><div className="rail-group-label">SYSTEM DIRECTORY</div><nav aria-label={t('Main navigation','主导航')} className="primary-nav">{links.map(link=><NavLink key={link.to} to={link.to} end={link.to==='/'}><Icon name={link.icon}/><span>{t(link.en,link.zh)}</span><small>{link.code}</small></NavLink>)}</nav><div className="rail-rule"/><div className="rail-group-label">QUICK ACCESS</div><nav className="secondary-nav" aria-label={t('Quick access','快速访问')}><Link to="/components/Button">{t('Button','按钮')}<span>↗</span></Link><Link to="/components/OperatorCard">{t('Operator card','操作员卡')}<span>↗</span></Link><Link to="/replica/home">{t('Open cyberdeck','进入阅读终端')}<span>↗</span></Link></nav></>;
+  const title=location.pathname.startsWith('/components/')?location.pathname.split('/').pop():links.find(l=>l.to!=='/'&&location.pathname.startsWith(l.to));
+  return <div className="app-shell">
+    <a href="#main-content" className="skip-link" onClick={e=>{e.preventDefault();main.current?.focus();}}>{t('Skip to content','跳至内容')}</a>
+    <aside className="rail"><Link to="/" className="brand" aria-label="CyberUI home"><span className="brand-symbol" aria-hidden>II</span><span>CYBER<span>UI</span><small>WEB INTERFACE SYSTEM</small></span></Link>{navigation}<div className="rail-bottom"><div className="micro"><span className="signal-dot"/> ALL SYSTEMS NOMINAL</div><Barcode/><span className="micro">V.01 // OPEN SOURCE<br/>MIT LICENSE · 2026</span></div></aside>
+    <div className="workspace"><header className="app-header"><div className="mobile-menu"><IconButton icon="menu" aria-label={t('Open navigation','打开导航')} variant="ghost" onPress={()=>setMobile(true)}/></div><div className="header-path"><span>CYBR://</span><Link to="/">{t('DESIGN SYSTEM','设计系统')}</Link><span>/</span><strong>{typeof title==='string'?title:title?t(title.en,title.zh):t('OVERVIEW','概览')}</strong></div><div className="header-actions"><Button variant="ghost" size="sm" icon="search" className="command-trigger" onPress={()=>setCommand(true)}>{t('Search','搜索')}<kbd>⌘ K</kbd></Button><button className="locale-button" onClick={()=>dispatch({type:'settings',settings:{locale:locale==='en'?'zh-CN':'en'}})} aria-label={t('Switch to Chinese','Switch to English')}>{locale==='en'?'中文':'EN'}</button><IconButton variant="ghost" icon={mode==='dark'?'light':'moon'} aria-label={t('Toggle light or dark mode','切换明暗模式')} onPress={()=>dispatch({type:'settings',settings:{mode:mode==='dark'?'light':'dark'}})}/><a className="github-link" href="https://github.com/Arasaka-Academy/CyberUI" target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="code"/></a></div></header>
+      <main id="main-content" ref={main} tabIndex={-1} className="main-content"><Suspense fallback={<div className="page-loading"><Spinner label={t('Loading scene','加载场景')}/></div>}><Routes><Route path="/" element={<HomePage/>}/><Route path="/components" element={<CataloguePage/>}/><Route path="/components/:name" element={<ComponentPage/>}/><Route path="/foundations" element={<FoundationsPage/>}/><Route path="/themes" element={<ThemesPage/>}/><Route path="/replica/*" element={<ReplicaPage/>}/><Route path="*" element={<NotFoundPage/>}/></Routes></Suspense></main>
+      <footer className="app-footer"><span>CYBERUI / <span className="muted">{t('CRAFTED FOR THE WEB','为 WEB 而构建')}</span></span><span>01 — 65 <span className="footer-ticks" aria-hidden>▏▏▏▏▏▏▏▏▏▏</span> <Badge>V 0.1.0</Badge></span></footer>
+    </div>
+    <Drawer title={t('Directory','目录')} isOpen={mobile} onOpenChange={setMobile}>{navigation}</Drawer>
+    <CommandPalette label={t('Search CyberUI','搜索 CyberUI')} isOpen={command} onOpenChange={setCommand} items={[...links.map(l=>({id:l.to,label:t(l.en,l.zh),icon:l.icon,onAction:()=>navigate(l.to)})),...components.map(c=>({id:c.name,label:`${c.name} / ${t(c.enDescription,c.zh)}`,icon:'code',onAction:()=>navigate(`/components/${c.name}`)}))]}/>
+  </div>;
+}

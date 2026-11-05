@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "packageVersion": "0.1.0",
+  "examplesTypechecked": 65,
+  "consumerDirectory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-independent-consumer-7ET9MP",
+  "checks": [
+    "packed artifacts installed outside workspace",
+    "all copyable examples typechecked",
+    "Vite production build",
+    "real browser styled components",
+    "input ref and controlled value",
+    "dialog Escape and focus restoration",
+    "font loading",
+    "no page errors"
+  ]
+}

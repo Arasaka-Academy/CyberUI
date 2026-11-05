@@ -1,0 +1,526 @@
+{
+  "repository": "EmirErtorer/CyberUI.koplugin",
+  "revision": "a964738a6611cbec01094746a314c21528f1247b",
+  "files": [
+    {
+      "source": "LICENSE",
+      "sha256": "33292b9f0273cdde230aa14bde4bacf0fc77433b83f313a8098be0ebe37d6c5e"
+    },
+    {
+      "source": "NOTICE.md",
+      "sha256": "b8e8619dc73830f23a39bfcb8689ff0501197cc812f3db2b291f53d2653963c4"
+    },
+    {
+      "source": "assets/cyberui-title.svg",
+      "sha256": "47aeab8dbb2f7b5f72f1ae03cd6f870cc2a0779c49e133863480b3d332cc2b8b"
+    },
+    {
+      "source": "fonts/Audiowide-Regular.ttf",
+      "sha256": "c7c0f2b0f6fad8c623e31772ce79f94a4edb9321ffce9fce978ea892d20ae730"
+    },
+    {
+      "source": "fonts/ChakraPetch-Bold.ttf",
+      "sha256": "65fbf76d95651697275e19db4d717c0e95a789ddd3476478b05292104db278a0"
+    },
+    {
+      "source": "fonts/ChakraPetch-Regular.ttf",
+      "sha256": "98fcd638baa5c81ff0316b7538ce330ee3b23b1302726de3526d5933a8ecf986"
+    },
+    {
+      "source": "fonts/ChakraPetch-SemiBold.ttf",
+      "sha256": "45264de3204ddbd5fb3e14a2402acd5c630d16650ae5fc221d2c52da46a6734b"
+    },
+    {
+      "source": "fonts/Electrolize-Regular.ttf",
+      "sha256": "aa81ab9015fc0190bb5e68c50290565c7a4a723ddf32b88774aaff05cdd66bca"
+    },
+    {
+      "source": "fonts/Exo2-Regular.ttf",
+      "sha256": "2f370bc22d072d5f56ad8606c93815e0445b367f79ea8398cd811ceec5370314"
+    },
+    {
+      "source": "fonts/Iceland-Regular.ttf",
+      "sha256": "5b5919189e5d01a6fac79251aaf9fa9565a738c39974cbe13de98ac02ec7fff5"
+    },
+    {
+      "source": "fonts/JetBrainsMono-Regular.ttf",
+      "sha256": "ae52ec008e1692ee69e7e241eb96b81cdced78acf3c349b7e4e67c2118a98ca3"
+    },
+    {
+      "source": "fonts/Michroma-Regular.ttf",
+      "sha256": "b62301163788bc5b7f8fcac0b74b184e34e1827e577b499ecb724da065098f87"
+    },
+    {
+      "source": "fonts/OFL-Audiowide.txt",
+      "sha256": "4fe01b13ffb41faa8f030d84843a95dab32792dfeeca7c072abbfd3f4d6896ad"
+    },
+    {
+      "source": "fonts/OFL-ChakraPetch.txt",
+      "sha256": "13831d02389d917d22fcfa6c79f98f8acbf61d230add0e73a4d4dc5f3bfb9e56"
+    },
+    {
+      "source": "fonts/OFL-Electrolize.txt",
+      "sha256": "c4955dfe15a5db10326aa58ef767460c42cd12a3acdb3e698eee2704eb373d94"
+    },
+    {
+      "source": "fonts/OFL-Exo2.txt",
+      "sha256": "7f95a8eeecc6904ffc81cd10cc8ebc7fcee72a67922924bf45f02dff03b88127"
+    },
+    {
+      "source": "fonts/OFL-Iceland.txt",
+      "sha256": "518962c41d4a5e96b0016bd8d8acc965413ea1a0102467e4955931e702b14a0d"
+    },
+    {
+      "source": "fonts/OFL-JetBrainsMono.txt",
+      "sha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d"
+    },
+    {
+      "source": "fonts/OFL-Michroma.txt",
+      "sha256": "33c39ce59a45bfb0dae3280e98bdb46be59d6d68efc62d4dc5fae90a26d2f393"
+    },
+    {
+      "source": "fonts/OFL-Orbitron.txt",
+      "sha256": "ab609b0e110d622435ff337cdf233288556e011bbf9bd0550be98846c0630819"
+    },
+    {
+      "source": "fonts/OFL-Oxanium.txt",
+      "sha256": "fe17c0f2581d71b4e1ea7e636e7f4877c29223e11bb1dd1a871e8c3f2a86336b"
+    },
+    {
+      "source": "fonts/OFL-PressStart2P.txt",
+      "sha256": "705960c3281a5765ecc0b59bd4ed7ca59eed165748076bc2fc3e8fdbfeb944b0"
+    },
+    {
+      "source": "fonts/OFL-Rajdhani.txt",
+      "sha256": "f62ef357d3a1c3d27edd35a6e1ba350e8a8d13499797964eeadefbf0b3b15d1f"
+    },
+    {
+      "source": "fonts/OFL-RussoOne.txt",
+      "sha256": "3ac1301549523d9861fedca12871f24e575fbd26d520632fc00ba849b471d275"
+    },
+    {
+      "source": "fonts/OFL-ShareTech.txt",
+      "sha256": "87b7d831a81fe8b37e7e6c672937493f710ff81883eee3adec7b5423297efd16"
+    },
+    {
+      "source": "fonts/OFL-ShareTechMono.txt",
+      "sha256": "9d96f445b6e9c701428811d0177f894874f8d6f07ecc30d568c506542368f3ff"
+    },
+    {
+      "source": "fonts/OFL-Tomorrow.txt",
+      "sha256": "1dd4eaacd1da1bfb7e1d14dd5af0279c17d4503fde55abc628bdaccc63ae9eca"
+    },
+    {
+      "source": "fonts/OFL-TurretRoad.txt",
+      "sha256": "b479f3aee0d64914d4d8575bb8d7b901ffbcf9badf0c4ae0cef89ff2df394115"
+    },
+    {
+      "source": "fonts/OFL-VT323.txt",
+      "sha256": "27d9af34210253e7ca1251fbace86c6f65b40031d6ce1a75493a1b2093631298"
+    },
+    {
+      "source": "fonts/OFL-Wallpoet.txt",
+      "sha256": "bddfe669338d0dbc24c15ccd31dbf5c101a213da38049c24baca9ccb7fde45a4"
+    },
+    {
+      "source": "fonts/Orbitron-Bold.ttf",
+      "sha256": "c5798b0ee594b0a0f8b5f03a4a965e178a6942dcae98c865d6b3c17b0d5721ec"
+    },
+    {
+      "source": "fonts/Orbitron-Regular.ttf",
+      "sha256": "8969caf6a94012c3896d9b411a1ddd208e269456955566c364f3581cc311dcdf"
+    },
+    {
+      "source": "fonts/Orbitron-SemiBold.ttf",
+      "sha256": "3be96d20adb3ffeb81aefdec108087ed76f6c0a0b3055cff1d7fe9473df084ff"
+    },
+    {
+      "source": "fonts/Oxanium-Bold.ttf",
+      "sha256": "290235be8f78ee72085010106d964a5c1dd32d4f385a6a8f5047387c76f6f912"
+    },
+    {
+      "source": "fonts/Oxanium-Regular.ttf",
+      "sha256": "7b210b5dc14606cb0d95e3bcca4ca7d8c86d07c44b73902853841c724cefee5a"
+    },
+    {
+      "source": "fonts/Oxanium-SemiBold.ttf",
+      "sha256": "b6ac1de82e491844d9ec5652bf3d1dec4c7e654290a6dcffa01f1e88f60dac70"
+    },
+    {
+      "source": "fonts/PressStart2P-Regular.ttf",
+      "sha256": "034c77f1f05ec89421e4a63f0e3a4ca1ecf852cc6d2bf611f126f275728e017d"
+    },
+    {
+      "source": "fonts/Rajdhani-Bold.ttf",
+      "sha256": "691470dd3286a14e9677940d0bf75796179841ba5215cbda1a2c8910a3226afd"
+    },
+    {
+      "source": "fonts/Rajdhani-Regular.ttf",
+      "sha256": "6e1fc228a8318251a6e569502ec57bac1e4656c582f92f59ccecc4688e039b98"
+    },
+    {
+      "source": "fonts/Rajdhani-SemiBold.ttf",
+      "sha256": "94bbd25a18ca665999feb05a537de9fd2b860dcfb78bbe9ca00270825bf235da"
+    },
+    {
+      "source": "fonts/RussoOne-Regular.ttf",
+      "sha256": "bc0abcc660bd8b7ad3000ecb2898a27c58a29a50f7ec81652fa12e75148d09df"
+    },
+    {
+      "source": "fonts/ShareTech-Regular.ttf",
+      "sha256": "2d1dc42631c22ce99285a3a7c1d0ca9e0bae9e67aa1ca01a501081f27a203df4"
+    },
+    {
+      "source": "fonts/ShareTechMono-Regular.ttf",
+      "sha256": "9ceab1f87414829af259c0f537573ae03ef7dd3147c0b27a36a1a0beb6732677"
+    },
+    {
+      "source": "fonts/Tomorrow-Bold.ttf",
+      "sha256": "f024e7550a4c61583f19b12bf9f0730a91634c370549a87667b812376d6d858a"
+    },
+    {
+      "source": "fonts/Tomorrow-Regular.ttf",
+      "sha256": "6bb5534178637f472be093b2df876d580e7cb50df53e1a4b2be9f94070ff1767"
+    },
+    {
+      "source": "fonts/Tomorrow-SemiBold.ttf",
+      "sha256": "27f99342d00d33da5a5c89cf53e58a09a6e079d07511edbac9594713bd2368b6"
+    },
+    {
+      "source": "fonts/TurretRoad-Bold.ttf",
+      "sha256": "e2d41e87abbaa1b53984df19938f81fd8b6715886d82bdf3af25497755eec4da"
+    },
+    {
+      "source": "fonts/TurretRoad-Medium.ttf",
+      "sha256": "a36a45d322f18ff5050b36a7a82e17a5c69685b2ef4b75508698bc8e06d80099"
+    },
+    {
+      "source": "fonts/TurretRoad-Regular.ttf",
+      "sha256": "cce8cfb3cddbef28083bcb1513ec58f4a5c4764d3ec20c6bf49e5e3ecc89ddf9"
+    },
+    {
+      "source": "fonts/VT323-Regular.ttf",
+      "sha256": "cf4de751ada78ceac033dbe16a687742939995b77bc2a052ae17a4957958594d"
+    },
+    {
+      "source": "fonts/Wallpoet-Regular.ttf",
+      "sha256": "0d8dc36abe195fa455a5a9f60a29f0aa29c7404bf880a67ec71f047dabefb02b"
+    },
+    {
+      "source": "icons/back.svg",
+      "sha256": "a401dc44357bbd68d99bfce7497ab3ec6342b9a6fbed30766b3f5f29cd45fd9c"
+    },
+    {
+      "source": "icons/backspace.svg",
+      "sha256": "0979235dbd07429a344fb6fb7a9f9707c22544f0ebd24fab234a98e01d1fb114"
+    },
+    {
+      "source": "icons/book.svg",
+      "sha256": "0fb82af58b4695353079178f18bc22e1551e118220e8acd1982c2055359611cf"
+    },
+    {
+      "source": "icons/bookmark.svg",
+      "sha256": "16a80475b91b914cc199e7afbdafd3c42de4fa32d6aa53cb5271991634692ca9"
+    },
+    {
+      "source": "icons/check.svg",
+      "sha256": "aa5f43113015da023dcd5e147bbd03cc076ee489ded4fce6a8e703d2beac00a4"
+    },
+    {
+      "source": "icons/close.svg",
+      "sha256": "2b505de16bb1a287bb98c6564934047877b17818712f86029645bd79f6c5fb70"
+    },
+    {
+      "source": "icons/collections.svg",
+      "sha256": "87c79be240e6c2c9a1266fdff0e090f4b9946b8bd113df512c44d03205b240e7"
+    },
+    {
+      "source": "icons/controls.svg",
+      "sha256": "8106888e7ccb9aaa4515cfafb4b5437ed816c3faaa6bd8e785ffb334c62aef8d"
+    },
+    {
+      "source": "icons/deck.svg",
+      "sha256": "453aacc796647b143e7b11878b24a453bc1857a6605f520620b799e4800ae80c"
+    },
+    {
+      "source": "icons/down.svg",
+      "sha256": "1d0b54363630aea2f9029a609c5ecdd2a14024ccdb2663a2075227aa668708a5"
+    },
+    {
+      "source": "icons/download.svg",
+      "sha256": "ea24c187d6efb44d2ac3c4f9710a9bd2fb6507f82110432b2a772c70ed33b712"
+    },
+    {
+      "source": "icons/edit.svg",
+      "sha256": "729156de379240b5fa0785422a50efa2ac9dafd89559be66207dc1cf07bf57b5"
+    },
+    {
+      "source": "icons/exit.svg",
+      "sha256": "1d9daac96477bf468e81d3841b35643679ba076819e5030758760e78647cab44"
+    },
+    {
+      "source": "icons/eye.svg",
+      "sha256": "1478530b2efd083d068c5abea560e1bee9abe468811662d0ad55d38312e3e2f0"
+    },
+    {
+      "source": "icons/files.svg",
+      "sha256": "073013034d54268512679a6190834a7e7e5838d095c4a3903d0afc67b48d480c"
+    },
+    {
+      "source": "icons/first.svg",
+      "sha256": "59430525d667cb979354fbea1cabaad9f27f6913bda36f9a85af48730d478713"
+    },
+    {
+      "source": "icons/folder.accent.svg",
+      "sha256": "ee3c0c85232a39f4fd378f5d35e61b19aa5f3db9d2612c837e095b3090fdc93d"
+    },
+    {
+      "source": "icons/folder.svg",
+      "sha256": "e292cbd1c26807c7d8af7d578cd98342ff47230a6962158be0ff1fc344b32d12"
+    },
+    {
+      "source": "icons/forward.svg",
+      "sha256": "e3644b542a1136c1cd952b30a4ad9c6a1182a20128f6c7f217eb0187781eaf8e"
+    },
+    {
+      "source": "icons/gigs.accent.svg",
+      "sha256": "f68b8a8e3d4d8de95723464954ec45fbd9d45938d1e8ab0880d3ccb92bf4b09b"
+    },
+    {
+      "source": "icons/gigs.svg",
+      "sha256": "b22d9fab13b9a4377c5f3e4bb69284b69d3ca3971bd22b5e9593b232104348ba"
+    },
+    {
+      "source": "icons/grid.svg",
+      "sha256": "dc75c32e57f5d2af329c2e7fea5bf3a350b2ba1e926c90e8c4d95de9c650af36"
+    },
+    {
+      "source": "icons/history.svg",
+      "sha256": "62ad1f1554c12b6b56bb40d948b8c1a4c6d57dd5bac2ba03d5681c5bafa20a8f"
+    },
+    {
+      "source": "icons/home.svg",
+      "sha256": "e4f71d1cf05c7f5b03ba2ac82ffcc9dadd79584eaf80433d9d3356d6ebfed6bb"
+    },
+    {
+      "source": "icons/id.svg",
+      "sha256": "8c4de7e58e63c6a09dc1219d31b264d8d3e9977f656e63705e9690058011b9e7"
+    },
+    {
+      "source": "icons/image.svg",
+      "sha256": "8c00df79362c163ddb999aedf30af9ce759e9f3244fd51ad87b049ebfe0105f7"
+    },
+    {
+      "source": "icons/last.svg",
+      "sha256": "94c8eaf501d1aa7ac6a0e36adce49ac78522e7127a2709a0d976fe3303e4838b"
+    },
+    {
+      "source": "icons/library.accent.svg",
+      "sha256": "f680c340365eba4cfe3814c90dea48f7112ab301d9b51a5adb5544ae18556222"
+    },
+    {
+      "source": "icons/library.svg",
+      "sha256": "3fa24c92b7be7876136336bf71606e30f5043bf0d2c8bcadadc25defc4b7a00f"
+    },
+    {
+      "source": "icons/light.svg",
+      "sha256": "a2fffe0f9df8b5c08b8b63cae3e8a50e0a6f8e773863cb3163d7f5782f8d66a2"
+    },
+    {
+      "source": "icons/list.svg",
+      "sha256": "d8219b18249905e1833c4436eafcd74095902a8b4bd65a4f8f97265384357765"
+    },
+    {
+      "source": "icons/menu.svg",
+      "sha256": "01c71ce1f3be85d832da42c3309e56213352e19db6b5462d266881d2af4f1f3d"
+    },
+    {
+      "source": "icons/moon.svg",
+      "sha256": "874fcbfdbaddc22e1a23ea2ebc54371d7c9cf4eed65ee874a42f3c5ecaca3cf9"
+    },
+    {
+      "source": "icons/move.svg",
+      "sha256": "45e6a346730cece95fa80b44ac9d987424ad089859c4f88212905ab027e111db"
+    },
+    {
+      "source": "icons/network.accent.svg",
+      "sha256": "c68c6c13dc8c2deee208cbc7ba8ec1f31def4ac44416c2667b7cb98b4ae70cfc"
+    },
+    {
+      "source": "icons/network.svg",
+      "sha256": "9fcf353e074c92e8e44f110bc12290852555193df650967f72d519a31588dfc0"
+    },
+    {
+      "source": "icons/notes.svg",
+      "sha256": "20b0e2f92579226d36665741a13ad1f00171acfde2aa94e2e0fae923e0119905"
+    },
+    {
+      "source": "icons/pen.accent.svg",
+      "sha256": "b0b8d7f720a0d76d5230c7d50e0c5e4ee30eb0016badc5d736942b6f56fe868a"
+    },
+    {
+      "source": "icons/pen.svg",
+      "sha256": "b36b06b112692f4d40a7e703c62545fd158f3bdf2623fbe189b9d178c32f3da5"
+    },
+    {
+      "source": "icons/plus.svg",
+      "sha256": "e7b19a1e7799f3c7baafaf14586459b0120ce4d8351bfb76955c979220f620ed"
+    },
+    {
+      "source": "icons/power.svg",
+      "sha256": "4defac0fb02fcb63c40305d196dfa4a273ab34c349ca8a956a36a739a0578d14"
+    },
+    {
+      "source": "icons/restart.svg",
+      "sha256": "2dd3e9f09c751d374dcf00728ebf7ab1545af97bd97e7e32e537817ca8bef21f"
+    },
+    {
+      "source": "icons/restore.svg",
+      "sha256": "648f78aba443d11a53f09268c0d8b43303ea452cad08bb44f4b43b833c8465fe"
+    },
+    {
+      "source": "icons/rotate.svg",
+      "sha256": "21f909e1f224ebd4ce46944eb495f4924301dd6d7f9985f367bff104724a744f"
+    },
+    {
+      "source": "icons/search.svg",
+      "sha256": "51dc2fd24bfae83ada29bfb4013e7c87e89cbbd8474addcd843da60c84562b00"
+    },
+    {
+      "source": "icons/settings.svg",
+      "sha256": "0e50b8bd3a73c1e9c1108ba6638865ba03aad9757f6abe44b52d59efb651579c"
+    },
+    {
+      "source": "icons/shard.accent.svg",
+      "sha256": "ca9b99698b1c2e59943663e5c74cd543580791200d233a94dae1671c122da0b2"
+    },
+    {
+      "source": "icons/shard.svg",
+      "sha256": "e7b3afe16e2ff5761e519af88ce0ed82acbc2d7a0585de88753c0a2b7c2946f7"
+    },
+    {
+      "source": "icons/shop.svg",
+      "sha256": "53976191e85641a34b9edc117adec1fccc570b616b49045cadec2f3b7542602f"
+    },
+    {
+      "source": "icons/skyline.svg",
+      "sha256": "6d5a8440905a565c847137d1750721ff6ddce1b742e5ccf860899188fbca4cff"
+    },
+    {
+      "source": "icons/sort.svg",
+      "sha256": "afac053f3bcdfef914772df34a8483309f9a2ba4916f490462423b03ca3c3b2e"
+    },
+    {
+      "source": "icons/stats.svg",
+      "sha256": "a6d9ae2a0541e6abc3aa0c4693b497885bb15a707de3c52cc1d6a1a889618b93"
+    },
+    {
+      "source": "icons/theme.svg",
+      "sha256": "126d6f8657df2c6e3eef3c4c281944160c892b41ba7fac5ccb0f8280e143420e"
+    },
+    {
+      "source": "icons/tools.accent.svg",
+      "sha256": "c90002f6b79204258f1d7d087601f7e46a339693a23b1423144e5fb2803d0cfa"
+    },
+    {
+      "source": "icons/tools.svg",
+      "sha256": "e47ec0077f8494ce76c9e3e01b45055b6d78dead3e0773e73c6185aa1867b717"
+    },
+    {
+      "source": "icons/trash.svg",
+      "sha256": "b339d6c1a094f5f0f1a10f3a5bd0aeef727d7687c43daef0732a7400257a493e"
+    },
+    {
+      "source": "icons/up.svg",
+      "sha256": "1231264656b34f1feb70ede78c9d7fa8885e0e07fb70ced62b265bd4f129001d"
+    },
+    {
+      "source": "icons/warning.accent.svg",
+      "sha256": "14b4ed78e0ae48a0f250e588473206a888f4902b06452f67aae4dd6c6fb7d639"
+    },
+    {
+      "source": "icons/warning.svg",
+      "sha256": "798eeed91a7c473d71d052ab237f205dcd9248920352f5b93178d551e9875d3f"
+    },
+    {
+      "source": "icons/wheel.svg",
+      "sha256": "8dec426c7375636966ef71e3ea5c28d8716000f9d32df6139d1290be2040ee73"
+    },
+    {
+      "source": "assets/screenshots/01-home.png",
+      "sha256": "96e4b1496f033e8c13775fe3247334d42a03874b1e841ceabc1d4ee6a4d8fb2d"
+    },
+    {
+      "source": "assets/screenshots/02-gigs.png",
+      "sha256": "0553366ddebe820ee10c1383cead1c08bd641b95807017ad53871d3c0a333cc0"
+    },
+    {
+      "source": "assets/screenshots/03-card.png",
+      "sha256": "c4e816959639681c254d5ca4135c7035e01208416627e1b8e0385a7302c1cee3"
+    },
+    {
+      "source": "assets/screenshots/04-library.png",
+      "sha256": "899102bb10a7bb52b18f0145980317df8e07648e8c3225826e6223203407a819"
+    },
+    {
+      "source": "assets/screenshots/05-menu.png",
+      "sha256": "d1a47e52cf9166a7714a853e0d248b7e7070f3c2da0e7318418ccf948f382c32"
+    },
+    {
+      "source": "assets/screenshots/06-collections.png",
+      "sha256": "81c5b492007b25c7d33bb674b0e7c3e0928e447f49820f40cd5afc87f8a07701"
+    },
+    {
+      "source": "assets/screenshots/07-log.png",
+      "sha256": "fcb649f270cfcb837f53b4a379ca4c8d8aa9cbd7c7124509447ba0cd89be3c90"
+    },
+    {
+      "source": "assets/screenshots/08-diagnostics.png",
+      "sha256": "2fd6df876205d697d4121e941c7ce14618e2cc7c3e70a0c02024fb4acc34c58d"
+    },
+    {
+      "source": "assets/screenshots/09-look.png",
+      "sha256": "19d4a1b812b6727555a2da32d80c165fd62f0d495555dc1dd4061e6e0d67cf9e"
+    },
+    {
+      "source": "assets/screenshots/10-covers.png",
+      "sha256": "21d4b2622b9cf0067959456324d9dd92f0a813dd46b802f5a8110c43706d44a9"
+    },
+    {
+      "source": "assets/screenshots/11-sleep.png",
+      "sha256": "86943f74e2c31652079e97d927d6a950d0a72a528d3ca87e4adb75a7fe441a4f"
+    },
+    {
+      "source": "assets/screenshots/12-shards.png",
+      "sha256": "d0315858f2a1a5cf75c9529699ea3474359ec95e3ddaed59312eddc4cc41a2d7"
+    },
+    {
+      "source": "assets/screenshots/13-shop.png",
+      "sha256": "58ab7967fb02ef3cd1ffc0820ce03d03764c860fa2f8202dffbf0cd6c0a4102f"
+    },
+    {
+      "source": "assets/screenshots/14-styles.png",
+      "sha256": "adc2d8c0e3cd1b66287b7244a72bbc191eeb749868ccab3ab825ca235d917575"
+    },
+    {
+      "source": "assets/screenshots/15-jackin.png",
+      "sha256": "8847f4ede860e963867d7bf4c6184b5bf86f97b801be528a0f888baf540579ef"
+    },
+    {
+      "source": "assets/screenshots/16-gigs.png",
+      "sha256": "058d877ca8f9948653f5498736db9d23358355212478999530db5f002ff1ade1"
+    },
+    {
+      "source": "assets/screenshots/17-languages.png",
+      "sha256": "db7e6e829a992d447d7cd615689b336f966265d276811eea3fbc21c923aede5c"
+    },
+    {
+      "source": "assets/screenshots/18-idtab.png",
+      "sha256": "c1069a35a1a2f4e3a0e73dcafacf5c8a57d7efd4552c729465333615f5141f69"
+    },
+    {
+      "source": "assets/screenshots/19-jackin.png",
+      "sha256": "f5056b6ad0eb3359f8e018d9050a7e016bdc68bfa70b1967000a39dd0edbf959"
+    }
+  ]
+}
