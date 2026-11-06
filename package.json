@@ -1,7 +1,7 @@
 {
   "name": "cyberui-workspace",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.2.2",
   "type": "module",
   "packageManager": "pnpm@11.3.0",
   "scripts": {
@@ -17,7 +17,8 @@
     "preview": "pnpm --filter @cyberui/docs preview",
     "registry:build": "node scripts/build-registry.mjs",
     "registry:check": "node scripts/build-registry.mjs --check",
-    "test:registry": "node scripts/test-registry-consumer.mjs"
+    "test:registry": "node scripts/test-registry-consumer.mjs",
+    "test:e2e:production": "node scripts/test-production.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "method": "npm official bulk advisory endpoint over curl; pnpm audit fetch failed on this host",
+  "endpoint": "https://registry.npmjs.org/-/npm/v1/security/advisories/bulk",
+  "packages": 59,
+  "resolvedVersions": 59,
+  "advisories": 0,
+  "requestSha256": "0c98bfcfca7a47deec5bcd386adcfd83aecd0120f4669f369ad8da65ee527fb4",
+  "lockfileSha256": "7ea1280d1f19cb3882e7fd23d2df85fe8b08657a8b52cc62b886e820cd1d0b42"
+}

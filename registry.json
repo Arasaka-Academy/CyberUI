@@ -2036,6 +2036,11 @@
           "path": "registry/cyberui/tokens.ts",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.ts"
+        },
+        {
+          "path": "registry/cyberui/use-form-reset.ts",
+          "type": "registry:file",
+          "target": "@components/cyberui/use-form-reset.ts"
         }
       ],
       "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
@@ -2608,6 +2613,11 @@
           "path": "registry/cyberui/tokens.ts",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.ts"
+        },
+        {
+          "path": "registry/cyberui/use-form-reset.ts",
+          "type": "registry:file",
+          "target": "@components/cyberui/use-form-reset.ts"
         }
       ],
       "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",

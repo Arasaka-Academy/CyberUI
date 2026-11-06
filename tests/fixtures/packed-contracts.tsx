@@ -1,5 +1,5 @@
 import { useRef, useState, type CSSProperties } from 'react';
-import { Button, CyberUIProvider, Dialog, FileUpload, Input } from '@cyberui/react';
+import { AlertDialog, Button, CyberUIProvider, Dialog, FileUpload, Input, MultiSelect, Select, VirtualKeyboard } from '@cyberui/react';
 
 export function PackedContracts() {
   const input = useRef<HTMLInputElement>(null);
@@ -7,6 +7,7 @@ export function PackedContracts() {
   const [controlled, setControlled] = useState<File[]>([]);
   const [updated, setUpdated] = useState(false);
   const [mounted, setMounted] = useState(true);
+  const [keyboard, setKeyboard] = useState('Name 👩🏽‍💻');
   return <section aria-label="Release contracts">
     <form data-testid="upload-form">
       <FileUpload label="Document" name="document" accept=".txt" ref={input} onChange={() => setReceived((new FormData(input.current!.form!).get('document') as File).name)}/>
@@ -15,7 +16,15 @@ export function PackedContracts() {
       <FileUpload label="Controlled document" name="controlled" value={controlled} onChange={setControlled}/>
       <Button onPress={() => setControlled([])}>Clear controlled document</Button>
       <FileUpload label="Disabled document" name="disabled" isDisabled/>
+      <MultiSelect label="Default roles" description="Permissions for this account" name="roles" defaultValue={['reader']} options={[{ id: 'reader', label: 'Reader' }]}/>
+      <Select label="Allowed role" name="allowed-role" defaultValue="reader" options={[{ id: 'reader', label: 'Reader' }, { id: 'admin', label: 'Admin', disabled: true }, { id: 'reviewer', label: 'Reviewer' }]}/>
+      <Button type="reset">Reset upload form</Button>
     </form>
+    <AlertDialog title="Async confirmation" trigger={<Button>Open async confirmation</Button>} confirmLabel="Run operation" onConfirm={async () => {
+      const response = await fetch('/confirmation-operation');
+      if (!response.ok) throw new Error('Confirmation failed');
+    }}>Complete the controlled operation.</AlertDialog>
+    <section aria-label="Unicode keyboard"><output data-testid="keyboard-value">{keyboard}</output><VirtualKeyboard value={keyboard} onChange={setKeyboard}/></section>
     <Button onPress={() => setMounted(value => !value)}>Toggle clipped provider</Button>
     <div data-testid="clipped-host" style={{ transform: 'translateZ(0)', overflow: 'hidden', width: 320, height: 180 }}>
       {mounted && <CyberUIProvider scheme={updated ? 'mono' : 'neon'} mode={updated ? 'dark' : 'light'} locale={updated ? 'en' : 'zh-CN'} customColors={{ accent: updated ? '#6145A3' : '#176B5B' }} style={{ '--cyber-font-body': 'monospace', '--cyber-space-md': updated ? '15px' : '12px' } as CSSProperties}>

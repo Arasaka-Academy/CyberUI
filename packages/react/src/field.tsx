@@ -16,7 +16,7 @@ export function Field({ label, description, error, isRequired, children, htmlFor
     const id = htmlFor ?? child?.props.id ?? generated;
     const described = [child?.props['aria-describedby'], description ? `${id}-help` : null, error ? `${id}-error` : null].filter(Boolean).join(' ') || undefined;
     return <div {...props} className={cx(s.field, className)}>
-    <label className={s.label} htmlFor={id}>{label}{isRequired && <span aria-hidden> *</span>}</label>
+    {label && <label className={s.label} htmlFor={id}>{label}{isRequired && <span aria-hidden> *</span>}</label>}
     {child ? cloneElement(child, { id, 'aria-describedby': described, 'aria-invalid': error ? true : child.props['aria-invalid'] }) : children}
     {description && <span className={s.helper} id={`${id}-help`}>{description}</span>}
     {error && <span className={s.error} id={`${id}-error`} role="alert">{error}</span>}

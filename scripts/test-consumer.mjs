@@ -4,9 +4,12 @@ import { join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { verifyConsumerContracts } from './verify-consumer-contracts.mjs';
 import { spawnSync } from 'node:child_process';
-import { chromium, expect } from '@playwright/test';
+import { chromium, firefox, webkit, expect } from '@playwright/test';
 import ts from 'typescript';
 const root=fileURLToPath(new URL('../', import.meta.url));
+const engines={chromium,firefox,webkit};
+const requestedBrowsers=[...new Set((process.env.CYBERUI_TEST_BROWSERS??'chromium').split(',').map(name=>name.trim()))];
+for(const name of requestedBrowsers)if(!Object.hasOwn(engines,name))throw new Error(`Unsupported consumer browser: ${name}`);
 const artifactRoot=resolve(process.env.CYBERUI_ARTIFACTS_DIR ?? join(root,'artifacts'));
 const artifacts=join(artifactRoot,'packages');mkdirSync(artifacts,{recursive:true});
 const packageVersion=JSON.parse(readFileSync(join(root,'packages/react/package.json'),'utf8')).version;
@@ -47,8 +50,11 @@ run(['exec','tsc','--noEmit'],consumer);run(['exec','vite','build'],consumer);
 const {preview}=await import(pathToFileURL(join(consumer,'node_modules/vite/dist/node/index.js')).href);
 const server=await preview({root:consumer,preview:{host:'127.0.0.1',port:0}});
 const address=server.httpServer.address();const url=`http://127.0.0.1:${address.port}`;
-const browser=await chromium.launch();
+const browserResults=[];
 try{
+ for(const name of requestedBrowsers){
+  const browser=await engines[name].launch();
+  try{
   const page=await browser.newPage({viewport:{width:1000,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(url);await page.evaluate(()=>document.fonts.ready);
   await expect(page.getByRole('heading',{name:'Independent CyberUI'})).toBeVisible();await expect(page.locator('[data-cyberui]').first()).toHaveCSS('background-color','rgb(30, 21, 23)');
   await expect(page.getByRole('textbox',{name:'Notes',exact:true})).toHaveCSS('padding-top','10px');
@@ -58,7 +64,12 @@ try{
   await page.getByRole('button',{name:'Open settings',exact:true}).click();await expect(page.getByRole('dialog',{name:'Settings'})).toBeVisible();await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'Open settings',exact:true})).toBeFocused();
   await expect(page.getByRole('progressbar',{name:'Decrypted'})).toHaveAttribute('aria-valuenow','42');expect(errors).toEqual([]);expect(await page.evaluate(()=>document.fonts.check('16px Oxanium'))).toBe(true);
   await verifyConsumerContracts(page);
-  mkdirSync(join(artifactRoot,'screenshots'),{recursive:true});await page.screenshot({path:join(artifactRoot,'screenshots/independent-consumer.png')});
-  writeFileSync(join(artifactRoot,'consumer-result.json'),JSON.stringify({status:'passed',packageVersion,examplesTypechecked:snippets.length,consumerDirectory:consumer,tailwindRequired:false,checks:['packed artifacts installed outside workspace','Tailwind absent and CSS fully compiled','all copyable examples typechecked','Vite production build','real browser styled components','shared textarea padding','input ref and controlled value','dialog Escape and focus restoration','font loading','dropped files match native FormData','controlled and disabled uploads','body portals escape clipped hosts','portal themes and nested focus update','portal cleanup','no page errors']},null,2)+'\n');
+  expect(errors).toEqual([]);
+  mkdirSync(join(artifactRoot,'screenshots'),{recursive:true});await page.screenshot({path:join(artifactRoot,`screenshots/independent-consumer-${name}.png`)});
+  browserResults.push({name,version:browser.version(),status:'passed'});
+  process.stdout.write(`PASS: ${name} ${browser.version()} packed component contracts.\n`);
+  }finally{await browser.close();}
+ }
+  writeFileSync(join(artifactRoot,'consumer-result.json'),JSON.stringify({status:'passed',packageVersion,browsers:browserResults,examplesTypechecked:snippets.length,consumerDirectory:consumer,tailwindRequired:false,checks:['packed artifacts installed outside workspace','Tailwind absent and CSS fully compiled','all copyable examples typechecked','Vite production build','real browser styled components','shared textarea padding','input ref and controlled value','dialog Escape and focus restoration','font loading','dropped files match native FormData','controlled and disabled uploads','native form reset and disabled selection','stale asynchronous confirmation','Unicode keyboard deletion','body portals escape clipped hosts','portal themes and nested focus update','portal cleanup','no page errors']},null,2)+'\n');
   process.stdout.write(`PASS: packed ESM, declarations, styles, fonts, ${snippets.length} examples, production build and browser interactions.\n`);
-}finally{await browser.close();await new Promise(resolve=>server.httpServer.close(resolve));}
+}finally{await new Promise(resolve=>server.httpServer.close(resolve));}

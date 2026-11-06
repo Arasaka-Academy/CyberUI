@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { spawn } from 'node:child_process';
 import { createServer } from 'node:net';
 import { chromium, expect } from '@playwright/test';
+import { verifyConsumerContracts } from './verify-consumer-contracts.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const artifacts = resolve(process.env.CYBERUI_ARTIFACTS_DIR ?? join(root, 'artifacts'));
@@ -33,8 +34,9 @@ save('next.config.mjs', "export default { experimental: { cpus: 2 } };\n");
 mkdirSync(join(consumer, 'app'));
 save('app/providers.tsx', "'use client';\nimport {CyberUIProvider} from '@cyberui/react';\nexport function Providers({children}:{children:React.ReactNode}) {return <CyberUIProvider>{children}</CyberUIProvider>;}\n");
 save('app/layout.tsx', "import {Providers} from './providers';\nimport '@cyberui/react/styles.css';\nexport default function Layout({children}:{children:React.ReactNode}) {return <html lang='en'><body><Providers>{children}</Providers></body></html>;}\n");
+save('app/contracts.tsx', "'use client';\n" + readFileSync(join(root, 'tests/fixtures/packed-contracts.tsx'), 'utf8'));
 // This must stay a Server Component. The package owns its client boundary.
-save('app/page.tsx', "import {Button,Dialog,Input} from '@cyberui/react';\nexport default function Page() {return <><h1>Next packed CyberUI</h1><Button>Server imported button</Button><Dialog title='Package settings' trigger={<Button>Open package settings</Button>}><Input label='Package name'/></Dialog></>;}\n");
+save('app/page.tsx', "import {PackedContracts} from './contracts';\nimport {Button,Dialog,Input} from '@cyberui/react';\nexport default function Page() {return <><h1>Next packed CyberUI</h1><Button>Server imported button</Button><Dialog title='Package settings' trigger={<Button>Open package settings</Button>}><Input label='Package name'/></Dialog><PackedContracts/></>;}\n");
 process.stdout.write(`Installing packed Next.js consumer in ${consumer}\n`);
 await run(['install', ...(process.env.CYBERUI_CONSUMER_OFFLINE === '0' ? [] : ['--offline']), '--registry', process.env.CYBERUI_TEST_REGISTRY ?? 'https://registry.npmmirror.com']);
 expect(existsSync(join(consumer, 'node_modules/tailwindcss'))).toBe(false);
@@ -72,6 +74,7 @@ try {
   await page.getByRole('textbox', { name: 'Package name' }).fill('Next consumer');
   await page.keyboard.press('Escape');
   await expect(page.getByRole('button', { name: 'Open package settings' })).toBeFocused();
+  await verifyConsumerContracts(page);
   expect(errors).toEqual([]);
 } finally {
   await browser?.close();
@@ -87,5 +90,5 @@ try {
   }
 }
 
-writeFileSync(join(artifacts, 'next-package-consumer-result.json'), JSON.stringify({ status: 'passed', packageVersion: version, nextVersion: '16.4.5', consumerDirectory: consumer, tailwindRequired: false, checks: ['packed client boundary', 'Server Component imports with client Provider', 'Next production build', 'hydrated browser styles and interaction', 'dialog Escape and focus restoration', 'no page errors'] }, null, 2) + '\n');
+writeFileSync(join(artifacts, 'next-package-consumer-result.json'), JSON.stringify({ status: 'passed', packageVersion: version, nextVersion: '16.4.5', consumerDirectory: consumer, tailwindRequired: false, checks: ['packed client boundary', 'Server Component imports with client Provider', 'Next production build', 'hydrated browser styles and interaction', 'dialog Escape and focus restoration', 'native form reset and disabled selection', 'stale asynchronous confirmation', 'Unicode keyboard deletion', 'nested portals and theme propagation', 'no page errors'] }, null, 2) + '\n');
 process.stdout.write('PASS: packed Next.js Server Component imports, production build, browser styles and dialog interaction.\n');

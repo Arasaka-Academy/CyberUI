@@ -1,0 +1,163 @@
+{
+  "version": "0.2.2",
+  "date": "2026-11-06",
+  "status": "passed",
+  "environment": {
+    "platform": "macOS",
+    "node": "v22.22.0",
+    "pnpm": "11.3.0",
+    "browsers": [
+      {
+        "name": "chromium",
+        "version": "156.0.8078.4",
+        "status": "passed"
+      },
+      {
+        "name": "firefox",
+        "version": "157.0",
+        "status": "passed"
+      },
+      {
+        "name": "webkit",
+        "version": "27.2",
+        "status": "passed"
+      }
+    ]
+  },
+  "checks": {
+    "typecheck": "passed",
+    "eslint": "passed",
+    "stylelint": "passed",
+    "frozenLockfileInstall": "passed",
+    "registryConsistency": {
+      "components": 65,
+      "files": 156,
+      "status": "passed"
+    },
+    "unit": {
+      "files": 11,
+      "passed": 71,
+      "failed": 0,
+      "newProductionRegressions": 23
+    },
+    "build": "passed",
+    "productionE2E": {
+      "passed": 70,
+      "failed": 0,
+      "target": "apps/docs/dist",
+      "command": "pnpm test:e2e:production"
+    },
+    "finalDescriptionRegression": {
+      "passed": 9,
+      "failed": 0,
+      "scope": "Production rebuild after final MultiSelect description correction; component WCAG sweep, Registry documentation and Tailwind contracts"
+    },
+    "packedConsumers": [
+      "Vite with Chromium/Firefox/WebKit",
+      "Next.js Server Component imports and expanded interaction contracts"
+    ],
+    "registrySourceConsumers": [
+      "Vite + Tailwind 4.3.4",
+      "Next.js + Tailwind 4.3.4"
+    ],
+    "productionAdvisories": {
+      "packages": 59,
+      "advisories": 0,
+      "method": "npm official bulk endpoint; see production-audit.json"
+    }
+  },
+  "accessibility": {
+    "scans": 662,
+    "violations": 0,
+    "reports": {
+      "accessibility-audit.json": {
+        "scans": 158,
+        "violations": 0
+      },
+      "agent-chat-accessibility.json": {
+        "scans": 56,
+        "violations": 0
+      },
+      "blog-accessibility.json": {
+        "scans": 112,
+        "violations": 0
+      },
+      "dashboard-accessibility.json": {
+        "scans": 56,
+        "violations": 0
+      },
+      "mobile-app-accessibility.json": {
+        "scans": 112,
+        "violations": 0
+      },
+      "product-home-accessibility.json": {
+        "scans": 56,
+        "violations": 0
+      },
+      "reader-accessibility.json": {
+        "scans": 112,
+        "violations": 0
+      }
+    },
+    "finalComponentRescan": {
+      "scans": 158,
+      "violations": 0
+    }
+  },
+  "mobileLayout": {
+    "viewport": 375,
+    "pages": 102,
+    "status": "passed"
+  },
+  "css": [
+    {
+      "file": "packages/react/dist/cyberui.css",
+      "bytes": 50701,
+      "gzipBytes": 8596
+    },
+    {
+      "file": "packages/tokens/dist/tokens.css",
+      "bytes": 498,
+      "gzipBytes": 204
+    },
+    {
+      "file": "apps/docs/dist/assets/WebScenePage-VarnfKSC.css",
+      "bytes": 98642,
+      "gzipBytes": 16217
+    },
+    {
+      "file": "apps/docs/dist/assets/index-H5awHEr1.css",
+      "bytes": 80275,
+      "gzipBytes": 13711
+    },
+    {
+      "file": "apps/docs/dist/fonts.css",
+      "bytes": 4442,
+      "gzipBytes": 478
+    }
+  ],
+  "packaging": {
+    "status": "passed",
+    "version": "0.2.2",
+    "assets": [
+      {
+        "name": "cyberui-react-0.2.2.tgz",
+        "bytes": 1238382,
+        "sha256": "f57a45da22daaf5311ff96d1e063054ac1e5b9d154fd52be3ac97fe6f5823545"
+      },
+      {
+        "name": "cyberui-tokens-0.2.2.tgz",
+        "bytes": 4411,
+        "sha256": "0e05ad9c035534627cf3327ca8421b5786e2e978366b89c6f1416ab33a31f9ab"
+      }
+    ]
+  },
+  "localRegistrySource": "controlled HTTP fixture of final generated sources; CI verifies the pushed GitHub commit",
+  "boundaries": [
+    "This file records local checks; CI, Release and Pages results are verified separately after push.",
+    "The full suite preceded the final MultiSelect description association correction; final production targeted checks and both consumer families verify that correction. CI reruns the full suite.",
+    "WebKit automation does not establish Safari application, VoiceOver or physical touch-device acceptance.",
+    "Automated axe scans do not establish full WCAG conformance.",
+    "The pnpm audit command could not reach the registry from this host; the same 59 resolved production packages returned an empty advisory result from the official bulk endpoint through curl."
+  ]
+}

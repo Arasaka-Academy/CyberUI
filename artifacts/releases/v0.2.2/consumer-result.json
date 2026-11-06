@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "packageVersion": "0.2.2",
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "156.0.8078.4",
+      "status": "passed"
+    },
+    {
+      "name": "firefox",
+      "version": "157.0",
+      "status": "passed"
+    },
+    {
+      "name": "webkit",
+      "version": "27.2",
+      "status": "passed"
+    }
+  ],
+  "examplesTypechecked": 65,
+  "consumerDirectory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-independent-consumer-tMGdeG",
+  "tailwindRequired": false,
+  "checks": [
+    "packed artifacts installed outside workspace",
+    "Tailwind absent and CSS fully compiled",
+    "all copyable examples typechecked",
+    "Vite production build",
+    "real browser styled components",
+    "shared textarea padding",
+    "input ref and controlled value",
+    "dialog Escape and focus restoration",
+    "font loading",
+    "dropped files match native FormData",
+    "controlled and disabled uploads",
+    "native form reset and disabled selection",
+    "stale asynchronous confirmation",
+    "Unicode keyboard deletion",
+    "body portals escape clipped hosts",
+    "portal themes and nested focus update",
+    "portal cleanup",
+    "no page errors"
+  ]
+}

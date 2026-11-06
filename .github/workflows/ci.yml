@@ -20,11 +20,12 @@ jobs:
       - run: pnpm lint
       - run: pnpm test
       - run: pnpm build
-      - run: pnpm exec playwright install --with-deps chromium
-      - run: pnpm test:e2e
+      - run: pnpm exec playwright install --with-deps chromium firefox webkit
+      - run: pnpm test:e2e:production
       - run: pnpm test:consumer
         env:
           CYBERUI_CONSUMER_OFFLINE: '0'
+          CYBERUI_TEST_BROWSERS: chromium,firefox,webkit
       - run: pnpm test:registry
         env:
           CYBERUI_GITHUB_REF: ${{ github.sha }}

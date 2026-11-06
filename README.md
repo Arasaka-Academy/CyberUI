@@ -57,10 +57,10 @@ pnpm dev --port 5174
 
 ## 从 GitHub 按需加入源码
 
-全部 65 类组件支持 shadcn GitHub Registry，无需发布或安装 CyberUI npm 包。组件、CSS Modules 和必要公共源码进入你的项目，之后可以直接修改。v0.2.1 发布版本：
+全部 65 类组件支持 shadcn GitHub Registry，无需发布或安装 CyberUI npm 包。组件、CSS Modules 和必要公共源码进入你的项目，之后可以直接修改。v0.2.2 发布版本：
 
 ```sh
-pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#v0.2.1
+pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#v0.2.2
 ```
 
 也可使用跟随默认分支的尝鲜命令：
@@ -87,11 +87,11 @@ pnpm --filter @cyberui/react pack --pack-destination artifacts/packages
 
 ```yaml
 overrides:
-  '@cyberui/tokens': file:/absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.1.tgz
+  '@cyberui/tokens': file:/absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.2.tgz
 ```
 
 ```sh
-pnpm add react@19 react-dom@19 /absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.1.tgz /absolute/path/CyberUI/artifacts/packages/cyberui-react-0.2.1.tgz
+pnpm add react@19 react-dom@19 /absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.2.tgz /absolute/path/CyberUI/artifacts/packages/cyberui-react-0.2.2.tgz
 ```
 
 ```tsx
@@ -136,15 +136,17 @@ export default function App() {
 pnpm typecheck
 pnpm lint
 pnpm test
-pnpm exec playwright install chromium
-pnpm test:e2e
+pnpm exec playwright install chromium firefox webkit
 pnpm build
-pnpm test:consumer
+pnpm test:e2e:production
+CYBERUI_TEST_BROWSERS=chromium,firefox,webkit pnpm test:consumer
 pnpm preview --port 4175
 ```
 
 `test:consumer` 在系统临时目录创建独立 React 项目，安装真实打包产物，编译全部 65 份文档示例，运行 Vite 与 Next.js App Router 生产构建和浏览器交互测试；Next.js 测试保留 Server Component 直接导入，以检查组件包的客户端边界。它优先使用本机 pnpm 离线缓存；新环境需要先完成一次依赖安装以填充缓存。
-也可用 `CYBERUI_CONSUMER_OFFLINE=0 pnpm test:consumer` 允许独立项目在线安装依赖。
+也可用 `CYBERUI_CONSUMER_OFFLINE=0 pnpm test:consumer` 允许独立项目在线安装依赖。Vite 成品消费者默认使用 Chromium；设置 `CYBERUI_TEST_BROWSERS=chromium,firefox,webkit` 会对同一套关键交互运行三引擎检查，CI 默认执行三者。Next.js 成品与 Registry 消费者使用 Chromium。
+
+`test:e2e:production` 自动启动实际生产构建、在结束后关闭预览服务，并将报告保存到 `artifacts/production`；可用 `CYBERUI_ARTIFACTS_DIR` 指定独立证据目录。日常开发仍可运行 `pnpm test:e2e`，它会启动开发服务器。
 
 静态产物在 `apps/docs/dist`，可部署到任意支持静态文件的服务器。使用相对资源路径和 HashRouter，支持子目录托管，无需服务端路由回退。通过 HTTP 预览，避免直接以 `file://` 打开模块。
 
@@ -155,7 +157,7 @@ CYBERUI_BASE_URL=http://127.0.0.1:4175 pnpm test:e2e
 CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
 ```
 
-详细证据见 [验收记录](docs/validation.md)、[场景参考与视觉差异](docs/reference-map.md) 和 [设计规范](design-system/cyberui/MASTER.md)。逐图图片见 [本地对照档案](artifacts/reference-comparisons/index.html)。
+组件库的生产使用范围和人工验收边界见 [生产可用性评估](docs/production-readiness.md)。详细证据见 [验收记录](docs/validation.md)、[场景参考与视觉差异](docs/reference-map.md) 和 [设计规范](design-system/cyberui/MASTER.md)。逐图图片见 [本地对照档案](artifacts/reference-comparisons/index.html)。
 
 ## GitHub Pages
 
@@ -169,7 +171,7 @@ CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
 
 ## 发布版本
 
-发布记录见 [Changelog](CHANGELOG.md) 和 [v0.2.1 说明](docs/releases/v0.2.1.md)。将版本提交合入 `main` 后，推送对应的 `vX.Y.Z` 标签会触发 [Release CyberUI](.github/workflows/release.yml)：先复用完整质量检查，再检查标签与四份 package.json 版本一致、提交已在 main 上，构建两个 `.tgz`，附上 `SHA256SUMS` 并创建 GitHub Release。发布说明位于 `docs/releases/vX.Y.Z.md`。GitHub Pages 由 main 的质量检查驱动，独立报告部署结果。
+发布记录见 [Changelog](CHANGELOG.md) 和 [v0.2.2 说明](docs/releases/v0.2.2.md)。将版本提交合入 `main` 后，推送对应的 `vX.Y.Z` 标签会触发 [Release CyberUI](.github/workflows/release.yml)：先复用完整质量检查，再检查标签与四份 package.json 版本一致、提交已在 main 上，构建两个 `.tgz`，附上 `SHA256SUMS` 并创建 GitHub Release。发布说明位于 `docs/releases/vX.Y.Z.md`。GitHub Pages 由 main 的质量检查驱动，独立报告部署结果。
 
 ## 许可与使用边界
 

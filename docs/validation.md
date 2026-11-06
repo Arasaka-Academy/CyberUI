@@ -1,5 +1,27 @@
 # 验收记录
 
+## v0.2.2 本地验收 — 2026-11-06
+
+环境：macOS、Node.js 22.22.0、pnpm 11.3.0。完整浏览器套件测试实际生产构建；最后的 MultiSelect 描述修复后重新构建，并追加组件可访问性、安装指南和 Tailwind 的定向检查。三引擎成品消费者与 Registry 消费者均使用最后源码。
+
+| 检查 | 结果 | 覆盖范围 |
+| --- | --- | --- |
+| Frozen lockfile、类型、ESLint、Stylelint | 通过 | 工作区与最新脚本 |
+| Registry 一致性与单元测试 | 71 / 71 通过 | 11 个文件；新增 23 项生产契约回归；65 个组件、156 份源码与许可 |
+| 生产构建 | 通过 | tokens、React 包、展示站 |
+| 完整生产 Chromium E2E | 70 / 70 通过 | 七套明暗主题、中英、响应式、键盘、焦点、六类产品 |
+| 最后描述修复后的生产回归 | 9 / 9 通过 | 全组件 axe 扫描、Registry 文档、样式级联与图表 |
+| axe 自动扫描 | 662 次零违规 | 完整套件 662 次；最后修复后另复扫 158 次 |
+| 375px 全量布局 | 102 / 102 通过 | 组件与场景页面 |
+| 三引擎无 Tailwind 打包消费者 | 全部通过 | Chromium 156.0.8078.4、Firefox 157.0、WebKit 27.2；65 份示例类型、表单 reset、禁用选项、描述、上传、异步确认、Unicode、弹层主题和焦点 |
+| Next.js 成品消费者 | 通过 | Server Component 导入、生产构建与扩充后的真实交互契约 |
+| Vite / Next.js Registry 消费者 | 全部通过 | 真实 shadcn CLI 安装全部 65 项，156 份文件一致；示例渲染与工具类覆盖 |
+| 生产依赖公告 | 59 个解析版本，0 条公告 | 本机 pnpm audit 请求失败；通过 curl 将相同版本提交至 npm 官方 bulk 接口，得到空结果 |
+
+可复核的精简结果见 [v0.2.2 验收证据](../artifacts/releases/v0.2.2/validation.json)，审查范围和生产使用条件见 [生产可用性评估](production-readiness.md)。本地 Registry 使用当前源码的受控 HTTP fixture，远端 CI 再从真实 GitHub 提交安装。
+
+CI 已改用生产构建 E2E，并在 Vite 成品消费者中默认启用 Chromium、Firefox、WebKit。Playwright WebKit 与实际 Safari、VoiceOver、真实触摸设备分开评价；本次没有把自动扫描视为完整 WCAG 认证。远端 CI、Release 与 Pages 的实际结果仍分别核实，本节只记录本地结果。
+
 ## v0.2.1 本地验收 — 2026-11-06
 
 环境：macOS、Node.js 22.22.0、pnpm 11.3.0、React 19、Playwright Chromium。生产版测试使用实际的 `apps/docs/dist`，测试报告写入独立临时目录，未覆盖下方历史验收档案。安装说明同步版本文案后重建展示站，并追加通过 5 项 Registry 浏览器回归。
@@ -26,7 +48,7 @@
 
 ## v0.1.0 历史验收 — 2026-11-05
 
-以下保留旧版结果；其中的无 Tailwind 源码接入、固定 SHA 和旧文件数量仅适用于当时的版本。当前默认安装目标为 `v0.2.1`。
+以下保留旧版结果；其中的无 Tailwind 源码接入、固定 SHA 和旧文件数量仅适用于当时的版本。当前默认安装目标为 `v0.2.2`。
 
 验收日期：2026-11-05。环境：macOS、Node.js 26.13、pnpm 11.3、React 19、Vite 7.3.7、Playwright Chromium；GitHub CI 使用 Node.js 22。
 

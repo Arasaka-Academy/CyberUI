@@ -6,6 +6,7 @@ import { useControllableState, cx } from "./shared";
 import s from "./file-upload.module.css";
 import { Icon } from "./icon";
 import fieldStyles from "./field.module.css";
+import { useFormReset } from "./use-form-reset";
 export interface FileUploadProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'type' | 'value' | 'defaultValue' | 'disabled'> {
     label: string;
     value?: File[];
@@ -31,6 +32,12 @@ export function FileUpload({ label, accept, multiple, onChange, value, defaultVa
     const input = useRef<HTMLInputElement>(null);
     useImperativeHandle(ref, () => input.current!);
     useLayoutEffect(() => { syncFiles(input.current, files); }, [files]);
+    useFormReset(input, () => {
+        syncFiles(input.current, value ?? defaultValue);
+        if (value === undefined) setFiles(defaultValue);
+        setError('');
+        setDragging(false);
+    }, props.form);
     const generated = useId();
     const id = props.id ?? generated;
     const receive = (incoming: File[]) => {
@@ -53,7 +60,7 @@ export function FileUpload({ label, accept, multiple, onChange, value, defaultVa
     } }} onDragLeave={() => setDragging(false)} onDrop={e => { e.preventDefault(); setDragging(false); if (!isDisabled)
         receive(Array.from(e.dataTransfer.files)); }}>
     <Icon name="download" size={28}/><span>{t('Drop files here or choose a file', '拖入文件，或选择文件')}</span>
-    <input {...props} ref={input} type="file" id={id} accept={accept} multiple={multiple} disabled={isDisabled} aria-invalid={!!error} aria-describedby={[description ? `${id}-help` : null, error ? `${id}-error` : null, props['aria-describedby']].filter(Boolean).join(' ') || undefined} onChange={e => receive(Array.from(e.target.files ?? []))}/>
+    <input {...props} ref={input} type="file" id={id} accept={accept} multiple={multiple} disabled={isDisabled} aria-invalid={error ? true : props['aria-invalid']} aria-describedby={[description ? `${id}-help` : null, error ? `${id}-error` : null, props['aria-describedby']].filter(Boolean).join(' ') || undefined} onChange={e => receive(Array.from(e.target.files ?? []))}/>
     {files.map(f => <span key={f.name} className={fieldStyles.helper}>{f.name} · {Math.ceil(f.size / 1024)} KB</span>)}
   </div>{description && <span className={fieldStyles.helper} id={`${id}-help`}>{description}</span>}{error && <span id={`${id}-error`} className={fieldStyles.error} role="alert">{error}</span>}</div>;
 }

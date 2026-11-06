@@ -1,6 +1,6 @@
 'use client';
 import { type DOMProps } from './shared';
-import { type ReactElement, useState } from 'react';
+import { type ReactElement, useEffect, useState } from 'react';
 import { type MenuItem } from './menu-types';
 import { useCyberUI } from './provider';
 import { Dialog } from './dialog';
@@ -21,6 +21,7 @@ export interface CommandPaletteProps extends Omit<DOMProps, 'role'> {
 }
 export function CommandPalette({ trigger, isOpen, onOpenChange, items, label = 'Command palette', onAction, ...props }: CommandPaletteProps) {
     const [query, setQuery] = useState('');
+    useEffect(() => { if (isOpen === false) setQuery(''); }, [isOpen]);
     const { t } = useCyberUI();
     const { contains } = A.useFilter({ sensitivity: 'base' });
     return <Dialog {...props} trigger={trigger} isOpen={isOpen} onOpenChange={open => { onOpenChange?.(open); if (!open)

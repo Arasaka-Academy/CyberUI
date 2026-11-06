@@ -14,5 +14,5 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input({ l
     const generated = useId();
     const fieldId = id ?? generated;
     const input = <input {...props} id={fieldId} ref={ref} className={cx(s.input, className)} aria-invalid={error ? true : props['aria-invalid']}/>;
-    return label ? <Field label={label} htmlFor={fieldId} description={description} error={error} isRequired={props.required} className={wrapperClassName}>{input}</Field> : input;
+    return label || description || error || wrapperClassName ? <Field label={label ?? ''} htmlFor={fieldId} description={description} error={error} isRequired={props.required} className={wrapperClassName}>{input}</Field> : input;
 });

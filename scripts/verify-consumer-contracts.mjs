@@ -3,6 +3,7 @@ import { expect } from '@playwright/test';
 export async function verifyConsumerContracts(page) {
   const form = page.getByTestId('upload-form');
   const documentInput = page.getByLabel('Document', { exact: true });
+  await expect(form.getByRole('button', { name: 'Default roles', exact: true })).toHaveAccessibleDescription('Permissions for this account');
   const drop = async (input, files) => input.evaluate((element, files) => {
     const transfer = new DataTransfer();
     for (const name of files) transfer.items.add(new File([name], name, { type: 'text/plain' }));
@@ -30,6 +31,47 @@ export async function verifyConsumerContracts(page) {
   await page.getByRole('button', { name: 'Clear controlled document' }).click();
   await expect.poll(() => submitted('controlled')).toEqual(['']);
   await expect(form.getByText(/controlled.txt ·/)).toHaveCount(0);
+
+  const role = page.getByRole('button', { name: /Allowed role/ });
+  await role.click();
+  await expect(page.getByRole('option', { name: 'Admin', exact: true })).toHaveAttribute('aria-disabled', 'true');
+  await page.keyboard.press('ArrowDown');
+  await page.keyboard.press('Enter');
+  await expect.poll(() => form.evaluate(element => new FormData(element).get('allowed-role'))).toBe('reviewer');
+  await page.getByRole('button', { name: 'Remove Reader', exact: true }).click();
+  await drop(page.getByLabel('Controlled document', { exact: true }), ['preserved.txt']);
+  await page.getByRole('button', { name: 'Reset upload form', exact: true }).click();
+  await expect.poll(() => submitted('document')).toEqual(['']);
+  await expect.poll(() => submitted('attachments')).toEqual(['']);
+  await expect.poll(() => submitted('controlled')).toEqual(['preserved.txt']);
+  await expect.poll(() => form.evaluate(element => new FormData(element).getAll('roles'))).toEqual(['reader']);
+  await expect(form.getByText(/first.txt ·/)).toHaveCount(0);
+  await expect(form.getByRole('button', { name: 'Remove Reader', exact: true })).toBeVisible();
+
+  let finishOperation;
+  await page.route('**/confirmation-operation', async route => {
+    await new Promise(resolve => { finishOperation = resolve; });
+    await route.fulfill({ status: 204 });
+  });
+  const openConfirmation = page.getByRole('button', { name: 'Open async confirmation', exact: true });
+  await openConfirmation.click();
+  await page.getByRole('button', { name: 'Run operation', exact: true }).click();
+  await expect.poll(() => typeof finishOperation).toBe('function');
+  await page.getByRole('button', { name: 'Cancel', exact: true }).click();
+  await expect(page.getByRole('alertdialog')).toHaveCount(0);
+  await openConfirmation.click();
+  const completed = page.waitForResponse('**/confirmation-operation');
+  finishOperation();
+  await (await completed).finished();
+  await expect(page.getByRole('alertdialog', { name: 'Async confirmation', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Run operation', exact: true }).focus();
+  await expect(page.getByRole('button', { name: 'Run operation', exact: true })).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(openConfirmation).toBeFocused();
+  await page.unroute('**/confirmation-operation');
+
+  await page.getByRole('region', { name: 'Unicode keyboard' }).getByRole('button', { name: 'Backspace', exact: true }).click();
+  await expect(page.getByTestId('keyboard-value')).toHaveText('Name ');
 
   const portalCount = await page.locator('[data-cyberui-portal]').count();
   const trigger = page.getByRole('button', { name: 'Open clipped settings', exact: true });

@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "packageVersion": "0.2.2",
+  "nextVersion": "16.4.5",
+  "consumerDirectory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-next-package-consumer-3cIZgZ",
+  "tailwindRequired": false,
+  "checks": [
+    "packed client boundary",
+    "Server Component imports with client Provider",
+    "Next production build",
+    "hydrated browser styles and interaction",
+    "dialog Escape and focus restoration",
+    "native form reset and disabled selection",
+    "stale asynchronous confirmation",
+    "Unicode keyboard deletion",
+    "nested portals and theme propagation",
+    "no page errors"
+  ]
+}
