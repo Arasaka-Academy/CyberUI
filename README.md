@@ -1,182 +1,149 @@
-# CyberUI Web
+# CyberUI
 
-CyberUI 是一套 React 组件库与中英双语展示站，采用硬边、切角、开放角框、条码和七套明暗配色，提供完整的 Web 表单、键盘、焦点和响应式交互。
+**Terminal aesthetics. Everyday interfaces.**
 
-[在线展示站](https://arasaka-academy.github.io/CyberUI/) · [组件目录](https://arasaka-academy.github.io/CyberUI/#/components) · [源码接入指南](https://arasaka-academy.github.io/CyberUI/#/installation)
+CyberUI is a React component library and design system with the precision of a cyber terminal. Chamfered corners, open frames, offset outlines, monospaced readouts, and a restrained signal palette create a shared visual language for readers, workspaces, product websites, and mobile apps.
 
-设计与交互规范使用 `ui-ux-pro-max` 辅助制定。
+[Live showcase](https://arasaka-academy.github.io/CyberUI/) · [Product scenes](https://arasaka-academy.github.io/CyberUI/#/replica) · [Components](https://arasaka-academy.github.io/CyberUI/#/components) · [Theme lab](https://arasaka-academy.github.io/CyberUI/#/themes)
 
-## 本地启动
+![CyberUI visual overview: a product homepage, project workspace, and mobile music player sharing one terminal design language](docs/images/readme/hero.png)
 
-使用 Node.js 22.13+ 和 pnpm 11；本次验证使用 Node.js 22.22。
+<p align="center"><strong>65 components · 6 product scenes · 7 palettes × light and dark · English / Simplified Chinese</strong></p>
+
+## Design philosophy
+
+### Character through geometry
+
+Chamfers give commands a sense of direction. Open corner frames define regions, while fine dividers, rails, and solid surfaces establish hierarchy. These rules extend from individual controls to complete layouts, giving buttons, panels, and navigation a recognizable identity across products.
+
+Offset outlines add depth. Barcodes, identifiers, and coordinates reinforce the terminal aesthetic. Decoration stays around edges, headings, and status areas, leaving continuous space for reading.
+
+![CyberUI component details: a chamfered command button, open corner panel, operator identity card, and segmented progress indicator](docs/images/readme/visual-language.png)
+
+### Color with a purpose
+
+The default **Neon Dark** palette pairs a warm, near-black background with cyan information and warm red actions. Muted text and dividers sit further back. Negative space and flat color fields give dense content a clear reading order.
+
+| Visual element | Design purpose |
+| --- | --- |
+| Chamfers and hard edges | Give controls distinct silhouettes and directional cues |
+| Open frames, rails, and fine dividers | Define regions while keeping dense layouts open |
+| Offset outlines and layered borders | Add depth to selected states and signature cards |
+| Cyan information and warm red actions | Separate content from primary commands |
+| Oxanium headings and Share Tech Mono readouts | Distinguish prose, labels, and data with a terminal rhythm |
+
+### One language, different densities
+
+The reader organizes books and reading progress. The project workspace prioritizes metrics and tasks. The product homepage uses large type and generous spacing. The chat workspace brings messages, tools, and deliverables together. Shared components, colors, and typography connect them; layout and hierarchy give each product its own character.
+
+The visual system follows familiar Web interactions: visible focus, keyboard navigation, labeled fields, clear state feedback, responsive layouts, and respect for reduced motion preferences.
+
+## Six products, six expressions
+
+All images below are browser captures of the current implementation. Open an image for a closer look, or follow a scene link to try the interactions.
+
+### CYBERDECK / Reading terminal
+
+A personal terminal for books, reading progress, logs, and identity. ASCII covers, segmented signals, and operator cards give it the character of a dedicated device, with clear divisions between reading data and everyday actions.
+
+![CYBERDECK reading terminal with an ASCII book cover, reading progress, operator identity, and navigation panels](docs/images/readme/reader.png)
+
+[Explore CYBERDECK →](https://arasaka-academy.github.io/CyberUI/#/preview/reader) · 27 internal pages covering the library, reading history, goals, and appearance settings.
+
+### ORBIT / Project workspace
+
+A steady grid supports dense information. Metric cards establish the overview; line charts and segmented progress reveal trends; boards and lists bring the work into focus. Open corner frames keep neighboring regions visually distinct.
+
+![ORBIT project workspace with metric cards, a task completion chart, and project progress](docs/images/readme/dashboard.png)
+
+[Explore ORBIT →](https://arasaka-academy.github.io/CyberUI/#/preview/dashboard) · Switch projects, edit tasks, filter work, and move between board and list views.
+
+### PULSE / AI product homepage
+
+The same terminal vocabulary takes on a more spacious composition. Large headlines, an orbital illustration, chamfered calls to action, and status cards establish the first impression. Features, workflows, and pricing continue the product story.
+
+![PULSE AI product homepage with a large headline, orbital illustration, and chamfered calls to action](docs/images/readme/product-home.png)
+
+[Explore PULSE →](https://arasaka-academy.github.io/CyberUI/#/preview/product-home) · Try pricing options, the trial form, and frequently asked questions.
+
+### NOVA / Agent chat workspace
+
+Conversation navigation, messages, tool activity, and deliverables share one workspace. Color fields distinguish messages, while fine dividers organize context around an ongoing conversation.
+
+![NOVA Agent workspace with conversation navigation, a completed sample response, tool activity, and a deliverable panel](docs/images/readme/agent-chat.png)
+
+[Explore NOVA →](https://arasaka-academy.github.io/CyberUI/#/preview/agent-chat) · Try locally simulated streaming responses, stop, retry, and export a result.
+
+### FREQ / Pocket music terminal
+
+Hard edges, record artwork, and signal readouts fit into a mobile canvas. Discover, playlists, and the player share navigation and controls, preserving a distinct visual rhythm in a compact space.
+
+![FREQ mobile music app showing its discover screen and player side by side](docs/images/readme/mobile-app.png)
+
+[Explore FREQ →](https://arasaka-academy.github.io/CyberUI/#/preview/mobile-app) · Try playlists, queues, favorites, and simulated playback progress. This is a silent interaction demo.
+
+### RELAY / Product team journal
+
+Editorial typography makes room for longer content. Large headlines establish the subject; categories and summaries support browsing; article pages connect the table of contents, body text, and related stories. Decoration stays at the edges and dividers.
+
+![RELAY product team journal with an editorial headline, geometric artwork, and a featured article](docs/images/readme/blog.png)
+
+[Explore RELAY →](https://arasaka-academy.github.io/CyberUI/#/preview/blog) · Read six complete bilingual sample articles and try search, bookmarks, and article navigation.
+
+## Seven palettes, one structure
+
+Every palette includes independently defined light and dark treatments. Geometry, typography, and hierarchy stay consistent, while backgrounds, surfaces, and text colors adapt to each mode.
+
+![Seven CyberUI palettes in dark and light modes: Neon, Mono, Graphite, Synthwave, Bloodline, Terminal, and Amber](docs/images/readme/themes.png)
+
+| Palette | Character |
+| --- | --- |
+| **Neon** | Cyan and warm red: the signature cyber terminal palette |
+| **Mono** | Pure black and white, emphasizing silhouette and structure |
+| **Graphite** | Quiet grayscale layers for focused work |
+| **Synthwave** | Magenta and pink with an electronic atmosphere |
+| **Bloodline** | Deep red and warm text for a more intense composition |
+| **Terminal** | Green signals on deep green: a classic terminal feel |
+| **Amber** | Amber and warm orange with the warmth of vintage instruments |
+
+[Open the theme lab →](https://arasaka-academy.github.io/CyberUI/#/themes) · Switch modes, adjust colors, and copy a theme configuration.
+
+## From desktop to handheld
+
+Desktop layouts use sidebars, grids, and parallel panels to show more context. Narrow layouts bring navigation into drawers and reflow content around the main actions and reading order. English and Simplified Chinese share the same layout rules, with headings and controls wrapping to fit the available space.
+
+![CyberUI responsive layouts at 375 pixels: the CYBERDECK reader, ORBIT workspace, and NOVA chat](docs/images/readme/responsive.png)
+
+## Bring the design into your project
+
+CyberUI provides React 19 and TypeScript components through a GitHub Registry. Add source directly to your project, then adapt its geometry, styling, and interactions.
+
+```sh
+pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#v0.2.2
+```
+
+The [source installation guide](docs/source-installation.md) covers Vite, Next.js, manual copying, and local packages. The [component catalog](https://arasaka-academy.github.io/CyberUI/#/components) includes adjustable previews, properties, and copyable examples.
+
+To explore locally, use Node.js 22.13+ and pnpm 11:
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-默认地址为 `http://127.0.0.1:5173`。端口被占用时，Vite 会显示实际地址；也可指定端口：
+Open the local address printed by Vite. The showcase initially uses Simplified Chinese and Neon Dark; select **EN** in the top bar for English. Use `⌘ / Ctrl K` to search the site.
 
-```sh
-pnpm dev --port 5174
-```
-
-站点默认显示简体中文与 Neon 深色主题。右上角可切换英文、明暗模式；`⌘/Ctrl K` 打开全站搜索。主要入口为 `/#/components`、`/#/foundations`、`/#/themes` 和 `/#/replica`。
-
-## 交付内容
-
-| 目录 | 内容 |
+| Further reading | Contents |
 | --- | --- |
-| `packages/tokens` | `@cyberui/tokens`：七套主题配色、明暗模式、几何、间距、字体配置及可读性派生色 |
-| `packages/react` | `@cyberui/react`：65 类组件，ESM、TypeScript 声明、独立 CSS 与可选字体样式 |
-| `apps/docs` | React + Vite 展示站、组件参数预览、代码复制、属性和键盘文档 |
-| `apps/docs/src/products.ts` | 六类产品注册表，统一驱动总览、产品切换、搜索和导航计数 |
-| `apps/docs/src/replica` | 阅读器内部的 27 个页面、19 张参考图和 31 个分区映射 |
-| `apps/docs/src/web-scenes` | 六类产品共享预览工具栏；ORBIT、PULSE、NOVA、FREQ、RELAY 的独立内容与本地状态 |
-| `registry.json`、`registry/cyberui` | GitHub Registry 清单与自动生成的可复制组件源码 |
-| `public` | 本地字体、SVG 图标、品牌素材和视觉参考图 |
-| `design-system/cyberui` | 设计规范与 token 约定 |
-| `artifacts` | 浏览器截图、逐图对照、打包接入结果和无障碍扫描记录 |
+| [Design system](design-system/cyberui/MASTER.md) | Geometry, typography, spacing, color, and interaction rules |
+| [Product scenes](docs/web-scenes.md) | Routes, interactions, and local state across all six products |
+| [Styling guide](docs/styles.md) | Tailwind v4, CSS Modules, and theme variables |
+| [Production readiness](docs/production-readiness.md) · [Validation](docs/validation.md) | Supported use, verification evidence, and manual acceptance boundaries |
+| [Visual references](docs/reference-map.md) | Source references, page mappings, and adaptation differences |
+| [Changelog](CHANGELOG.md) · [v0.2.2](docs/releases/v0.2.2.md) | Changes and release notes |
 
-组件按基础与容器 10、表单 16、导航 9、反馈与浮层 11、数据展示 6、特色组件 13 分类。外观变体单独展示，不计入 65 类的数量。
+Product scenes use local demo data and interactions. NOVA generates sample responses from local templates, FREQ does not connect to an audio service, and trial and subscription forms provide local feedback. See the [scene documentation](docs/web-scenes.md) for details.
 
-演示区包含首页、书库、详情、搜索、收藏、历史、回收站，阅读日志、统计、连续阅读、日历、目标、诊断，系统、配色、字体、封面、休眠，身份卡、顶部菜单身份／控制页，任务、收益、碎片、四类共 20 种商店外观，以及五种 Jack-in 卡片。
+## License
 
-场景总览固定提供六个平级产品入口，均支持内嵌预览与独立打开：
-
-| 场景 | 内嵌预览 | 独立页面 |
-| --- | --- | --- |
-| CYBERDECK 阅读器 | `/#/replica/reader` | `/#/preview/reader` |
-| ORBIT 项目管理 Dashboard | `/#/replica/dashboard` | `/#/preview/dashboard` |
-| PULSE AI 产品官网 | `/#/replica/product-home` | `/#/preview/product-home` |
-| NOVA Agent 聊天工作台 | `/#/replica/agent-chat` | `/#/preview/agent-chat` |
-| FREQ 移动音乐 App | `/#/replica/mobile-app` | `/#/preview/mobile-app` |
-| RELAY 产品团队博客 | `/#/replica/blog` | `/#/preview/blog` |
-
-阅读器默认进入首页，全部子页面及视觉参考收在产品内部；旧阅读器链接会保留查询参数并跳转到新地址。FREQ 提供六首虚构曲目、三个歌单和无声播放交互，不创建音频实例。RELAY 提供六篇完整中英文文章、收藏、文章目录和本地订阅反馈。所有产品支持中英文及七套明暗主题，详细路由、交互和状态边界见 [产品场景说明](docs/web-scenes.md)。
-
-## 从 GitHub 按需加入源码
-
-全部 65 类组件支持 shadcn GitHub Registry，无需发布或安装 CyberUI npm 包。组件、CSS Modules 和必要公共源码进入你的项目，之后可以直接修改。v0.2.2 发布版本：
-
-```sh
-pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#v0.2.2
-```
-
-也可使用跟随默认分支的尝鲜命令：
-
-```sh
-pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button
-```
-
-不带 ref 的命令读取默认分支，需该分支已包含 registry；也可在组件地址后追加 `#` 与发布标签或包含 registry 的完整提交 SHA。固定版本命令见展示站组件页。React 19 的 Vite 与 Next.js 接入、手动复制、可选字体和更新方式见 [源码接入指南](docs/source-installation.md) 或展示站 `/#/installation`。
-
-维护原始组件后运行 `pnpm registry:build`，再运行 `pnpm registry:check` 检查生成源码；`pnpm test:registry` 验证独立项目安装。
-
-## 本地组件包接入
-
-先构建本地包：
-
-```sh
-pnpm build
-pnpm --filter @cyberui/tokens pack --pack-destination artifacts/packages
-pnpm --filter @cyberui/react pack --pack-destination artifacts/packages
-```
-
-组件包使用 React 19。尚未向公共注册表发布；在另一个 pnpm 项目中安装两个 `.tgz`。本地接入时，在该项目的 `pnpm-workspace.yaml` 中将 tokens 的间接依赖也指向同一个包：
-
-```yaml
-overrides:
-  '@cyberui/tokens': file:/absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.2.tgz
-```
-
-```sh
-pnpm add react@19 react-dom@19 /absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.2.tgz /absolute/path/CyberUI/artifacts/packages/cyberui-react-0.2.2.tgz
-```
-
-```tsx
-import { useRef, useState } from 'react';
-import { CyberUIProvider, Button, Input, Progress } from '@cyberui/react';
-import '@cyberui/react/styles.css';
-import '@cyberui/react/fonts.css'; // 可选：本地 Oxanium、Share Tech Mono 及其他字体配置
-
-export default function App() {
-  const input = useRef<HTMLInputElement>(null);
-  const [handle, setHandle] = useState('NOVA_7');
-  return (
-    <CyberUIProvider scheme="neon" mode="dark" locale="zh-CN">
-      <Input ref={input} name="handle" label="操作员代号"
-        value={handle} onChange={event => setHandle(event.target.value)} />
-      <Button variant="primary" onPress={() => input.current?.focus()}>
-        连接终端
-      </Button>
-      <Progress value={42} label="已解密" variant="heartbeat" />
-    </CyberUIProvider>
-  );
-}
-```
-
-`CyberUIProvider` 接受 `scheme`、`mode: 'dark' | 'light' | 'system'`、`locale: 'en' | 'zh-CN'` 和 `customColors`。自定义颜色采用 `#RRGGBB`。主题编辑器可即时预览并复制配置。
-
-普通输入保留原生事件、属性与输入 ref。复合控件的 `ref` 指向根节点；`NumberInput`、`Combobox`、`ColorPicker` 额外提供 `inputRef`，选择器提供 `buttonRef`。`FileUpload.ref` 指向原生文件输入。模态组件的 ref 指向弹窗内容，静态容器指向其语义宿主。以包内类型声明和组件属性表为准。
-
-状态控件支持受控与非受控模式，例如 `value/defaultValue/onChange`、`isSelected/defaultSelected/onChange` 或分页的 `page/defaultPage/onChange`。复杂交互基于 React Aria Components，图表基于 Recharts；样式使用 CSS Modules 和 `--cyber-*` CSS 变量。
-
-组件库、展示站与全部产品场景统一使用 Tailwind v4，映射现有 `--cyber-*` 变量并省略 Preflight。CSS Modules 保留语义选择器和精确几何，普通工具类可覆盖组件默认样式。组件包提供成品 CSS；Registry 源码接入需要 Tailwind v4 编译插件。公共样式复用、变量约定与检查见[样式规范](docs/styles.md)，Vite/Next.js 配置见[源码接入](docs/source-installation.md)。
-
-## 演示数据
-
-演示使用 `localStorage` 的 `cyberui-web-demo-v1`，固定参考时间为 `2026-10-30 17:46`。可以搜索与筛选、重命名、收藏、删除并恢复书籍，推进阅读任务、领取一次性里程碑收益、购买并装备外观、恢复碎片、保存设置。演示页面的“重置演示”可恢复初始数据。
-
-头像上传用于当前页面的本地预览。阅读器硬件、真实阅读引擎、网络诊断读数与更新服务使用演示模型。中英文为完整界面语言，德语、俄语、土耳其语和希腊语仅提供样本展示。
-
-## 验证与静态构建
-
-```sh
-pnpm typecheck
-pnpm lint
-pnpm test
-pnpm exec playwright install chromium firefox webkit
-pnpm build
-pnpm test:e2e:production
-CYBERUI_TEST_BROWSERS=chromium,firefox,webkit pnpm test:consumer
-pnpm preview --port 4175
-```
-
-`test:consumer` 在系统临时目录创建独立 React 项目，安装真实打包产物，编译全部 65 份文档示例，运行 Vite 与 Next.js App Router 生产构建和浏览器交互测试；Next.js 测试保留 Server Component 直接导入，以检查组件包的客户端边界。它优先使用本机 pnpm 离线缓存；新环境需要先完成一次依赖安装以填充缓存。
-也可用 `CYBERUI_CONSUMER_OFFLINE=0 pnpm test:consumer` 允许独立项目在线安装依赖。Vite 成品消费者默认使用 Chromium；设置 `CYBERUI_TEST_BROWSERS=chromium,firefox,webkit` 会对同一套关键交互运行三引擎检查，CI 默认执行三者。Next.js 成品与 Registry 消费者使用 Chromium。
-
-`test:e2e:production` 自动启动实际生产构建、在结束后关闭预览服务，并将报告保存到 `artifacts/production`；可用 `CYBERUI_ARTIFACTS_DIR` 指定独立证据目录。日常开发仍可运行 `pnpm test:e2e`，它会启动开发服务器。
-
-静态产物在 `apps/docs/dist`，可部署到任意支持静态文件的服务器。使用相对资源路径和 HashRouter，支持子目录托管，无需服务端路由回退。通过 HTTP 预览，避免直接以 `file://` 打开模块。
-
-可对生产预览执行同一组测试，或重新生成逐图对照：
-
-```sh
-CYBERUI_BASE_URL=http://127.0.0.1:4175 pnpm test:e2e
-CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
-```
-
-组件库的生产使用范围和人工验收边界见 [生产可用性评估](docs/production-readiness.md)。详细证据见 [验收记录](docs/validation.md)、[场景参考与视觉差异](docs/reference-map.md) 和 [设计规范](design-system/cyberui/MASTER.md)。逐图图片见 [本地对照档案](artifacts/reference-comparisons/index.html)。
-
-## GitHub Pages
-
-展示站发布于 **[arasaka-academy.github.io/CyberUI](https://arasaka-academy.github.io/CyberUI/)**。仓库 Settings → Pages 的 Source 使用 **GitHub Actions**。
-
-`main` 上的 **Verify CyberUI** 工作流成功后，[Pages 工作流](.github/workflows/pages.yml) 会构建同一提交，将 `apps/docs/dist` 发布到 `github-pages` 环境。检查失败或 PR 检查不会触发发布。
-
-需要重新发布时，在 Actions 中打开 **Deploy CyberUI to GitHub Pages**，选择 **Run workflow → main**。字体、图标和参考图随静态站点一同发布；组件源码仍通过 GitHub Registry 分发。
-
-组件页和场景使用 `/#/...` 路由，例如 [Button](https://arasaka-academy.github.io/CyberUI/#/components/Button) 和 [NOVA](https://arasaka-academy.github.io/CyberUI/#/preview/agent-chat)。刷新或直接打开这些链接无需配置服务端路由。
-
-## 发布版本
-
-发布记录见 [Changelog](CHANGELOG.md) 和 [v0.2.2 说明](docs/releases/v0.2.2.md)。将版本提交合入 `main` 后，推送对应的 `vX.Y.Z` 标签会触发 [Release CyberUI](.github/workflows/release.yml)：先复用完整质量检查，再检查标签与四份 package.json 版本一致、提交已在 main 上，构建两个 `.tgz`，附上 `SHA256SUMS` 并创建 GitHub Release。发布说明位于 `docs/releases/vX.Y.Z.md`。GitHub Pages 由 main 的质量检查驱动，独立报告部署结果。
-
-## 许可与使用边界
-
-代码采用 [MIT](LICENSE)。第三方素材和字体的许可证、版权声明保存在 [licenses](licenses/upstream-NOTICE.md) 及字体目录中。
-
-书籍封面采用本地原创 ASCII 图案；浏览器字体度量、翻译文本、初始装备和演示数据会造成视觉差异。Web 控件的焦点、点击区域、可读性和滚动也有适配。因此对照档案用于逐项复核，不代表逐像素一致。
-
-For English readers: use **EN** in the live site. All 65 component pages and six product scenes are available in English. The reader contains 27 internal pages. FREQ is a silent music interaction demo; RELAY contains six complete bilingual articles. This repository distributes source through GitHub Registry and a static site without publishing to npm.
+Code is available under the [MIT License](LICENSE). Third-party artwork and font notices are included in [licenses](licenses/upstream-NOTICE.md) and the [font directory](public/fonts).
