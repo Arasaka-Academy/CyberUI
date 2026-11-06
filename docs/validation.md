@@ -1,14 +1,15 @@
 # 验收记录
 
-## v0.2.0 本地验收 — 2026-11-06
+## v0.2.1 本地验收 — 2026-11-06
 
-环境：macOS、Node.js 22.22.0、pnpm 11.3.0、React 19、Playwright Chromium。生产版测试使用实际的 `apps/docs/dist`，测试报告写入独立临时目录，未覆盖下方历史验收档案。
+环境：macOS、Node.js 22.22.0、pnpm 11.3.0、React 19、Playwright Chromium。生产版测试使用实际的 `apps/docs/dist`，测试报告写入独立临时目录，未覆盖下方历史验收档案。安装说明同步版本文案后重建展示站，并追加通过 5 项 Registry 浏览器回归。
 
 | 检查 | 结果 | 覆盖范围 |
 | --- | --- | --- |
 | 类型、ESLint、Stylelint | 通过 | 工作区类型、CSS 属性与设计变量约定 |
 | Registry 一致性与单元测试 | 48 / 48 通过 | 10 个测试文件；65 个组件、155 份源码与许可文件 |
 | `pnpm build` | 通过 | tokens、React 组件包、展示站生产构建 |
+| 发布打包路径 | 通过 | 按工作区绝对路径打包，两个 `0.2.1.tgz` 均落入正确目录 |
 | 生产预览 Chromium E2E | 70 / 70 通过 | 七套明暗主题、中英双语、嵌入与独立页面、键盘与焦点、快速图表缩放 |
 | axe 自动扫描 | 662 / 662 无违规 | 通用页面 158 次，六类产品 504 次；保留原有 WCAG A/AA 规则 |
 | 375px 全量布局 | 102 / 102 通过 | 组件页、阅读器子页面、六类产品入口与主要页面 |
@@ -19,13 +20,13 @@
 
 源码消费者本地使用受控 HTTP fixture 提供本次生成的 Registry，并从 npm 镜像安装第三方依赖；发布后的 CI 从被检验提交的真实 GitHub 源码重复验收。组件包消费者没有安装 Tailwind；Registry 源码消费者使用 Tailwind 4.3.4。这两种接入方式的编译要求见[源码接入说明](source-installation.md)。
 
-可复核的本次结果与精简报告见 [v0.2.0 验收证据](../artifacts/releases/v0.2.0/validation.json)。`artifacts/styles` 和 `artifacts/tailwind` 是此前迁移阶段的对照数据，不能替代本次发布验收。自动扫描不等于完整 WCAG 认证；VoiceOver、真实触摸设备、Safari 和 Firefox 尚未完成本次人工或浏览器验收。
+可复核的本次结果与精简报告见 [v0.2.1 验收证据](../artifacts/releases/v0.2.1/validation.json)。`artifacts/styles` 和 `artifacts/tailwind` 是此前迁移阶段的对照数据，不能替代本次发布验收。自动扫描不等于完整 WCAG 认证；VoiceOver、真实触摸设备、Safari 和 Firefox 尚未完成本次人工或浏览器验收。
 
 本节记录本地结果。远端质量检查、GitHub Release 和 Pages 部署分别以 [CI](../.github/workflows/ci.yml)、[Release](../.github/workflows/release.yml) 和 [Pages](../.github/workflows/pages.yml) 的实际执行结果为准。
 
 ## v0.1.0 历史验收 — 2026-11-05
 
-以下保留旧版结果；其中的无 Tailwind 源码接入、固定 SHA 和旧文件数量仅适用于当时的版本。当前默认安装目标为 `v0.2.0`。
+以下保留旧版结果；其中的无 Tailwind 源码接入、固定 SHA 和旧文件数量仅适用于当时的版本。当前默认安装目标为 `v0.2.1`。
 
 验收日期：2026-11-05。环境：macOS、Node.js 26.13、pnpm 11.3、React 19、Vite 7.3.7、Playwright Chromium；GitHub CI 使用 Node.js 22。
 

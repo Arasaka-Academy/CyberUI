@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "packageVersion": "0.2.1",
+  "nextVersion": "16.4.5",
+  "tailwindRequired": false,
+  "checks": [
+    "packed client boundary",
+    "Server Component imports with client Provider",
+    "Next production build",
+    "hydrated browser styles and interaction",
+    "dialog Escape and focus restoration",
+    "no page errors"
+  ]
+}

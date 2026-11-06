@@ -1,0 +1,1108 @@
+[
+  {
+    "route": "/",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/foundations",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/IconButton",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/ButtonGroup",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Badge",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Tag",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Avatar",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Divider",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Panel",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Card",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Toolbar",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Field",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Input",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Textarea",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/NumberInput",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/PasswordInput",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Checkbox",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/RadioGroup",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Switch",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Select",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Combobox",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/MultiSelect",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Slider",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/DatePicker",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/TimePicker",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/ColorPicker",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/FileUpload",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Tabs",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/SegmentedControl",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Breadcrumb",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Pagination",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Sidebar",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/BottomNavigation",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/NavigationMenu",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/DropdownMenu",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/CommandPalette",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Dialog",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/AlertDialog",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Drawer",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Popover",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Tooltip",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Toast",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Alert",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Progress",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Skeleton",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Spinner",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/EmptyState",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Table",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/DataTable",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Accordion",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/TreeView",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Calendar",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Chart",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/StatusBar",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/OperatorCard",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/AsciiCover",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/BookCard",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/CollectionStack",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/DataShard",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/GigCard",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/ThemeSwatch",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/LauncherTile",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/TelemetryPanel",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/JackInCard",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/SkylineCalendar",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/VirtualKeyboard",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/home",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/library",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/book",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/search",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/collections",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/history",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/trash",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/log",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/stats",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/streaks",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/calendar",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/goals",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/diagnostics",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/settings",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/colors",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/fonts",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/covers",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/sleep",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/operator",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/menu",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/identity",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/gigs",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/payouts",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/shards",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/shop",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/jackin",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/reader/languages",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "neon",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "neon",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "mono",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "mono",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "graphite",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "graphite",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "synthwave",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "synthwave",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "bloodline",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "bloodline",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "terminal",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "terminal",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "amber",
+    "mode": "light",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/components/Button",
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/operator",
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/replica/calendar",
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "route": "/",
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "violations": []
+  },
+  {
+    "route": "/components/Input",
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "violations": []
+  },
+  {
+    "route": "/components/Calendar",
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "violations": []
+  },
+  {
+    "route": "/replica/home",
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "violations": []
+  },
+  {
+    "route": "/replica/book",
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "violations": []
+  },
+  {
+    "route": "/themes",
+    "scheme": "amber",
+    "mode": "dark",
+    "locale": "zh-CN",
+    "violations": []
+  }
+]

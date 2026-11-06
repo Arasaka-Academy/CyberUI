@@ -1,0 +1,512 @@
+[
+  {
+    "route": "/",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/foundations",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/themes",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Button",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/IconButton",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/ButtonGroup",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Badge",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Tag",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Avatar",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Divider",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Panel",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Card",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Toolbar",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Field",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Input",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Textarea",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/NumberInput",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/PasswordInput",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Checkbox",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/RadioGroup",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Switch",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Select",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Combobox",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/MultiSelect",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Slider",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/DatePicker",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/TimePicker",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/ColorPicker",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/FileUpload",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Tabs",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/SegmentedControl",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Breadcrumb",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Pagination",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Sidebar",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/BottomNavigation",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/NavigationMenu",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/DropdownMenu",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/CommandPalette",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Dialog",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/AlertDialog",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Drawer",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Popover",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Tooltip",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Toast",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Alert",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Progress",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Skeleton",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Spinner",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/EmptyState",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Table",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/DataTable",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Accordion",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/TreeView",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Calendar",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/Chart",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/StatusBar",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/OperatorCard",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/AsciiCover",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/BookCard",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/CollectionStack",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/DataShard",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/GigCard",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/ThemeSwatch",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/LauncherTile",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/TelemetryPanel",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/JackInCard",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/SkylineCalendar",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/components/VirtualKeyboard",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/dashboard",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/product-home",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/agent-chat",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/mobile-app",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/blog",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/home",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/library",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/book",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/search",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/collections",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/history",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/trash",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/log",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/stats",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/streaks",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/calendar",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/goals",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/diagnostics",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/settings",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/colors",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/fonts",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/covers",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/sleep",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/operator",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/menu",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/identity",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/gigs",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/payouts",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/shards",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/shop",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/jackin",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/replica/reader/languages",
+    "width": 375,
+    "scrollWidth": 375
+  }
+]

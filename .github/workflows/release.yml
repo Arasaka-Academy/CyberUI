@@ -46,8 +46,9 @@ jobs:
       - name: Pack versioned artifacts
         run: |
           mkdir -p artifacts/packages
-          pnpm --filter @cyberui/tokens pack --pack-destination ../../artifacts/packages
-          pnpm --filter @cyberui/react pack --pack-destination ../../artifacts/packages
+          # pnpm resolves this option from the workspace invocation directory.
+          pnpm --filter @cyberui/tokens pack --pack-destination "$GITHUB_WORKSPACE/artifacts/packages"
+          pnpm --filter @cyberui/react pack --pack-destination "$GITHUB_WORKSPACE/artifacts/packages"
           cd artifacts/packages
           sha256sum ./*.tgz > SHA256SUMS
       - name: Publish verified GitHub release

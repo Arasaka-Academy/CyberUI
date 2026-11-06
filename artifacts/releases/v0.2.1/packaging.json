@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "version": "0.2.1",
+  "absoluteWorkspaceDestination": true,
+  "assets": [
+    {
+      "name": "cyberui-react-0.2.1.tgz",
+      "bytes": 1237990,
+      "sha256": "86dacb48d0a611ff3fb96ab7ee4b22eeb4b95e26737be81c8b379e0f80929d97"
+    },
+    {
+      "name": "cyberui-tokens-0.2.1.tgz",
+      "bytes": 4411,
+      "sha256": "e6a77ac4f830c367bb7378a8996db3569e2f3e93f108063df32765e4b4039722"
+    }
+  ]
+}

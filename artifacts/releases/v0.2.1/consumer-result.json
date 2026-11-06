@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "packageVersion": "0.2.1",
+  "examplesTypechecked": 65,
+  "tailwindRequired": false,
+  "checks": [
+    "packed artifacts installed outside workspace",
+    "Tailwind absent and CSS fully compiled",
+    "all copyable examples typechecked",
+    "Vite production build",
+    "real browser styled components",
+    "shared textarea padding",
+    "input ref and controlled value",
+    "dialog Escape and focus restoration",
+    "font loading",
+    "dropped files match native FormData",
+    "controlled and disabled uploads",
+    "body portals escape clipped hosts",
+    "portal themes and nested focus update",
+    "portal cleanup",
+    "no page errors"
+  ]
+}

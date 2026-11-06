@@ -57,10 +57,10 @@ pnpm dev --port 5174
 
 ## 从 GitHub 按需加入源码
 
-全部 65 类组件支持 shadcn GitHub Registry，无需发布或安装 CyberUI npm 包。组件、CSS Modules 和必要公共源码进入你的项目，之后可以直接修改。v0.2.0 发布版本：
+全部 65 类组件支持 shadcn GitHub Registry，无需发布或安装 CyberUI npm 包。组件、CSS Modules 和必要公共源码进入你的项目，之后可以直接修改。v0.2.1 发布版本：
 
 ```sh
-pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#v0.2.0
+pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#v0.2.1
 ```
 
 也可使用跟随默认分支的尝鲜命令：
@@ -79,19 +79,19 @@ pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button
 
 ```sh
 pnpm build
-pnpm --filter @cyberui/tokens pack --pack-destination ../../artifacts/packages
-pnpm --filter @cyberui/react pack --pack-destination ../../artifacts/packages
+pnpm --filter @cyberui/tokens pack --pack-destination artifacts/packages
+pnpm --filter @cyberui/react pack --pack-destination artifacts/packages
 ```
 
 组件包使用 React 19。尚未向公共注册表发布；在另一个 pnpm 项目中安装两个 `.tgz`。本地接入时，在该项目的 `pnpm-workspace.yaml` 中将 tokens 的间接依赖也指向同一个包：
 
 ```yaml
 overrides:
-  '@cyberui/tokens': file:/absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.0.tgz
+  '@cyberui/tokens': file:/absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.1.tgz
 ```
 
 ```sh
-pnpm add react@19 react-dom@19 /absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.0.tgz /absolute/path/CyberUI/artifacts/packages/cyberui-react-0.2.0.tgz
+pnpm add react@19 react-dom@19 /absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.1.tgz /absolute/path/CyberUI/artifacts/packages/cyberui-react-0.2.1.tgz
 ```
 
 ```tsx
@@ -169,7 +169,7 @@ CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
 
 ## 发布版本
 
-发布记录见 [Changelog](CHANGELOG.md) 和 [v0.2.0 说明](docs/releases/v0.2.0.md)。将版本提交合入 `main` 后，推送对应的 `vX.Y.Z` 标签会触发 [Release CyberUI](.github/workflows/release.yml)：先复用完整质量检查，再检查标签与四份 package.json 版本一致、提交已在 main 上，构建两个 `.tgz`，附上 `SHA256SUMS` 并创建 GitHub Release。发布说明位于 `docs/releases/vX.Y.Z.md`。GitHub Pages 由 main 的质量检查驱动，独立报告部署结果。
+发布记录见 [Changelog](CHANGELOG.md) 和 [v0.2.1 说明](docs/releases/v0.2.1.md)。将版本提交合入 `main` 后，推送对应的 `vX.Y.Z` 标签会触发 [Release CyberUI](.github/workflows/release.yml)：先复用完整质量检查，再检查标签与四份 package.json 版本一致、提交已在 main 上，构建两个 `.tgz`，附上 `SHA256SUMS` 并创建 GitHub Release。发布说明位于 `docs/releases/vX.Y.Z.md`。GitHub Pages 由 main 的质量检查驱动，独立报告部署结果。
 
 ## 许可与使用边界
 
