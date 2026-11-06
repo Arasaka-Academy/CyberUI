@@ -1,2 +1,7 @@
 /* Generated from packages/react/src/skyline.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.skyline { position:absolute; bottom:0; left:0; width:100%; height:76%; z-index:-1; color:var(--cyber-soft); pointer-events:none; }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.skyline { @apply tw:absolute tw:bottom-[0]; @apply tw:left-[0] tw:w-full tw:h-[76%] tw:z-[-1] tw:text-cyber-soft tw:pointer-events-none; }
+}

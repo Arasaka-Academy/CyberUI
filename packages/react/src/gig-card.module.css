@@ -1,6 +1,11 @@
-.micro { color:var(--cyber-muted); font:12px/1.5 var(--cyber-font-mono); letter-spacing:.06em; text-transform:uppercase; }
-.shardHead { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font:11px var(--cyber-font-mono); letter-spacing:.07em; }
-.shardHead > span:last-child { color:var(--cyber-accent-text); }
-.gig h3 { font-size:20px; margin:18px 0 4px; }
-.gig p { color:var(--cyber-muted); font-size:13px; margin-bottom:22px; }
-.gigFoot { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:16px; }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.micro { @apply tw:text-cyber-muted; font:12px/1.5 var(--cyber-font-mono); @apply tw:tracking-[.06em] tw:uppercase; }
+.shardHead { @apply tw:flex tw:justify-between tw:items-center tw:flex-wrap tw:gap-cyber-md; font:11px var(--cyber-font-mono); @apply tw:tracking-[.07em]; }
+.shardHead > span:last-child { @apply tw:text-cyber-accent-text; }
+.gig h3 { @apply tw:text-[length:20px] tw:m-[var(--cyber-space-xl)_0_var(--cyber-space-xs)]; }
+.gig p { @apply tw:text-cyber-muted tw:text-[length:13px] tw:mb-[22px]; }
+.gigFoot { @apply tw:flex tw:items-center tw:justify-between tw:flex-wrap tw:gap-[12px] tw:mt-[16px]; }
+}

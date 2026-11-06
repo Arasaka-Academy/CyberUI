@@ -10,6 +10,7 @@ import { chromium, expect } from '@playwright/test';
 import { buildRegistry } from './build-registry.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const artifactRoot = resolve(process.env.CYBERUI_ARTIFACTS_DIR ?? join(root, 'artifacts'));
 const { manifest, generated } = await buildRegistry({ check: true });
 const cli = resolve(root, 'node_modules/shadcn/dist/index.js');
 const toolchainTarballs = JSON.parse(process.env.CYBERUI_TEST_TARBALLS ?? '{}');
@@ -69,16 +70,18 @@ export default function App() {
   const input = useRef<HTMLInputElement>(null);
   const [value,setValue] = useState('NOVA_7');
   const [mode,setMode] = useState<'dark'|'light'>('dark');
-  return <CyberUIProvider scheme="neon" mode={mode} locale="zh-CN">
+  return <><div data-testid="host-utilities" className="flex gap-4 p-4 font-semibold"><span>Existing host</span><span>Tailwind utilities</span></div>
+  <CyberUIProvider scheme="neon" mode={mode} locale="zh-CN">
     <h1>Source consumer</h1>
     <Input label="Handle" ref={input} value={value} onChange={event=>setValue(event.target.value)} />
     <Button onPress={()=>input.current?.focus()}>Focus input</Button>
     <Button onPress={()=>setMode(mode==='dark'?'light':'dark')}>Toggle theme</Button>
+    <Button data-testid="utility-override" variant="danger" size="lg" className="tw:px-[12px] tw:text-cyber-ink">Custom utility</Button>
     <Dialog title="Settings" trigger={<Button>Open settings</Button>}><p>{value}</p></Dialog>
     <Select data-testid="theme-select" label="Theme" defaultValue="neon" options={[{id:'neon',label:'Neon'},{id:'mono',label:'Mono'}]} />
     <Progress label="Decrypted" value={42} />
     <Chart label="Pages" data={[{label:'MON',value:18},{label:'TUE',value:30}]} />
-  </CyberUIProvider>;
+  </CyberUIProvider></>;
 }
 `;
 async function browserChecks(browser, url, framework) {
@@ -86,7 +89,14 @@ async function browserChecks(browser, url, framework) {
   const errors = []; page.on('pageerror', error => errors.push(error.message));
   await page.goto(url);
   await expect(page.getByRole('heading', { name: 'Source consumer' })).toBeVisible();
+  await expect(page.getByTestId('host-utilities')).toHaveCSS('display', 'flex');
+  await expect(page.getByTestId('host-utilities')).toHaveCSS('gap', '16px');
+  await expect(page.getByTestId('host-utilities')).toHaveCSS('padding', '16px');
+  await expect(page.getByTestId('host-utilities')).toHaveCSS('font-weight', '600');
   await expect(page.locator('[data-cyberui]')).toHaveAttribute('data-mode', 'dark');
+  await expect(page.getByTestId('utility-override')).toHaveCSS('padding-left', '12px');
+  await expect(page.getByTestId('utility-override')).toHaveCSS('padding-right', '12px');
+  await expect(page.getByTestId('utility-override')).toHaveCSS('color', await page.locator('[data-cyberui]').evaluate(el => getComputedStyle(el).color));
   await page.getByRole('button', { name: 'Focus input', exact: true }).click();
   await expect(page.getByRole('textbox', { name: 'Handle' })).toBeFocused();
   await page.getByRole('textbox', { name: 'Handle' }).fill('NOVA_8');
@@ -104,11 +114,14 @@ async function browserChecks(browser, url, framework) {
   await expect(page.getByRole('progressbar', { name: 'Decrypted' })).toHaveAttribute('aria-valuenow', '42');
   await expect(page.locator('.recharts-surface').first()).toBeVisible();
   expect(errors).toEqual([]);
-  const screenshot = resolve(root, 'artifacts/screenshots/registry-' + framework + '.png');
+  const screenshot = resolve(artifactRoot, 'screenshots/registry-' + framework + '.png');
   await page.screenshot({ path: screenshot, fullPage: true });
   await page.goto(new URL(framework === 'vite' ? '/examples.html' : '/examples', url).href);
   await expect(page.locator('[data-example]')).toHaveCount(manifest.items.length);
   await expect(page.locator('[data-example="ExampleVirtualKeyboard"]')).toBeVisible();
+  await expect(page.locator('[data-example="ExampleTextarea"] textarea')).toHaveCSS('padding-top', '10px');
+  await expect(page.locator('[data-example="ExampleTextarea"] textarea')).toHaveCSS('padding-right', '13px');
+  await expect(page.locator('[data-example="ExampleSelect"] button').first()).toHaveCSS('min-height', '44px');
   expect(errors).toEqual([]);
   await page.close();
 }
@@ -120,21 +133,25 @@ try {
     const cwd = join(base, framework); mkdirSync(cwd);
     const componentDir = framework === 'vite' ? 'widgets' : 'components';
     const prefix = `@/${componentDir}/cyberui`;
-    json(join(cwd, 'package.json'), { name: `cyberui-${framework}-source-consumer`, private: true, type: 'module', packageManager: 'pnpm@11.3.0', dependencies: { react: '19.3.1', 'react-dom': '19.3.1', ...(framework === 'next' ? { next: '16.4.5' } : {}) }, devDependencies: { typescript: '~5.9.3', '@types/react': '^19.2.0', '@types/react-dom': '^19.2.0', '@types/node': '^22.18.0', ...(framework === 'vite' ? { vite: '^7.1.7', '@vitejs/plugin-react': '^5.0.4' } : {}) } });
+    json(join(cwd, 'package.json'), { name: `cyberui-${framework}-source-consumer`, private: true, type: 'module', packageManager: 'pnpm@11.3.0', dependencies: { react: '19.3.1', 'react-dom': '19.3.1', ...(framework === 'next' ? { next: '16.4.5' } : {}) }, devDependencies: { typescript: '~5.9.3', '@types/react': '^19.2.0', '@types/react-dom': '^19.2.0', '@types/node': '^22.18.0', tailwindcss: '4.3.4', ...(framework === 'vite' ? { vite: '^7.1.7', '@vitejs/plugin-react': '^5.0.4', '@tailwindcss/vite': '4.3.4' } : { '@tailwindcss/postcss': '4.3.4' }) } });
     json(join(cwd, 'tsconfig.json'), { compilerOptions: { target: 'ES2022', lib: ['ES2022','DOM','DOM.Iterable'], module: 'ESNext', moduleResolution: 'Bundler', jsx: framework === 'next' ? 'preserve' : 'react-jsx', strict: true, skipLibCheck: true, noEmit: true, esModuleInterop: true, resolveJsonModule: true, isolatedModules: true, baseUrl: '.', paths: { '@/*': ['./src/*'] }, ...(framework === 'next' ? { plugins: [{ name: 'next' }] } : { types: ['vite/client'] }) }, include: ['src', 'next-env.d.ts', '.next/types/**/*.ts'] });
     const cssPath = framework === 'next' ? 'src/app/globals.css' : 'src/styles.css';
-    save(join(cwd, cssPath), 'body { margin: 0; }\n');
+    // An existing host keeps its own Tailwind compiler root and prefix.
+    save(join(cwd, cssPath), `@import 'tailwindcss';\n@source '${framework === 'next' ? '..' : '.'}/';\nbody { margin: 0; }\n`);
+    const utilityPath = framework === 'next' ? 'src/app/cyberui.css' : 'src/cyberui.css';
+    save(join(cwd, utilityPath), `@layer theme, base, components, utilities;\n@import '${framework === 'next' ? '..' : '.'}/${componentDir}/cyberui/tailwind-theme.css';\n@import 'tailwindcss/utilities.css' layer(utilities) prefix(tw) source(none);\n@source '${framework === 'next' ? '..' : '.'}/';\n`);
     json(join(cwd, 'components.json'), { $schema: 'https://ui.shadcn.com/schema.json', style: 'new-york', rsc: framework === 'next', tsx: true, tailwind: { config: '', css: cssPath, baseColor: 'neutral', cssVariables: false }, aliases: { components: `@/${componentDir}`, ui: `@/${componentDir}/ui`, utils: '@/lib/utils', lib: '@/lib', hooks: '@/hooks' } });
     save(join(cwd, 'pnpm-workspace.yaml'), 'allowBuilds:\n  esbuild: true\n  sharp: true\n' + (framework === 'next' && Object.keys(toolchainTarballs).length ? 'overrides:\n' + Object.entries(toolchainTarballs).map(([name, path]) => `  ${JSON.stringify(name)}: ${JSON.stringify('file:' + path)}\n`).join('') : ''));
     save(join(cwd, '.npmrc'), `registry=${npmRegistry}\n`);
     if (framework === 'vite') {
-      save(join(cwd, 'vite.config.ts'), `import { defineConfig } from 'vite';import react from '@vitejs/plugin-react';import { fileURLToPath } from 'node:url';export default defineConfig({plugins:[react()],resolve:{alias:{'@':fileURLToPath(new URL('./src',import.meta.url))}},build:{rollupOptions:{input:{main:fileURLToPath(new URL('./index.html',import.meta.url)),examples:fileURLToPath(new URL('./examples.html',import.meta.url))}}}});`);
+      save(join(cwd, 'vite.config.ts'), `import { defineConfig } from 'vite';import react from '@vitejs/plugin-react';import tailwindcss from '@tailwindcss/vite';import { fileURLToPath } from 'node:url';export default defineConfig({plugins:[react(),tailwindcss()],resolve:{alias:{'@':fileURLToPath(new URL('./src',import.meta.url))}},build:{rollupOptions:{input:{main:fileURLToPath(new URL('./index.html',import.meta.url)),examples:fileURLToPath(new URL('./examples.html',import.meta.url))}}}});`);
       save(join(cwd, 'index.html'), '<html lang="en"><head><title>Source consumer</title></head><body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body></html>');
-      save(join(cwd, 'src/main.tsx'), "import { createRoot } from 'react-dom/client';import App from './App';import './styles.css';createRoot(document.getElementById('root')!).render(<App/>);");
+      save(join(cwd, 'src/main.tsx'), "import { createRoot } from 'react-dom/client';import App from './App';import './styles.css';import './cyberui.css';createRoot(document.getElementById('root')!).render(<App/>);");
       save(join(cwd, 'src/App.tsx'), appSource(prefix));
     } else {
+      save(join(cwd, 'postcss.config.mjs'), "export default { plugins: { '@tailwindcss/postcss': {} } };\n");
       save(join(cwd, 'next-env.d.ts'), '/// <reference types="next" />\n/// <reference types="next/image-types/global" />\n');
-      save(join(cwd, 'src/app/layout.tsx'), "import type { ReactNode } from 'react';import './globals.css';export default function Layout({children}:{children:ReactNode}){return <html lang=\"zh-CN\"><body>{children}</body></html>}");
+      save(join(cwd, 'src/app/layout.tsx'), "import type { ReactNode } from 'react';import './globals.css';import './cyberui.css';export default function Layout({children}:{children:ReactNode}){return <html lang=\"zh-CN\"><body>{children}</body></html>}");
       save(join(cwd, 'src/app/page.tsx'), appSource(prefix));
     }
     console.log(`${framework}: installing standalone React 19 toolchain in ${cwd}`);
@@ -146,7 +163,7 @@ try {
     const sourceConsistency = verifyInstalledSources(installed);
     const packageAfter = JSON.parse(readFileSync(join(cwd, 'package.json'), 'utf8'));
     expect(Object.keys(packageAfter.dependencies).some(name => name.startsWith('@cyberui/'))).toBe(false);
-    expect(existsSync(join(cwd, 'node_modules/tailwindcss'))).toBe(false);
+    expect(existsSync(join(cwd, 'node_modules/tailwindcss'))).toBe(true);
     if (framework === 'vite') {
       const buttonPath = join(installed, 'button.tsx');
       const custom = readFileSync(buttonPath, 'utf8') + '\n// consumer customization preserved\n';
@@ -162,7 +179,7 @@ try {
     save(join(cwd, 'src/ExamplesGallery.tsx'), `'use client';\nimport * as examples from './examples';\nexport default function ExamplesGallery(){return <main>{Object.entries(examples).map(([name,Example])=><section key={name} data-example={name}><h2>{name}</h2><Example/></section>)}</main>}`);
     if (framework === 'vite') {
       save(join(cwd, 'examples.html'), '<html lang="en"><head><title>All source examples</title></head><body><div id="root"></div><script type="module" src="/src/examples-main.tsx"></script></body></html>');
-      save(join(cwd, 'src/examples-main.tsx'), "import {createRoot} from 'react-dom/client';import ExamplesGallery from './ExamplesGallery';createRoot(document.getElementById('root')!).render(<ExamplesGallery/>);");
+      save(join(cwd, 'src/examples-main.tsx'), "import {createRoot} from 'react-dom/client';import ExamplesGallery from './ExamplesGallery';import './styles.css';import './cyberui.css';createRoot(document.getElementById('root')!).render(<ExamplesGallery/>);");
     } else {
       save(join(cwd, 'src/app/examples/page.tsx'), "export { default } from '../../ExamplesGallery';");
     }
@@ -188,11 +205,11 @@ try {
       close = () => new Promise(resolveClose => { server.once('exit', resolveClose); server.kill('SIGTERM'); });
     }
     try { await browserChecks(browser, url, framework); } finally { await close(); }
-    report.consumers.push({ framework, directory: cwd, components: manifest.items.length, examples: exampleBodies.length, sourceConsistency, productionBuild: 'passed', renderedExamples: exampleBodies.length, browser: 'passed', customComponentsDirectory: componentDir, tailwindRequired: false });
+    report.consumers.push({ framework, directory: cwd, components: manifest.items.length, examples: exampleBodies.length, sourceConsistency, productionBuild: 'passed', renderedExamples: exampleBodies.length, browser: 'passed', customComponentsDirectory: componentDir, tailwindRequired: true, tailwindVersion: '4.3.4', utilitiesOverrideComponents: true, hostTailwindUtilitiesPreserved: true, utilityEntry: 'separate-js-import' });
     console.log(`${framework}: PASS`);
   }
   report.status = 'passed';
-  json(resolve(root, 'artifacts/registry-consumer-result.json'), report);
+  json(resolve(artifactRoot, 'registry-consumer-result.json'), report);
   console.log('PASS: standalone CLI, source, types, production and browser validation.');
 } finally {
   await browser?.close();

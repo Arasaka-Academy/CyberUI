@@ -46,3 +46,30 @@ test('skyline keeps every day visible and supports native keyboard and pointer s
   const columns=stage.locator('figure [aria-hidden="true"][data-selected]');await expect(columns).toHaveCount(31);const last=await columns.last().boundingBox();expect(last!.x+last!.width).toBeLessThanOrEqual(bounds!.x+bounds!.width+1);
   await stage.getByText('Daily reading data',{exact:true}).click();await expect(stage.locator('dl > div')).toHaveCount(31);
 });
+test('command palette supports focused search, keyboard activation and Escape in both languages', async ({ page }) => {
+  for (const english of [false, true]) {
+    await page.goto('/#/components/CommandPalette');
+    await page.getByRole('button', { name: english ? 'Switch to English' : 'Switch to Chinese' }).click();
+    const trigger = page.locator('.component-stage').getByRole('button');
+    await trigger.click();
+    const search = page.getByRole('searchbox', { name: english ? 'Search commands' : '搜索命令' });
+    await expect(search).toBeFocused();
+    await search.fill(english ? 'Rename' : '重命名');
+    await page.keyboard.press('ArrowDown');
+    await expect(search).toBeFocused();
+    await page.keyboard.press('Enter');
+    await expect(page.getByRole('dialog')).toHaveCount(0);
+    await expect(page.getByRole('status').filter({ hasText: /^rename$/ }).last()).toBeVisible();
+    await expect(trigger).toBeFocused();
+    await trigger.click();
+    await expect(search).toHaveValue('');
+    await search.fill('missing-command');
+    await expect(page.getByText(english ? 'No commands found' : '没有匹配的命令')).toBeVisible();
+    await page.keyboard.press('ArrowDown');
+    await page.keyboard.press('Enter');
+    await expect(page.getByRole('dialog')).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect(page.getByRole('dialog')).toHaveCount(0);
+    await expect(trigger).toBeFocused();
+  }
+});

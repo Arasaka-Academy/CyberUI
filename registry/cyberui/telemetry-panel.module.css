@@ -1,8 +1,13 @@
 /* Generated from packages/react/src/telemetry-panel.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.micro { color:var(--cyber-muted); font:12px/1.5 var(--cyber-font-mono); letter-spacing:.06em; text-transform:uppercase; }
-.metric { margin-bottom:22px; }
-.metric:last-child { margin-bottom:0; }
-.metric > div:first-child { display:flex; align-items:center; justify-content:space-between; gap:16px; font:13px var(--cyber-font-mono); text-transform:uppercase; margin-bottom:8px; }
-.metric strong { font-size:22px; font-weight:400; }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
 
-.telemetry { min-width: 0; }
+@layer components {
+.micro { @apply tw:text-cyber-muted; font:12px/1.5 var(--cyber-font-mono); @apply tw:tracking-[.06em] tw:uppercase; }
+.metric { @apply tw:mb-[22px]; }
+.metric:last-child { @apply tw:mb-[0]; }
+.metric > div:first-child { @apply tw:flex tw:items-center tw:justify-between tw:gap-[16px]; font:13px var(--cyber-font-mono); @apply tw:uppercase tw:mb-[8px]; }
+.metric strong { @apply tw:text-[length:22px]; @apply tw:font-normal; }
+
+.telemetry { @apply tw:min-w-[0]; }
+}

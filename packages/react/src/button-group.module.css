@@ -1,5 +1,6 @@
-.buttonGroup { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.buttonGroup { @apply tw:flex tw:flex-wrap tw:items-center tw:gap-[8px]; }
+}

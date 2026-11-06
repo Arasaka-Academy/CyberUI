@@ -1,15 +1,20 @@
 /* Generated from packages/react/src/book-card.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.micro { color:var(--cyber-muted); font:12px/1.5 var(--cyber-font-mono); letter-spacing:.06em; text-transform:uppercase; }
-.book { min-width:0; }
-.bookOpen { display:block; width:100%; padding:0; color:var(--cyber-ink); border:0; background:transparent; text-align:left; }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.micro { @apply tw:text-cyber-muted; font:12px/1.5 var(--cyber-font-mono); @apply tw:tracking-[.06em] tw:uppercase; }
+.book { @apply tw:min-w-[0]; }
+.bookOpen { @apply tw:block tw:w-full tw:p-[0] tw:text-cyber-ink; border:0; background:transparent; @apply tw:text-left; }
 .bookOpen:hover [data-slot='ascii-cover'] { filter:brightness(1.15); }
-.bookTitle { display:block; font-size:15px; font-weight:500; padding-top:9px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.book .micro { display:block; padding:4px 0 10px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
-.book > [role='progressbar'] { margin-top:8px; height:5px; gap:1px; }
-.book[data-compact='true'] .bookOpen { display:grid; grid-template-columns:54px 1fr; column-gap:14px; }
-.book[data-compact='true'] [data-slot='ascii-cover'] { grid-row:span 2; }
-.book[data-compact='true'] [data-slot='cover-decor'] { min-height:0; font-size:6px; padding:6px 3px; }
-.book[data-compact='true'] [data-slot='ascii-cover'] pre { font-size:2px; }
-.book[data-compact='true'] [data-slot='cover-badge'] { display:none; }
-.book[data-compact='true'] .bookTitle { align-self:end; }
-.book[data-compact='true'] > [role='progressbar'] { display:none; }
+.bookTitle { @apply tw:block tw:text-[length:15px]; @apply tw:font-medium tw:pt-[9px] tw:overflow-hidden tw:text-ellipsis tw:whitespace-nowrap; }
+.book .micro { @apply tw:block tw:p-[var(--cyber-space-xs)_0_var(--cyber-space-md)] tw:overflow-hidden tw:whitespace-nowrap tw:text-ellipsis; }
+.book > [role='progressbar'] { @apply tw:mt-[8px] tw:h-[5px] tw:gap-[1px]; }
+.book[data-compact='true'] .bookOpen { @apply tw:grid tw:grid-cols-[54px_1fr] tw:gap-x-cyber-lg; }
+.book[data-compact='true'] [data-slot='ascii-cover'] { @apply tw:row-[span_2]; }
+.book[data-compact='true'] [data-slot='cover-decor'] { @apply tw:min-h-[0] tw:text-[length:6px] tw:p-[var(--cyber-space-sm)_3px]; }
+.book[data-compact='true'] [data-slot='ascii-cover'] pre { @apply tw:text-[length:2px]; }
+.book[data-compact='true'] [data-slot='cover-badge'] { @apply tw:hidden; }
+.book[data-compact='true'] .bookTitle { @apply tw:[align-self:end]; }
+.book[data-compact='true'] > [role='progressbar'] { @apply tw:hidden; }
+}

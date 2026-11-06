@@ -1,4 +1,9 @@
 /* Generated from packages/react/src/barcode.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.barcode { display:inline-flex; height:32px; align-items:stretch; flex-shrink:0; }
-.barcode i { display:block; background:currentColor; }
-.barcode i { flex-shrink:0; }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.barcode { @apply tw:inline-flex tw:h-[32px] tw:items-stretch tw:shrink-[0]; }
+.barcode i { @apply tw:block; background:currentColor; }
+.barcode i { @apply tw:shrink-[0]; }
+}

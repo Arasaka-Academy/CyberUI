@@ -9,9 +9,12 @@
       "title": "Button",
       "description": "Chamfered commands with clear priority.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -55,6 +58,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -70,6 +78,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -80,7 +93,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Button",
         "zh": "按钮",
@@ -94,9 +107,12 @@
       "title": "IconButton",
       "description": "A compact command with an accessible name.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -150,6 +166,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -165,6 +186,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -175,7 +201,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "IconButton",
         "zh": "图标按钮",
@@ -189,9 +215,12 @@
       "title": "ButtonGroup",
       "description": "Related actions in a flexible row.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -220,6 +249,11 @@
           "target": "@components/cyberui/button-group.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -235,6 +269,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -245,7 +284,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "ButtonGroup",
         "zh": "按钮组",
@@ -259,9 +298,12 @@
       "title": "Badge",
       "description": "Compact, semantic status readouts.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -290,6 +332,11 @@
           "target": "@components/cyberui/badge.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -305,6 +352,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -315,7 +367,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Badge",
         "zh": "徽标",
@@ -329,9 +381,12 @@
       "title": "Tag",
       "description": "Removable labels for selected values.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -365,6 +420,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -390,6 +450,11 @@
           "target": "@components/cyberui/tag.tsx"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -400,7 +465,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Tag",
         "zh": "标签",
@@ -414,9 +479,12 @@
       "title": "Avatar",
       "description": "An image identity with initials fallback.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -445,6 +513,11 @@
           "target": "@components/cyberui/avatar.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -460,6 +533,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -470,7 +548,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Avatar",
         "zh": "头像",
@@ -484,9 +562,12 @@
       "title": "Divider",
       "description": "A precise one-pixel separator.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -515,6 +596,11 @@
           "target": "@components/cyberui/divider.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -530,6 +616,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -540,7 +631,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Divider",
         "zh": "分割线",
@@ -554,9 +645,12 @@
       "title": "Panel",
       "description": "Six distinct border geometries.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -573,6 +667,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/panel.module.css",
@@ -600,6 +699,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -610,7 +714,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Panel",
         "zh": "面板",
@@ -624,9 +728,12 @@
       "title": "Card",
       "description": "A content surface with optional actions.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -655,6 +762,11 @@
           "target": "@components/cyberui/card.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -670,6 +782,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -680,7 +797,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Card",
         "zh": "卡片",
@@ -694,9 +811,12 @@
       "title": "Toolbar",
       "description": "Grouped commands with arrow-key navigation.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -715,6 +835,11 @@
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -728,6 +853,11 @@
           "path": "registry/cyberui/styles.css",
           "type": "registry:file",
           "target": "@components/cyberui/styles.css"
+        },
+        {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
         },
         {
           "path": "registry/cyberui/tokens.css",
@@ -750,7 +880,7 @@
           "target": "@components/cyberui/toolbar.tsx"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Toolbar",
         "zh": "工具栏",
@@ -764,9 +894,12 @@
       "title": "Field",
       "description": "Visible labels, guidance and inline errors.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -795,6 +928,11 @@
           "target": "@components/cyberui/field.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -810,6 +948,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -820,7 +963,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Field",
         "zh": "字段",
@@ -834,9 +977,12 @@
       "title": "Input",
       "description": "Native text input with full ref support.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -875,6 +1021,11 @@
           "target": "@components/cyberui/input.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -890,6 +1041,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -900,7 +1056,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Input",
         "zh": "输入框",
@@ -914,9 +1070,12 @@
       "title": "Textarea",
       "description": "Multiline input with a resizable writing area.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -945,6 +1104,16 @@
           "target": "@components/cyberui/field.tsx"
         },
         {
+          "path": "registry/cyberui/input.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/input.module.css"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -960,9 +1129,9 @@
           "target": "@components/cyberui/styles.css"
         },
         {
-          "path": "registry/cyberui/textarea.module.css",
+          "path": "registry/cyberui/tailwind-theme.css",
           "type": "registry:file",
-          "target": "@components/cyberui/textarea.module.css"
+          "target": "@components/cyberui/tailwind-theme.css"
         },
         {
           "path": "registry/cyberui/textarea.tsx",
@@ -980,7 +1149,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Textarea",
         "zh": "文本域",
@@ -994,9 +1163,12 @@
       "title": "NumberInput",
       "description": "Bounded values with accessible steppers.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -1025,6 +1197,11 @@
           "target": "@components/cyberui/button.tsx"
         },
         {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
+        },
+        {
           "path": "registry/cyberui/icon.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/icon.module.css"
@@ -1040,9 +1217,14 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
-          "path": "registry/cyberui/number-input.module.css",
+          "path": "registry/cyberui/input.module.css",
           "type": "registry:file",
-          "target": "@components/cyberui/number-input.module.css"
+          "target": "@components/cyberui/input.module.css"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/number-input.tsx",
@@ -1065,6 +1247,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -1075,7 +1262,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "NumberInput",
         "zh": "数字输入",
@@ -1089,9 +1276,12 @@
       "title": "PasswordInput",
       "description": "Reveal a password without losing focus.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -1165,9 +1355,9 @@
           "target": "@components/cyberui/input.tsx"
         },
         {
-          "path": "registry/cyberui/password-input.module.css",
+          "path": "registry/cyberui/motion.css",
           "type": "registry:file",
-          "target": "@components/cyberui/password-input.module.css"
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/password-input.tsx",
@@ -1190,6 +1380,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -1200,7 +1395,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "PasswordInput",
         "zh": "密码输入",
@@ -1214,9 +1409,12 @@
       "title": "Checkbox",
       "description": "Independent, keyboard-operable selection.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -1260,6 +1458,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -1275,6 +1478,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -1285,7 +1493,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Checkbox",
         "zh": "复选框",
@@ -1299,9 +1507,12 @@
       "title": "RadioGroup",
       "description": "One choice in a clearly labelled group.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -1318,6 +1529,16 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/option.tsx",
@@ -1350,6 +1571,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -1360,7 +1586,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "RadioGroup",
         "zh": "单选组",
@@ -1374,9 +1600,12 @@
       "title": "Switch",
       "description": "Immediate binary settings with visible state.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -1393,6 +1622,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -1420,6 +1654,11 @@
           "target": "@components/cyberui/switch.tsx"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -1430,7 +1669,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Switch",
         "zh": "开关",
@@ -1444,9 +1683,12 @@
       "title": "Select",
       "description": "Single selection with typeahead.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -1465,6 +1707,16 @@
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
         },
         {
+          "path": "registry/cyberui/choice.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/choice.module.css"
+        },
+        {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
+        },
+        {
           "path": "registry/cyberui/icon.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/icon.module.css"
@@ -1480,19 +1732,24 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/option.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/option.tsx"
         },
         {
+          "path": "registry/cyberui/popover.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/popover.module.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
-        },
-        {
-          "path": "registry/cyberui/select.module.css",
-          "type": "registry:file",
-          "target": "@components/cyberui/select.module.css"
         },
         {
           "path": "registry/cyberui/select.tsx",
@@ -1510,6 +1767,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -1520,7 +1782,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Select",
         "zh": "选择器",
@@ -1534,9 +1796,12 @@
       "title": "Combobox",
       "description": "Search and select from suggestions.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -1555,14 +1820,19 @@
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
         },
         {
-          "path": "registry/cyberui/combobox.module.css",
+          "path": "registry/cyberui/choice.module.css",
           "type": "registry:file",
-          "target": "@components/cyberui/combobox.module.css"
+          "target": "@components/cyberui/choice.module.css"
         },
         {
           "path": "registry/cyberui/combobox.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/combobox.tsx"
+        },
+        {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
         },
         {
           "path": "registry/cyberui/icon.module.css",
@@ -1580,19 +1850,29 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/input.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/input.module.css"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/option.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/option.tsx"
         },
         {
+          "path": "registry/cyberui/popover.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/popover.module.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
-        },
-        {
-          "path": "registry/cyberui/select.module.css",
-          "type": "registry:file",
-          "target": "@components/cyberui/select.module.css"
         },
         {
           "path": "registry/cyberui/select.tsx",
@@ -1610,6 +1890,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -1620,7 +1905,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Combobox",
         "zh": "组合框",
@@ -1634,9 +1919,12 @@
       "title": "MultiSelect",
       "description": "Select multiple entries and remove tags.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -1655,6 +1943,16 @@
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
         },
         {
+          "path": "registry/cyberui/choice.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/choice.module.css"
+        },
+        {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
+        },
+        {
           "path": "registry/cyberui/icon.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/icon.module.css"
@@ -1668,6 +1966,11 @@
           "path": "registry/cyberui/icons.generated.ts",
           "type": "registry:file",
           "target": "@components/cyberui/icons.generated.ts"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/multi-select.module.css",
@@ -1685,14 +1988,14 @@
           "target": "@components/cyberui/option.tsx"
         },
         {
+          "path": "registry/cyberui/popover.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/popover.module.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
-        },
-        {
-          "path": "registry/cyberui/select.module.css",
-          "type": "registry:file",
-          "target": "@components/cyberui/select.module.css"
         },
         {
           "path": "registry/cyberui/select.tsx",
@@ -1720,6 +2023,11 @@
           "target": "@components/cyberui/tag.tsx"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -1730,7 +2038,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "MultiSelect",
         "zh": "多选器",
@@ -1744,9 +2052,12 @@
       "title": "Slider",
       "description": "Adjust a continuous or stepped value.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -1763,6 +2074,16 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -1790,6 +2111,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -1800,7 +2126,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Slider",
         "zh": "滑块",
@@ -1815,9 +2141,12 @@
       "description": "Locale-aware date segments and calendar.",
       "dependencies": [
         "@internationalized/date@^3.12.4",
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -1871,6 +2200,11 @@
           "target": "@components/cyberui/date-utils.tsx"
         },
         {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
+        },
+        {
           "path": "registry/cyberui/icon.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/icon.module.css"
@@ -1884,6 +2218,16 @@
           "path": "registry/cyberui/icons.generated.ts",
           "type": "registry:file",
           "target": "@components/cyberui/icons.generated.ts"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
+          "path": "registry/cyberui/popover.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/popover.module.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -1901,6 +2245,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -1911,7 +2260,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "DatePicker",
         "zh": "日期选择",
@@ -1926,9 +2275,12 @@
       "description": "Keyboard-editable 24-hour time.",
       "dependencies": [
         "@internationalized/date@^3.12.4",
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -1982,6 +2334,11 @@
           "target": "@components/cyberui/date-utils.tsx"
         },
         {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
+        },
+        {
           "path": "registry/cyberui/icon.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/icon.module.css"
@@ -1997,6 +2354,16 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
+          "path": "registry/cyberui/popover.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/popover.module.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -2010,6 +2377,11 @@
           "path": "registry/cyberui/styles.css",
           "type": "registry:file",
           "target": "@components/cyberui/styles.css"
+        },
+        {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
         },
         {
           "path": "registry/cyberui/time-picker.module.css",
@@ -2032,7 +2404,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "TimePicker",
         "zh": "时间选择",
@@ -2046,9 +2418,12 @@
       "title": "ColorPicker",
       "description": "Native color selection and validated HEX.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -2097,6 +2472,11 @@
           "target": "@components/cyberui/input.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -2112,6 +2492,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -2122,7 +2507,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "ColorPicker",
         "zh": "颜色选择",
@@ -2136,9 +2521,12 @@
       "title": "FileUpload",
       "description": "Drop files or use a native file chooser.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -2155,6 +2543,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
         },
         {
           "path": "registry/cyberui/file-upload.module.css",
@@ -2182,6 +2575,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -2197,6 +2595,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -2207,7 +2610,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "FileUpload",
         "zh": "文件上传",
@@ -2221,9 +2624,12 @@
       "title": "Tabs",
       "description": "Switch between related content panels.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -2240,6 +2646,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -2267,6 +2678,11 @@
           "target": "@components/cyberui/tabs.tsx"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -2277,7 +2693,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Tabs",
         "zh": "分页标签",
@@ -2291,9 +2707,12 @@
       "title": "SegmentedControl",
       "description": "Mutually exclusive view and mode switches.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -2310,6 +2729,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/option.tsx",
@@ -2342,6 +2766,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -2352,7 +2781,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "SegmentedControl",
         "zh": "分段控制",
@@ -2366,9 +2795,12 @@
       "title": "Breadcrumb",
       "description": "Trace a readable path through the archive.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -2397,6 +2829,11 @@
           "target": "@components/cyberui/breadcrumb.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/navigation-types.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/navigation-types.tsx"
@@ -2417,6 +2854,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -2427,7 +2869,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Breadcrumb",
         "zh": "面包屑",
@@ -2441,9 +2883,12 @@
       "title": "Pagination",
       "description": "Bounded navigation through result pages.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -2497,6 +2942,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/pagination.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/pagination.module.css"
@@ -2522,6 +2972,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -2532,7 +2987,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Pagination",
         "zh": "分页器",
@@ -2546,9 +3001,12 @@
       "title": "Sidebar",
       "description": "Hierarchical navigation with active states.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -2580,6 +3038,11 @@
           "path": "registry/cyberui/icons.generated.ts",
           "type": "registry:file",
           "target": "@components/cyberui/icons.generated.ts"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/navigation-links.tsx",
@@ -2617,6 +3080,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -2627,7 +3095,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Sidebar",
         "zh": "侧边导航",
@@ -2641,9 +3109,12 @@
       "title": "BottomNavigation",
       "description": "Up to five primary destinations.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -2687,6 +3158,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/navigation-links.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/navigation-links.tsx"
@@ -2712,6 +3188,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -2722,7 +3203,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "BottomNavigation",
         "zh": "底部导航",
@@ -2736,9 +3217,12 @@
       "title": "NavigationMenu",
       "description": "Linked destinations with native URLs.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -2770,6 +3254,11 @@
           "path": "registry/cyberui/icons.generated.ts",
           "type": "registry:file",
           "target": "@components/cyberui/icons.generated.ts"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/navigation-links.tsx",
@@ -2807,6 +3296,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -2817,7 +3311,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "NavigationMenu",
         "zh": "导航菜单",
@@ -2831,9 +3325,12 @@
       "title": "DropdownMenu",
       "description": "Context actions with full keyboard control.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -2862,9 +3359,9 @@
           "target": "@components/cyberui/button.tsx"
         },
         {
-          "path": "registry/cyberui/dropdown-menu.module.css",
+          "path": "registry/cyberui/choice.module.css",
           "type": "registry:file",
-          "target": "@components/cyberui/dropdown-menu.module.css"
+          "target": "@components/cyberui/choice.module.css"
         },
         {
           "path": "registry/cyberui/dropdown-menu.tsx",
@@ -2892,6 +3389,16 @@
           "target": "@components/cyberui/menu-types.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
+          "path": "registry/cyberui/popover.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/popover.module.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -2907,6 +3414,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -2917,7 +3429,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "DropdownMenu",
         "zh": "下拉菜单",
@@ -2931,9 +3443,12 @@
       "title": "CommandPalette",
       "description": "Searchable actions in a focused dialog.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -2962,9 +3477,9 @@
           "target": "@components/cyberui/button.tsx"
         },
         {
-          "path": "registry/cyberui/command-palette.module.css",
+          "path": "registry/cyberui/choice.module.css",
           "type": "registry:file",
-          "target": "@components/cyberui/command-palette.module.css"
+          "target": "@components/cyberui/choice.module.css"
         },
         {
           "path": "registry/cyberui/command-palette.tsx",
@@ -2980,11 +3495,6 @@
           "path": "registry/cyberui/field.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/field.module.css"
-        },
-        {
-          "path": "registry/cyberui/field.tsx",
-          "type": "registry:file",
-          "target": "@components/cyberui/field.tsx"
         },
         {
           "path": "registry/cyberui/icon-button.module.css",
@@ -3017,11 +3527,6 @@
           "target": "@components/cyberui/input.module.css"
         },
         {
-          "path": "registry/cyberui/input.tsx",
-          "type": "registry:file",
-          "target": "@components/cyberui/input.tsx"
-        },
-        {
           "path": "registry/cyberui/menu-types.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/menu-types.tsx"
@@ -3035,6 +3540,11 @@
           "path": "registry/cyberui/modal-surface.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/modal-surface.tsx"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -3052,6 +3562,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -3062,7 +3577,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "CommandPalette",
         "zh": "命令面板",
@@ -3076,9 +3591,12 @@
       "title": "Dialog",
       "description": "A focused modal with Escape and restoration.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -3147,6 +3665,11 @@
           "target": "@components/cyberui/modal-surface.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -3162,6 +3685,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -3172,7 +3700,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Dialog",
         "zh": "对话框",
@@ -3186,9 +3714,12 @@
       "title": "AlertDialog",
       "description": "Explicit confirmation for a consequential action.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -3237,6 +3768,11 @@
           "target": "@components/cyberui/dialog.tsx"
         },
         {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
+        },
+        {
           "path": "registry/cyberui/icon-button.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/icon-button.module.css"
@@ -3272,6 +3808,11 @@
           "target": "@components/cyberui/modal-surface.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -3287,6 +3828,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -3297,7 +3843,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "AlertDialog",
         "zh": "确认对话框",
@@ -3311,9 +3857,12 @@
       "title": "Drawer",
       "description": "A responsive side surface with focus containment.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -3387,6 +3936,11 @@
           "target": "@components/cyberui/modal-surface.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -3402,6 +3956,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -3412,7 +3971,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Drawer",
         "zh": "抽屉",
@@ -3426,9 +3985,12 @@
       "title": "Popover",
       "description": "Contextual content anchored to its trigger.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -3445,6 +4007,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/popover.module.css",
@@ -3472,6 +4039,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -3482,7 +4054,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Popover",
         "zh": "浮出面板",
@@ -3496,9 +4068,12 @@
       "title": "Tooltip",
       "description": "Supplementary context on hover and focus.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -3517,6 +4092,11 @@
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -3530,6 +4110,11 @@
           "path": "registry/cyberui/styles.css",
           "type": "registry:file",
           "target": "@components/cyberui/styles.css"
+        },
+        {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
         },
         {
           "path": "registry/cyberui/tokens.css",
@@ -3552,7 +4137,7 @@
           "target": "@components/cyberui/tooltip.tsx"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Tooltip",
         "zh": "提示",
@@ -3566,9 +4151,12 @@
       "title": "Toast",
       "description": "Dismissible feedback with pause on focus.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -3622,6 +4210,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -3635,6 +4228,11 @@
           "path": "registry/cyberui/styles.css",
           "type": "registry:file",
           "target": "@components/cyberui/styles.css"
+        },
+        {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
         },
         {
           "path": "registry/cyberui/toast-context.tsx",
@@ -3672,7 +4270,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Toast",
         "zh": "轻提示",
@@ -3686,9 +4284,12 @@
       "title": "Alert",
       "description": "Persistent, contextual status messages.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -3732,6 +4333,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -3747,6 +4353,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -3757,7 +4368,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Alert",
         "zh": "警示",
@@ -3771,9 +4382,12 @@
       "title": "Progress",
       "description": "Five distinctive reading signals.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -3790,6 +4404,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/progress-variant.tsx",
@@ -3822,6 +4441,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -3832,7 +4456,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Progress",
         "zh": "进度",
@@ -3846,9 +4470,12 @@
       "title": "Skeleton",
       "description": "Reserve space during data loading.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -3865,6 +4492,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -3892,6 +4524,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -3902,7 +4539,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Skeleton",
         "zh": "骨架屏",
@@ -3916,9 +4553,12 @@
       "title": "Spinner",
       "description": "An accessible indeterminate busy state.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -3935,6 +4575,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -3962,6 +4607,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -3972,7 +4622,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Spinner",
         "zh": "加载指示",
@@ -3986,9 +4636,12 @@
       "title": "EmptyState",
       "description": "Explain an empty result and the next action.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -4032,6 +4685,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -4047,6 +4705,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -4057,7 +4720,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "EmptyState",
         "zh": "空状态",
@@ -4071,9 +4734,12 @@
       "title": "Table",
       "description": "Semantic rows and columns with custom cells.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -4090,6 +4756,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -4117,6 +4788,11 @@
           "target": "@components/cyberui/table.tsx"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -4127,7 +4803,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Table",
         "zh": "表格",
@@ -4141,9 +4817,12 @@
       "title": "DataTable",
       "description": "Search, sort, select and paginate records.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -4227,6 +4906,11 @@
           "target": "@components/cyberui/input.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/pagination.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/pagination.module.css"
@@ -4262,6 +4946,11 @@
           "target": "@components/cyberui/table.tsx"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -4272,7 +4961,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "DataTable",
         "zh": "数据表格",
@@ -4286,9 +4975,12 @@
       "title": "Accordion",
       "description": "Expandable sections with controlled state.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -4332,6 +5024,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -4347,6 +5044,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -4357,7 +5059,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Accordion",
         "zh": "折叠面板",
@@ -4371,9 +5073,12 @@
       "title": "TreeView",
       "description": "Navigate a nested archive by keyboard.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -4407,6 +5112,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -4420,6 +5130,11 @@
           "path": "registry/cyberui/styles.css",
           "type": "registry:file",
           "target": "@components/cyberui/styles.css"
+        },
+        {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
         },
         {
           "path": "registry/cyberui/tokens.css",
@@ -4442,7 +5157,7 @@
           "target": "@components/cyberui/tree-view.tsx"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "TreeView",
         "zh": "树形视图",
@@ -4457,9 +5172,12 @@
       "description": "Locale-aware single-date selection.",
       "dependencies": [
         "@internationalized/date@^3.12.4",
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -4523,6 +5241,11 @@
           "target": "@components/cyberui/date-utils.tsx"
         },
         {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
+        },
+        {
           "path": "registry/cyberui/icon.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/icon.module.css"
@@ -4536,6 +5259,16 @@
           "path": "registry/cyberui/icons.generated.ts",
           "type": "registry:file",
           "target": "@components/cyberui/icons.generated.ts"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
+          "path": "registry/cyberui/popover.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/popover.module.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -4553,6 +5286,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -4563,7 +5301,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Calendar",
         "zh": "日历",
@@ -4577,10 +5315,13 @@
       "title": "Chart",
       "description": "Lines, bars and sparklines with exact data.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0",
         "recharts@^3.3.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -4609,6 +5350,16 @@
           "target": "@components/cyberui/chart.tsx"
         },
         {
+          "path": "registry/cyberui/field.module.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/field.module.css"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -4634,6 +5385,11 @@
           "target": "@components/cyberui/table.tsx"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -4644,7 +5400,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "Chart",
         "zh": "图表",
@@ -4658,9 +5414,12 @@
       "title": "StatusBar",
       "description": "Fixed-time telemetry from the cyberdeck.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -4677,6 +5436,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -4704,6 +5468,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -4714,7 +5483,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "StatusBar",
         "zh": "状态栏",
@@ -4728,9 +5497,12 @@
       "title": "OperatorCard",
       "description": "An identity card with rank and equipment.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -4782,6 +5554,11 @@
           "path": "registry/cyberui/icons.generated.ts",
           "type": "registry:file",
           "target": "@components/cyberui/icons.generated.ts"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/operator-card.module.css",
@@ -4854,6 +5631,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -4864,7 +5646,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "OperatorCard",
         "zh": "操作员卡",
@@ -4878,9 +5660,12 @@
       "title": "AsciiCover",
       "description": "Deterministic, locally generated cover art.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -4909,6 +5694,11 @@
           "target": "@components/cyberui/ascii-cover.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -4924,6 +5714,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -4934,7 +5729,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "AsciiCover",
         "zh": "字符封面",
@@ -4948,9 +5743,12 @@
       "title": "BookCard",
       "description": "Cover, reading progress and favorite action.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -5014,6 +5812,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/progress-variant.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/progress-variant.tsx"
@@ -5044,6 +5847,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -5054,7 +5862,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "BookCard",
         "zh": "书籍卡",
@@ -5068,9 +5876,12 @@
       "title": "CollectionStack",
       "description": "A layered archive of related books.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -5124,6 +5935,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -5139,6 +5955,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -5149,7 +5970,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "CollectionStack",
         "zh": "收藏集",
@@ -5163,9 +5984,12 @@
       "title": "DataShard",
       "description": "Recovered quotations from the archive.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -5219,6 +6043,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/panel.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/panel.module.css"
@@ -5244,6 +6073,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -5254,7 +6088,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "DataShard",
         "zh": "数据碎片",
@@ -5268,9 +6102,12 @@
       "title": "GigCard",
       "description": "A reading contract with progress and payout.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -5334,6 +6171,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/panel.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/panel.module.css"
@@ -5374,6 +6216,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -5384,7 +6231,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "GigCard",
         "zh": "任务卡",
@@ -5398,9 +6245,12 @@
       "title": "ThemeSwatch",
       "description": "Preview and select a theme palette.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -5419,6 +6269,11 @@
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -5432,6 +6287,11 @@
           "path": "registry/cyberui/styles.css",
           "type": "registry:file",
           "target": "@components/cyberui/styles.css"
+        },
+        {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
         },
         {
           "path": "registry/cyberui/theme-swatch.module.css",
@@ -5454,7 +6314,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "ThemeSwatch",
         "zh": "主题色板",
@@ -5468,9 +6328,12 @@
       "title": "LauncherTile",
       "description": "Direct access to the next destination.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -5514,6 +6377,11 @@
           "target": "@components/cyberui/launcher-tile.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -5529,6 +6397,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -5539,7 +6412,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "LauncherTile",
         "zh": "启动器",
@@ -5553,9 +6426,12 @@
       "title": "TelemetryPanel",
       "description": "Grouped readings and segmented gauges.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -5572,6 +6448,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/panel.module.css",
@@ -5614,6 +6495,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/telemetry-panel.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/telemetry-panel.module.css"
@@ -5634,7 +6520,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "TelemetryPanel",
         "zh": "遥测面板",
@@ -5648,9 +6534,12 @@
       "title": "JackInCard",
       "description": "Five entry sequences for the reading deck.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -5724,6 +6613,11 @@
           "target": "@components/cyberui/jack-in-card.tsx"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/panel.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/panel.module.css"
@@ -5749,6 +6643,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -5759,7 +6658,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "JackInCard",
         "zh": "连接卡",
@@ -5773,9 +6672,12 @@
       "title": "SkylineCalendar",
       "description": "Daily pages form an interactive skyline.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -5792,6 +6694,11 @@
           "path": "registry/cyberui/UPSTREAM-NOTICE.md",
           "type": "registry:file",
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
+        },
+        {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -5819,6 +6726,11 @@
           "target": "@components/cyberui/styles.css"
         },
         {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
+        },
+        {
           "path": "registry/cyberui/tokens.css",
           "type": "registry:file",
           "target": "@components/cyberui/tokens.css"
@@ -5829,7 +6741,7 @@
           "target": "@components/cyberui/tokens.ts"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "SkylineCalendar",
         "zh": "天际线日历",
@@ -5843,9 +6755,12 @@
       "title": "VirtualKeyboard",
       "description": "A supplemental, fully keyboard-accessible input.",
       "dependencies": [
-        "react-aria-components@^1.12.0",
+        "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
+      ],
+      "devDependencies": [
+        "tailwindcss@4.3.4"
       ],
       "files": [
         {
@@ -5889,6 +6804,11 @@
           "target": "@components/cyberui/icons.generated.ts"
         },
         {
+          "path": "registry/cyberui/motion.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/motion.css"
+        },
+        {
           "path": "registry/cyberui/provider.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/provider.tsx"
@@ -5902,6 +6822,11 @@
           "path": "registry/cyberui/styles.css",
           "type": "registry:file",
           "target": "@components/cyberui/styles.css"
+        },
+        {
+          "path": "registry/cyberui/tailwind-theme.css",
+          "type": "registry:file",
+          "target": "@components/cyberui/tailwind-theme.css"
         },
         {
           "path": "registry/cyberui/tokens.css",
@@ -5924,7 +6849,7 @@
           "target": "@components/cyberui/virtual-keyboard.tsx"
         }
       ],
-      "docs": "Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.",
+      "docs": "Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.",
       "meta": {
         "componentName": "VirtualKeyboard",
         "zh": "虚拟键盘",

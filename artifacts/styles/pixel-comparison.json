@@ -1,0 +1,58 @@
+[
+  {
+    "file": "preview-en-1440.png",
+    "width": 1440,
+    "height": 1000,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "file": "preview-en-375.png",
+    "width": 375,
+    "height": 1000,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "file": "preview-zh-CN-1440.png",
+    "width": 1440,
+    "height": 1000,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "file": "preview-zh-CN-375.png",
+    "width": 375,
+    "height": 1000,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "file": "replica-en-1440.png",
+    "width": 1440,
+    "height": 1000,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "file": "replica-en-375.png",
+    "width": 375,
+    "height": 1000,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "file": "replica-zh-CN-1440.png",
+    "width": 1440,
+    "height": 1000,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "file": "replica-zh-CN-375.png",
+    "width": 375,
+    "height": 1000,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  }
+]

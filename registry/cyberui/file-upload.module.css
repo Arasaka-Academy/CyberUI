@@ -1,12 +1,9 @@
 /* Generated from packages/react/src/file-upload.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-.label { display: block; color: var(--cyber-ink); font: 500 13px/1.5 var(--cyber-font-display); letter-spacing: .06em; text-transform: uppercase; }
-.helper { color: var(--cyber-muted); font-size: 12px; }
-.error { color: var(--cyber-danger); font-size: 13px; }
-.fileDrop { border: 1px dashed var(--cyber-muted); padding: 22px; display: grid; place-items: center; gap: 10px; text-align: center; }
-.fileDrop[data-dragging='true'] { border-color: var(--cyber-accent); background: var(--cyber-soft); }
-.fileDrop input { max-width: 100%; font-size: 12px; color: var(--cyber-muted); }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.fileDrop { border: 1px dashed var(--cyber-muted); @apply tw:p-[22px] tw:grid tw:place-items-center tw:gap-cyber-md tw:text-center; }
+.fileDrop[data-dragging='true'] { @apply tw:border-cyber-accent; background: var(--cyber-soft); }
+.fileDrop input { @apply tw:max-w-full tw:text-[length:12px] tw:text-cyber-muted; }
+}

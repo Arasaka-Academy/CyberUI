@@ -1,0 +1,64 @@
+{
+  "label": "after",
+  "node": "v22.22.0",
+  "buildCommand": "pnpm build",
+  "buildMs": [
+    10350,
+    9069,
+    10727
+  ],
+  "warmMeanMs": 9898,
+  "css": {
+    "packages/react/dist": {
+      "files": [
+        {
+          "path": "packages/react/dist/cyberui.css",
+          "bytes": 41905,
+          "gzipBytes": 8237
+        },
+        {
+          "path": "packages/react/dist/fonts.css",
+          "bytes": 4442,
+          "gzipBytes": 475
+        }
+      ],
+      "bytes": 46347,
+      "gzipBytes": 8712
+    },
+    "apps/docs/dist": {
+      "files": [
+        {
+          "path": "apps/docs/dist/assets/WebScenePage-D7_yWTrW.css",
+          "bytes": 97439,
+          "gzipBytes": 16536
+        },
+        {
+          "path": "apps/docs/dist/assets/index-Ds71-Zv9.css",
+          "bytes": 65692,
+          "gzipBytes": 12502
+        },
+        {
+          "path": "apps/docs/dist/fonts.css",
+          "bytes": 4442,
+          "gzipBytes": 475
+        }
+      ],
+      "bytes": 167573,
+      "gzipBytes": 29513
+    }
+  },
+  "componentSource": {
+    "spacingReferences": 84,
+    "motionReferences": 8,
+    "keyframes": {
+      "cyber-spin": 1,
+      "cyber-pulse": 1,
+      "cyber-appear": 1,
+      "cyber-lift": 1
+    }
+  },
+  "orbit": {
+    "sourceBytes": 18569,
+    "utilityReferences": 78
+  }
+}

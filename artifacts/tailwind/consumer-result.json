@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "packageVersion": "0.1.0",
+  "examplesTypechecked": 65,
+  "consumerDirectory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-independent-consumer-wb0H4Z",
+  "tailwindRequired": false,
+  "checks": [
+    "packed artifacts installed outside workspace",
+    "Tailwind absent and CSS fully compiled",
+    "all copyable examples typechecked",
+    "Vite production build",
+    "real browser styled components",
+    "shared textarea padding",
+    "input ref and controlled value",
+    "dialog Escape and focus restoration",
+    "font loading",
+    "no page errors"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "cli": "4.23.0",
+  "components": 65,
+  "githubRef": null,
+  "toolchainTarballCache": [],
+  "consumers": [
+    {
+      "framework": "vite",
+      "directory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-registry-consumers-vASw4t/vite",
+      "components": 65,
+      "examples": 65,
+      "sourceConsistency": {
+        "files": 155,
+        "sha256": "3f2f49cfeacfafd99914672e2d63d6977be574118e47ecd8a50524f54caeb0dd"
+      },
+      "productionBuild": "passed",
+      "renderedExamples": 65,
+      "browser": "passed",
+      "customComponentsDirectory": "widgets",
+      "tailwindRequired": true,
+      "tailwindVersion": "4.3.4",
+      "utilitiesOverrideComponents": true,
+      "hostTailwindUtilitiesPreserved": true,
+      "utilityEntry": "separate-js-import"
+    },
+    {
+      "framework": "next",
+      "directory": "/var/folders/l4/dv8b_8z91g5704dmdtd9p59m0000gn/T/cyberui-registry-consumers-vASw4t/next",
+      "components": 65,
+      "examples": 65,
+      "sourceConsistency": {
+        "files": 155,
+        "sha256": "3f2f49cfeacfafd99914672e2d63d6977be574118e47ecd8a50524f54caeb0dd"
+      },
+      "productionBuild": "passed",
+      "renderedExamples": 65,
+      "browser": "passed",
+      "customComponentsDirectory": "components",
+      "tailwindRequired": true,
+      "tailwindVersion": "4.3.4",
+      "utilitiesOverrideComponents": true,
+      "hostTailwindUtilitiesPreserved": true,
+      "utilityEntry": "separate-js-import"
+    }
+  ],
+  "status": "passed"
+}

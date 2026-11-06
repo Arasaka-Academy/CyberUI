@@ -1,9 +1,10 @@
-.choice { display: flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer; font-size: 15px; }
-.choice[data-disabled] { opacity: .45; cursor: not-allowed; }
-.checkBox { display: grid; place-items: center; width: 20px; height: 20px; border: 2px solid var(--cyber-ink); color: transparent; flex-shrink: 0; }
-.checkBox { pointer-events:none; }
-.choice[data-selected] .checkBox { background: var(--cyber-accent); border-color: var(--cyber-accent); color: var(--cyber-on-accent); }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.choice { @apply tw:flex tw:items-center tw:gap-cyber-md tw:min-h-cyber-touch tw:cursor-pointer tw:text-[length:15px]; }
+.choice[data-disabled] { @apply tw:opacity-[.45] tw:cursor-not-allowed; }
+.checkBox { @apply tw:grid tw:place-items-center tw:w-[20px] tw:h-[20px]; border: 2px solid var(--cyber-ink); @apply tw:text-transparent tw:shrink-[0]; }
+.checkBox { @apply tw:pointer-events-none; }
+.choice[data-selected] .checkBox { background: var(--cyber-accent); @apply tw:border-cyber-accent tw:text-cyber-on-accent; }
+}

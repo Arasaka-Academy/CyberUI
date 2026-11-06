@@ -1,6 +1,7 @@
-.avatar { display: inline-grid; place-items: center; width: 52px; height: 52px; background: var(--cyber-soft); border: 2px solid var(--cyber-ink); font: 600 20px var(--cyber-font-display); flex-shrink: 0; overflow: hidden; }
-.avatar img { width: 100%; height: 100%; object-fit: cover; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.avatar { @apply tw:inline-grid tw:place-items-center tw:w-[52px] tw:h-[52px]; background: var(--cyber-soft); border: 2px solid var(--cyber-ink); font: 600 20px var(--cyber-font-display); @apply tw:shrink-[0] tw:overflow-hidden; }
+.avatar img { @apply tw:w-full tw:h-full; object-fit: cover; }
+}

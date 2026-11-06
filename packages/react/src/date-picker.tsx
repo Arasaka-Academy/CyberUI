@@ -6,6 +6,8 @@ import s from './date-picker.module.css';
 import { Button } from './button';
 import { CalendarBody } from './calendar-body';
 import { type InputHTMLAttributes } from 'react';
+import fieldStyles from './field.module.css';
+import popoverStyles from './popover.module.css';
 export interface DatePickerProps extends DOMProps {
     label: string;
     value?: string | null;
@@ -16,9 +18,9 @@ export interface DatePickerProps extends DOMProps {
     name?: string;
 }
 export function DatePicker({ label, value, defaultValue, onChange, className, ...props }: DatePickerProps) {
-    return <A.DatePicker {...props} value={value === undefined ? undefined : date(value)} defaultValue={date(defaultValue)} onChange={v => onChange?.(v?.toString() ?? null)} className={cx(s.field, className)}>
-    <A.Label className={s.label}>{label}</A.Label><A.Group className={s.inputRow}><A.DateInput className={s.dateInput}>{segment => <A.DateSegment segment={segment} className={s.dateSegment}/>}</A.DateInput><Button icon="calendar" aria-label={label}/></A.Group>
-    <A.Popover className={s.popover}><A.Dialog aria-label={label}><A.Calendar className={s.calendar}><CalendarBody /></A.Calendar></A.Dialog></A.Popover><A.FieldError className={s.error}/>
+    return <A.DatePicker {...props} value={value === undefined ? undefined : date(value)} defaultValue={date(defaultValue)} onChange={v => onChange?.(v?.toString() ?? null)} className={cx(fieldStyles.field, className)}>
+    <A.Label className={fieldStyles.label}>{label}</A.Label><A.Group className={fieldStyles.inputRow}><A.DateInput className={s.dateInput}>{segment => <A.DateSegment segment={segment} className={s.dateSegment}/>}</A.DateInput><Button icon="calendar" aria-label={label}/></A.Group>
+    <A.Popover className={popoverStyles.popover}><A.Dialog aria-label={label}><A.Calendar className={s.calendar}><CalendarBody /></A.Calendar></A.Dialog></A.Popover><A.FieldError className={fieldStyles.error}/>
   </A.DatePicker>;
 }
 export type NativeDateInputProps = InputHTMLAttributes<HTMLInputElement>;

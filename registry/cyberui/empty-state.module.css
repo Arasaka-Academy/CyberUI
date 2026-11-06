@@ -1,8 +1,9 @@
 /* Generated from packages/react/src/empty-state.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.empty { display: grid; justify-items: center; text-align: center; gap: 12px; padding: 48px 24px; }
-.empty h3 { margin: 0; font-size: 20px; }
-.empty p { margin: 0; max-width: 360px; color: var(--cyber-muted); font-size: 14px; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.empty { @apply tw:grid; justify-items: center; @apply tw:text-center tw:gap-[12px] tw:p-[var(--cyber-space-4xl)_var(--cyber-space-2xl)]; }
+.empty h3 { @apply tw:m-[0] tw:text-[length:20px]; }
+.empty p { @apply tw:m-[0] tw:max-w-[360px] tw:text-cyber-muted tw:text-[length:14px]; }
+}

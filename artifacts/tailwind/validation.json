@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-05",
+  "status": "passed",
+  "scope": "Full Tailwind v4 migration, superseding the ORBIT-only pilot",
+  "tailwindVersion": "4.3.4",
+  "migration": {
+    "componentStyleModules": 64,
+    "documentationSceneStylesheets": 5,
+    "commonDeclarationsMigrated": 4227,
+    "sharedCompositionsMovedToDirectImports": 66,
+    "componentSourcesWithDirectSharedImports": 17,
+    "forwardingOnlyStyleModulesRemoved": 7,
+    "preflight": false,
+    "defaultsLayer": "components",
+    "utilitiesLayer": "utilities",
+    "prefix": "tw"
+  },
+  "checks": {
+    "typecheck": "passed",
+    "eslintAndStylelint": "passed",
+    "unitTests": {
+      "status": "passed",
+      "files": 9,
+      "tests": 45
+    },
+    "productionBuild": "passed",
+    "measurementBuilds": 3,
+    "finalCssSizesMatchMeasurement": true,
+    "chromiumSuite": {
+      "status": "passed",
+      "tests": 68,
+      "duration": "3.6m"
+    },
+    "registryFreshness": {
+      "status": "passed",
+      "components": 65,
+      "sourceAndLicenseFiles": 155
+    },
+    "packedConsumer": {
+      "status": "passed",
+      "tailwindInstalled": false,
+      "examplesTypechecked": 65
+    },
+    "registryViteConsumer": {
+      "status": "passed",
+      "tailwindRequired": true,
+      "examplesBuiltAndRendered": 65
+    },
+    "registryNextConsumer": {
+      "status": "passed",
+      "tailwindRequired": true,
+      "examplesBuiltAndRendered": 65
+    },
+    "componentUtilitiesOverrideDefaults": "passed",
+    "sharedFormStyleCompilation": "passed",
+    "compiledRuntimeCssHasNoApplyOrReference": true
+  },
+  "baselineComparison": {
+    "records": 89,
+    "computedPropertiesCompared": 2001339,
+    "computedDifferences": 0,
+    "representativeScreenshots": 32,
+    "changedPixels": 0,
+    "palette": "Neon dark",
+    "ruleGroupsCompared": 1856,
+    "originalDeclarationsCompared": 5083,
+    "declarationDifferences": 0,
+    "conditionalColorFallbacksAccountedFor": 2
+  },
+  "css": {
+    "componentRuntime": {
+      "bytes": 49983,
+      "gzipBytes": 8544,
+      "baselineGzipBytes": 8237
+    },
+    "docsIncludingFonts": {
+      "bytes": 182619,
+      "gzipBytes": 30314,
+      "baselineGzipBytes": 29513
+    },
+    "optionalRawTheme": {
+      "bytes": 1878,
+      "gzipBytes": 490
+    }
+  },
+  "boundaries": [
+    "Local Chromium validation; Safari and Firefox were not executed",
+    "Pixel and computed-style equality applies to the captured default Neon dark baseline",
+    "Theme, language, interaction and responsive coverage comes from separate browser regressions",
+    "Registry consumers used the real CLI against a local fixture, not a newly published GitHub revision",
+    "Source consumers require Tailwind v4 compilation; packed consumers receive compiled CSS",
+    "Overlapping build-time ranges do not establish a speedup"
+  ],
+  "delivery": {
+    "committed": false,
+    "pushed": false,
+    "published": false,
+    "deployed": false
+  },
+  "review": ".context/compound-engineering/ce-review/2026-11-05-tailwind-migration/review.md",
+  "hostPrefixFix": {
+    "status": "passed",
+    "evidence": "artifacts/tailwind/host-prefix/validation.json"
+  }
+}

@@ -1,8 +1,13 @@
 /* Generated from packages/react/src/launcher-tile.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.launcher { width:100%; position:relative; isolation:isolate; display:flex; align-items:center; gap:12px; background:transparent; border:0; border-left:3px solid transparent; padding:13px 16px; color:var(--cyber-ink); text-align:left; }
-.launcher:before { content:''; position:absolute; inset:0; background:var(--cyber-soft); clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%); z-index:-1; pointer-events:none; }
-.launcher:hover { border-left-color:var(--cyber-accent-text); }
-.launcher:disabled { opacity:.45; }
-.launcher > span { flex:1; }
-.launcher strong { display:block; font:600 15px var(--cyber-font-display); letter-spacing:.1em; text-transform:uppercase; }
-.launcher small { display:block; font:11px var(--cyber-font-mono); margin-top:5px; letter-spacing:.07em; }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.launcher { @apply tw:w-full tw:relative tw:isolate tw:flex tw:items-center tw:gap-[12px]; background:transparent; border:0; border-left:3px solid transparent; @apply tw:p-[13px_16px] tw:text-cyber-ink tw:text-left; }
+.launcher:before { content:''; @apply tw:absolute tw:inset-[0]; background:var(--cyber-soft); clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%); @apply tw:z-[-1] tw:pointer-events-none; }
+.launcher:hover { @apply tw:border-l-cyber-accent-text; }
+.launcher:disabled { @apply tw:opacity-[.45]; }
+.launcher > span { @apply tw:flex-[1]; }
+.launcher strong { @apply tw:block; font:600 15px var(--cyber-font-display); @apply tw:tracking-[.1em] tw:uppercase; }
+.launcher small { @apply tw:block; font:11px var(--cyber-font-mono); @apply tw:mt-[5px] tw:tracking-[.07em]; }
+}

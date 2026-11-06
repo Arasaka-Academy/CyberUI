@@ -1,11 +1,12 @@
 /* Generated from packages/react/src/alert.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.alert { display: flex; gap: 12px; border: 1px solid var(--cyber-line); border-left: 3px solid var(--cyber-info); padding: 16px; background: var(--cyber-soft); }
-.alert[data-tone='danger'] { border-left-color: var(--cyber-danger); }
-.alert[data-tone='success'] { border-left-color: var(--cyber-success); }
-.alert[data-tone='warning'] { border-left-color: var(--cyber-warning); }
-.alert strong { display: block; font-size: 14px; }
-.alert p { margin: 4px 0 0; color: var(--cyber-muted); font-size: 13px; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.alert { @apply tw:flex tw:gap-[12px]; border: 1px solid var(--cyber-line); border-left: 3px solid var(--cyber-info); @apply tw:p-[16px]; background: var(--cyber-soft); }
+.alert[data-tone='danger'] { @apply tw:border-l-cyber-danger; }
+.alert[data-tone='success'] { @apply tw:border-l-cyber-success; }
+.alert[data-tone='warning'] { @apply tw:border-l-cyber-warning; }
+.alert strong { @apply tw:block tw:text-[length:14px]; }
+.alert p { @apply tw:m-[var(--cyber-space-xs)_0_0] tw:text-cyber-muted tw:text-[length:13px]; }
+}

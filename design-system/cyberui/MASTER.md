@@ -35,6 +35,8 @@ All vendor fonts are self-hosted and font-display:swap. Font configurations reta
 ## Spacing and responsiveness
 
 Base spacing scale: 4/6/10/14/18px. Extended web layout: 24/32/48/64px.
+Use the matching `--cyber-space-*` variables for these layout values. CSS defaults
+live in the tokens package; do not redeclare them in the component baseline.
 Navigation shell uses a 216px rail on desktop, a drawer on small screens.
 Content includes one visual priority per page. Dense components use short borders
 and local toolbars. Breakpoints: 600/768/1024/1440px; validate at 375px.
@@ -62,6 +64,12 @@ Reference scenes offer a 3:4 canvas, while fit mode reflows actual HTML.
 Value-bearing controls allow controlled/uncontrolled usage. Native attributes and refs
 remain available. Core exports do not depend on documentation routes or demo storage.
 The stylesheet is explicit; font loading is a separate optional stylesheet.
+Shared form, input, choice and popover styles use direct CSS Module imports. Global
+motion definitions are referenced through `--cyber-motion-*` values. All
+components and documentation scenes use prefixed Tailwind utilities and
+`@apply` without Preflight. Defaults live in the components cascade layer so
+application utilities can override them. Packed CSS is precompiled; Registry
+source builds require Tailwind v4. See `docs/styles.md` for ownership and checks.
 Button and IconButton expose six appearances and three sizes; Avatar shows three
 size specimens. Panel has six border shapes, Progress five signals, Chart three
 forms, and JackInCard standard/terminal/poster/ticket/scanner. The shop provides

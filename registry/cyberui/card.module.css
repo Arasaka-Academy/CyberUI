@@ -1,8 +1,9 @@
 /* Generated from packages/react/src/card.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.card { background: var(--cyber-soft); padding: 22px; min-width: 0; }
-.card h3 { margin-bottom: 8px; font-size: 20px; }
-.card p { color: var(--cyber-muted); margin-bottom: 0; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.card { background: var(--cyber-soft); @apply tw:p-[22px] tw:min-w-[0]; }
+.card h3 { @apply tw:mb-[8px] tw:text-[length:20px]; }
+.card p { @apply tw:text-cyber-muted tw:mb-[0]; }
+}

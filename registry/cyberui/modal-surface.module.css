@@ -1,13 +1,14 @@
 /* Generated from packages/react/src/modal-surface.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.overlay { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 24px; background: rgb(0 0 0 / .76); overflow-y: auto; animation: appear 120ms ease-out; }
-.modal { width: min(520px,100%); max-height: calc(100dvh - 48px); overflow-y: auto; background: var(--cyber-bg); border: 2px solid var(--cyber-ink); box-shadow: 6px 6px 0 var(--cyber-line); outline: 0; animation: lift 180ms ease-out; }
-.dialog { padding: 26px; color: var(--cyber-ink); outline: 0; }
-.dialogHead { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
-.dialogHead h2 { margin: 0; font-size: 22px; }
-.drawerOverlay { justify-items: end; padding: 0; }
-.drawer { height: 100dvh; max-height: 100dvh; width: min(440px,100%); border-right: 0; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
-@media(max-width:600px) { .dialog { padding: 20px; } .overlay { padding: 16px; } .drawerOverlay { padding: 0; } .modal { max-height: calc(100dvh - 32px); } .drawer { max-height: 100dvh; } }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.overlay { @apply tw:fixed tw:inset-[0] tw:z-[100] tw:grid tw:place-items-center tw:p-cyber-2xl; background: rgb(0 0 0 / .76); @apply tw:overflow-y-auto tw:animate-cyber-overlay; }
+.modal { @apply tw:w-[min(520px,100%)] tw:max-h-[calc(100dvh_-_48px)] tw:overflow-y-auto; background: var(--cyber-bg); border: 2px solid var(--cyber-ink); box-shadow: 6px 6px 0 var(--cyber-line); outline: 0; @apply tw:animate-cyber-lift; }
+.dialog { @apply tw:p-[26px] tw:text-cyber-ink; outline: 0; }
+.dialogHead { @apply tw:flex tw:items-start tw:justify-between tw:gap-[16px] tw:mb-[20px]; }
+.dialogHead h2 { @apply tw:m-[0] tw:text-[length:22px]; }
+.drawerOverlay { justify-items: end; @apply tw:p-[0]; }
+.drawer { @apply tw:h-[100dvh] tw:max-h-[100dvh] tw:w-[min(440px,100%)]; border-right: 0; }
+@media(max-width:600px) { .dialog { @apply tw:p-[20px]; } .overlay { @apply tw:p-[16px]; } .drawerOverlay { @apply tw:p-[0]; } .modal { @apply tw:max-h-[calc(100dvh_-_32px)]; } .drawer { @apply tw:max-h-[100dvh]; } }
+}

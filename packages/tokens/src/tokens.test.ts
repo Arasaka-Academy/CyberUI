@@ -1,7 +1,16 @@
 import { describe, expect, it } from 'vitest';
-import { contrast, createTheme, schemes } from './index';
+import { contrast, createTheme, geometry, schemes, spacing } from './index';
+import { readFileSync } from 'node:fs';
 
 describe('source palettes and accessible theme resolution', () => {
+  it('keeps public spacing and geometry exports aligned with the shared CSS defaults', () => {
+    const css = readFileSync('packages/tokens/src/tokens.css', 'utf8');
+    const values = new Map([...css.matchAll(/(--cyber-[\w-]+)\s*:\s*([^;]+);/g)].map(match => [match[1], match[2]]));
+    for (const [name, value] of Object.entries(spacing)) expect(values.get(`--cyber-space-${name}`)).toBe(`${value}px`);
+    for (const [name, value] of Object.entries(geometry)) {
+      expect(values.get('--cyber-' + name.replace(/[A-Z]/g, letter => '-' + letter.toLowerCase()))).toBe(`${value}px`);
+    }
+  });
   it('preserves the original Neon identity', () => {
     const t = createTheme('neon', 'dark');
     expect(t.bg).toBe('#1E1517');

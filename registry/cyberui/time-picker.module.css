@@ -1,12 +1,10 @@
 /* Generated from packages/react/src/time-picker.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-.label { display: block; color: var(--cyber-ink); font: 500 13px/1.5 var(--cyber-font-display); letter-spacing: .06em; text-transform: uppercase; }
-.error { color: var(--cyber-danger); font-size: 13px; }
-.dateSegment { padding: 1px 3px; font-family: var(--cyber-font-mono); }
-.dateSegment[data-focused] { color: var(--cyber-on-accent); background: var(--cyber-accent); outline: 0; }
-.dateSegment[data-placeholder] { color: var(--cyber-muted); }
-.dateInput { display: flex; align-items: center; flex-wrap: wrap; min-height: 44px; padding: 7px 10px; gap: 1px; border: 1px solid var(--cyber-muted); }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.dateSegment { @apply tw:p-[1px_3px] tw:font-cyber-mono; }
+.dateSegment[data-focused] { @apply tw:text-cyber-on-accent; background: var(--cyber-accent); outline: 0; }
+.dateSegment[data-placeholder] { @apply tw:text-cyber-muted; }
+.dateInput { @apply tw:flex tw:items-center tw:flex-wrap tw:min-h-cyber-touch tw:p-[7px_var(--cyber-space-md)] tw:gap-[1px]; border: 1px solid var(--cyber-muted); }
+}

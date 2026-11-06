@@ -1,0 +1,31 @@
+{
+  "compositions": 66,
+  "edited": [
+    "packages/react/src/chart.tsx",
+    "packages/react/src/color-picker.tsx",
+    "packages/react/src/combobox.tsx",
+    "packages/react/src/command-palette.tsx",
+    "packages/react/src/confirmation.tsx",
+    "packages/react/src/data-table.tsx",
+    "packages/react/src/date-picker.tsx",
+    "packages/react/src/dropdown-menu.tsx",
+    "packages/react/src/file-upload.tsx",
+    "packages/react/src/multi-select.tsx",
+    "packages/react/src/number-input.tsx",
+    "packages/react/src/password-input.tsx",
+    "packages/react/src/radio-group.tsx",
+    "packages/react/src/select.tsx",
+    "packages/react/src/slider.tsx",
+    "packages/react/src/textarea.tsx",
+    "packages/react/src/time-picker.tsx"
+  ],
+  "deleted": [
+    "packages/react/src/combobox.module.css",
+    "packages/react/src/command-palette.module.css",
+    "packages/react/src/dropdown-menu.module.css",
+    "packages/react/src/number-input.module.css",
+    "packages/react/src/password-input.module.css",
+    "packages/react/src/select.module.css",
+    "packages/react/src/textarea.module.css"
+  ]
+}

@@ -4,6 +4,7 @@ import { HashRouter } from 'react-router-dom';
 import { App } from './App';
 import { DemoStore } from './demo/store';
 import { WebDemoStore } from './web-scenes/store';
+import './tailwind.css';
 import './app.css';
 class ErrorBoundary extends Component<{children:ReactNode},{error:boolean}> {
   state={error:false};

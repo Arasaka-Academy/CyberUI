@@ -3,8 +3,8 @@ import { readFileSync } from 'node:fs';
 const registry = JSON.parse(readFileSync(new URL('../../registry.json', import.meta.url), 'utf8')) as { items: { name: string; meta: { componentName: string } }[] };
 const verifiedRef = JSON.parse(readFileSync(new URL('../../apps/docs/src/registry-version.json', import.meta.url), 'utf8')).ref;
 
-test('verified commit and default branch commands pin every example dependency consistently', async ({ page }) => {
-  expect(verifiedRef).toMatch(/^[0-9a-f]{40}$/);
+test('release and default branch commands pin every example dependency consistently', async ({ page }) => {
+  expect(verifiedRef).toMatch(/^v\d+\.\d+\.\d+$/);
   await page.goto('/#/components/Dialog');
   const source = page.getByRole('region', { name: '获取组件源码' });
   const command = source.locator('.code-block code').first();
@@ -13,10 +13,10 @@ test('verified commit and default branch commands pin every example dependency c
   await expect(command).toContainText('CyberUI/input#' + verifiedRef);
   await source.getByRole('radio', { name: '默认分支', exact: true }).click();
   await expect(command).not.toContainText('#');
-  await source.getByRole('radio', { name: '已验证提交', exact: true }).click();
+  await source.getByRole('radio', { name: '发布版本', exact: true }).click();
   await expect(command).toContainText('CyberUI/dialog#' + verifiedRef);
   await page.goto('/#/installation');
-  await expect(page.locator('.installation-guide .code-block code').nth(1)).toContainText('CyberUI/button#' + verifiedRef);
+  await expect(page.locator('.installation-guide .code-block code').filter({ hasText: 'CyberUI/button#' + verifiedRef })).toHaveCount(1);
 });
 
 test('all 65 component pages load their actual distributable source', async ({ page }) => {
@@ -49,6 +49,9 @@ test('source files, keyboard tabs and clipboard failure work in Chinese and Engl
   await expect(source.getByRole('alert')).toContainText('手动复制');
   await page.getByRole('button', { name: 'Switch to English' }).click();
   await expect(page.getByRole('region', { name: 'Get component source' }).getByRole('tab', { name: 'Source files' })).toBeVisible();
+  const english = page.getByRole('region', { name: 'Get component source' });
+  await english.getByText('Dependencies and setup', { exact: true }).click();
+  await expect(english.locator('.source-dependencies')).toContainText('pnpm add -D tailwindcss@4.3.4');
 });
 
 test('source documentation and installation guide fit mobile widths', async ({ page }) => {

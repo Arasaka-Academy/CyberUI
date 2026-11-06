@@ -1,0 +1,78 @@
+import { expect } from '@playwright/test';
+
+export async function verifyConsumerContracts(page) {
+  const form = page.getByTestId('upload-form');
+  const documentInput = page.getByLabel('Document', { exact: true });
+  const drop = async (input, files) => input.evaluate((element, files) => {
+    const transfer = new DataTransfer();
+    for (const name of files) transfer.items.add(new File([name], name, { type: 'text/plain' }));
+    element.parentElement.dispatchEvent(new DragEvent('drop', { bubbles: true, cancelable: true, dataTransfer: transfer }));
+  }, files);
+  const submitted = name => form.evaluate((element, name) => new FormData(element).getAll(name).map(file => file.name), name);
+  await documentInput.setInputFiles({ name: 'chosen.txt', mimeType: 'text/plain', buffer: Buffer.from('chosen') });
+  await drop(documentInput, ['dropped.txt']);
+  await expect(page.getByTestId('received-document')).toHaveText('dropped.txt');
+  await expect.poll(() => submitted('document')).toEqual(['dropped.txt']);
+  await expect(form.getByText(/dropped.txt ·/)).toBeVisible();
+  await drop(documentInput, ['invalid.exe']);
+  await expect(form.getByRole('alert')).toContainText('Unsupported file type');
+  expect(await submitted('document')).toEqual(['dropped.txt']);
+  await documentInput.setInputFiles({ name: 'invalid.exe', mimeType: 'application/octet-stream', buffer: Buffer.from('invalid') });
+  expect(await submitted('document')).toEqual(['dropped.txt']);
+  await drop(documentInput, ['first.txt', 'second.txt']);
+  await expect.poll(() => submitted('document')).toEqual(['first.txt']);
+  await drop(page.getByLabel('Attachments', { exact: true }), ['one.txt', 'two.txt']);
+  await expect.poll(() => submitted('attachments')).toEqual(['one.txt', 'two.txt']);
+  await drop(page.getByLabel('Disabled document', { exact: true }), ['disabled.txt']);
+  expect(await submitted('disabled')).toEqual([]);
+  await drop(page.getByLabel('Controlled document', { exact: true }), ['controlled.txt']);
+  await expect.poll(() => submitted('controlled')).toEqual(['controlled.txt']);
+  await page.getByRole('button', { name: 'Clear controlled document' }).click();
+  await expect.poll(() => submitted('controlled')).toEqual(['']);
+  await expect(form.getByText(/controlled.txt ·/)).toHaveCount(0);
+
+  const portalCount = await page.locator('[data-cyberui-portal]').count();
+  const trigger = page.getByRole('button', { name: 'Open clipped settings', exact: true });
+  await trigger.click();
+  const dialog = page.getByRole('dialog', { name: 'Clipped settings', exact: true });
+  const portal = dialog.locator('xpath=ancestor::*[@data-cyberui-portal]');
+  const overlay = dialog.locator('xpath=../..');
+  const verifyViewport = async () => {
+    const box = await overlay.boundingBox();
+    expect(box.x).toBeCloseTo(0, 0); expect(box.y).toBeCloseTo(0, 0);
+    expect(box.width).toBeCloseTo(page.viewportSize().width, 0);
+    expect(box.height).toBeCloseTo(page.viewportSize().height, 0);
+  };
+  await expect(dialog).toBeVisible();
+  await verifyViewport();
+  expect(await portal.evaluate(element => element.parentElement === document.body)).toBe(true);
+  await expect(portal).toHaveAttribute('lang', 'zh-CN');
+  await expect(portal).toHaveAttribute('data-mode', 'light');
+  await expect(dialog.getByRole('button', { name: '关闭弹窗', exact: true })).toBeVisible();
+  await expect(dialog).toHaveCSS('font-family', 'monospace');
+  await expect(dialog).toHaveCSS('--cyber-accent', '#176B5B');
+  await expect(page.getByLabel('Portal input', { exact: true })).toHaveCSS('padding-top', '12px');
+  await expect(page.getByLabel('Portal input', { exact: true })).toBeFocused();
+  await dialog.getByRole('button', { name: 'Update portal theme' }).click();
+  await expect(portal).toHaveAttribute('lang', 'en');
+  await expect(portal).toHaveAttribute('data-scheme', 'mono');
+  await expect(portal).toHaveAttribute('data-mode', 'dark');
+  await expect(dialog).toHaveCSS('--cyber-accent', '#6145A3');
+  await expect(page.getByLabel('Portal input', { exact: true })).toHaveCSS('padding-top', '15px');
+  await dialog.getByRole('button', { name: 'Open nested settings' }).click();
+  const nested = page.getByRole('dialog', { name: 'Nested settings', exact: true });
+  await expect(nested).toBeVisible();
+  await nested.getByRole('textbox', { name: 'Nested input' }).fill('Nested value');
+  await expect(nested.getByRole('textbox', { name: 'Nested input' })).toBeFocused();
+  await expect(nested.getByRole('textbox')).toHaveValue('Nested value');
+  await page.keyboard.press('Escape');
+  await expect(dialog.getByRole('button', { name: 'Open nested settings' })).toBeFocused();
+  const viewport = page.viewportSize();
+  await page.setViewportSize({ width: 375, height: 740 });
+  await verifyViewport();
+  await page.keyboard.press('Escape');
+  await expect(trigger).toBeFocused();
+  await page.setViewportSize(viewport);
+  await page.getByRole('button', { name: 'Toggle clipped provider' }).click();
+  await expect(page.locator('[data-cyberui-portal]')).toHaveCount(portalCount - 1);
+}

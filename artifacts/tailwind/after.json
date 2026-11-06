@@ -1,0 +1,69 @@
+{
+  "label": "after",
+  "node": "v22.22.0",
+  "buildCommand": "pnpm build",
+  "buildMs": [
+    9341,
+    8980,
+    8929
+  ],
+  "warmMeanMs": 8955,
+  "css": {
+    "packages/react/dist": {
+      "files": [
+        {
+          "path": "packages/react/dist/cyberui.css",
+          "bytes": 49983,
+          "gzipBytes": 8544
+        },
+        {
+          "path": "packages/react/dist/fonts.css",
+          "bytes": 4442,
+          "gzipBytes": 475
+        },
+        {
+          "path": "packages/react/dist/tailwind.css",
+          "bytes": 1878,
+          "gzipBytes": 490
+        }
+      ],
+      "bytes": 56303,
+      "gzipBytes": 9509
+    },
+    "apps/docs/dist": {
+      "files": [
+        {
+          "path": "apps/docs/dist/assets/WebScenePage-VarnfKSC.css",
+          "bytes": 98642,
+          "gzipBytes": 16183
+        },
+        {
+          "path": "apps/docs/dist/assets/index-CtuLa9lt.css",
+          "bytes": 79535,
+          "gzipBytes": 13656
+        },
+        {
+          "path": "apps/docs/dist/fonts.css",
+          "bytes": 4442,
+          "gzipBytes": 475
+        }
+      ],
+      "bytes": 182619,
+      "gzipBytes": 30314
+    }
+  },
+  "componentSource": {
+    "spacingReferences": 9,
+    "motionReferences": 8,
+    "keyframes": {
+      "cyber-spin": 1,
+      "cyber-pulse": 1,
+      "cyber-appear": 1,
+      "cyber-lift": 1
+    }
+  },
+  "orbit": {
+    "sourceBytes": 18547,
+    "utilityReferences": 78
+  }
+}

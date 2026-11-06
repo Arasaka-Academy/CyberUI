@@ -3,7 +3,8 @@
 import { type TextareaHTMLAttributes, forwardRef, useId } from 'react';
 import { Field } from "./field";
 import { cx } from "./shared";
-import s from "./textarea.module.css";
+
+import inputStyles from "./input.module.css";
 export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     label: string;
     description?: string;
@@ -13,6 +14,6 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
     const generated = useId();
     const fieldId = id ?? generated;
     return <Field label={label} htmlFor={fieldId} description={description} error={error} isRequired={props.required}>
-    <textarea rows={4} {...props} ref={ref} id={fieldId} className={cx(s.input, className)}/>
+    <textarea rows={4} {...props} ref={ref} id={fieldId} className={cx(inputStyles.input, className)}/>
   </Field>;
 });

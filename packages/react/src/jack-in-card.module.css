@@ -1,20 +1,25 @@
-.micro { color:var(--cyber-muted); font:12px/1.5 var(--cyber-font-mono); letter-spacing:.06em; text-transform:uppercase; }
-.jackin { position:relative; display:flex; flex-direction:column; gap:18px; min-width:0; }
-.jackin > div:first-of-type:not(.jackBook):not(.terminalLines) { margin-bottom:0; }
-.jackin h3 { font-size:clamp(20px,2.5vw,30px); letter-spacing:.06em; margin:4px 0; overflow-wrap:anywhere; }
-.jackin p { color:var(--cyber-muted); font-size:14px; margin:0 0 10px; }
-.jackBook { display:flex; align-items:stretch; gap:20px; min-width:0; }
-.jackCover { width:100px; min-width:75px; position:relative; align-self:start; }
-.jackCover pre { font-size:4px; }
-.jackCover > div > div { font-size:8px; min-height:35px; padding:6px; }
-.jackFacts { flex:1; min-width:0; display:flex; flex-direction:column; gap:7px; font:12px var(--cyber-font-mono); }
-.workStripes { display:block; height:10px; background:repeating-linear-gradient(135deg,var(--cyber-ink) 0 2px,transparent 2px 5px); margin-top:6px; }
-.terminalLines { display:grid; gap:8px; font:13px/1.7 var(--cyber-font-mono); color:var(--cyber-on-ink); }
-.terminalLines hr { border:0; width:100%; border-top:1px solid currentColor; margin:2px 0; }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.micro { @apply tw:text-cyber-muted; font:12px/1.5 var(--cyber-font-mono); @apply tw:tracking-[.06em] tw:uppercase; }
+.jackin { @apply tw:relative tw:flex tw:flex-col tw:gap-cyber-xl tw:min-w-[0]; }
+.jackin > div:first-of-type:not(.jackBook):not(.terminalLines) { @apply tw:mb-[0]; }
+.jackin h3 { @apply tw:text-[length:clamp(20px,2.5vw,30px)] tw:tracking-[.06em] tw:m-[var(--cyber-space-xs)_0] tw:wrap-anywhere; }
+.jackin p { @apply tw:text-cyber-muted tw:text-[length:14px] tw:m-[0_0_var(--cyber-space-md)]; }
+.jackBook { @apply tw:flex tw:items-stretch tw:gap-[20px] tw:min-w-[0]; }
+.jackCover { @apply tw:w-[100px] tw:min-w-[75px] tw:relative tw:[align-self:start]; }
+.jackCover pre { @apply tw:text-[length:4px]; }
+.jackCover > div > div { @apply tw:text-[length:8px] tw:min-h-[35px] tw:p-cyber-sm; }
+.jackFacts { @apply tw:flex-[1] tw:min-w-[0] tw:flex; @apply tw:flex-col tw:gap-[7px]; font:12px var(--cyber-font-mono); }
+.workStripes { @apply tw:block tw:h-[10px]; background:repeating-linear-gradient(135deg,var(--cyber-ink) 0 2px,transparent 2px 5px); @apply tw:mt-cyber-sm; }
+.terminalLines { @apply tw:grid tw:gap-[8px]; font:13px/1.7 var(--cyber-font-mono); @apply tw:text-cyber-on-ink; }
+.terminalLines hr { border:0; @apply tw:w-full; border-top:1px solid currentColor; @apply tw:m-[2px_0]; }
 .jackin[data-variant='terminal'] { background:var(--cyber-ink); }
-.jackin[data-variant='poster'] .jackBook { flex-direction:column; align-items:center; text-align:center; }
-.jackin[data-variant='poster'] .jackCover { width:180px; align-self:center; }
-.jackin[data-variant='poster'] .jackFacts { background:var(--cyber-accent); color:var(--cyber-on-accent); padding:16px; width:100%; }
-.jackin[data-variant='poster'] p,.jackin[data-variant='poster'] .micro { color:inherit; }
-.jackin[data-variant='ticket'] .jackBook > [data-slot='barcode'] { height:160px; border-left:3px solid var(--cyber-accent); padding-left:14px; width:90px; overflow:hidden; }
-.scanBeam { display:block; position:absolute; top:45%; left:0; right:0; height:12px; background:repeating-linear-gradient(0deg,var(--cyber-accent) 0 2px,transparent 2px 4px); }
+.jackin[data-variant='poster'] .jackBook { @apply tw:flex-col tw:items-center tw:text-center; }
+.jackin[data-variant='poster'] .jackCover { @apply tw:w-[180px] tw:self-center; }
+.jackin[data-variant='poster'] .jackFacts { background:var(--cyber-accent); @apply tw:text-cyber-on-accent tw:p-[16px] tw:w-full; }
+.jackin[data-variant='poster'] p,.jackin[data-variant='poster'] .micro { @apply tw:text-inherit; }
+.jackin[data-variant='ticket'] .jackBook > [data-slot='barcode'] { @apply tw:h-[160px]; border-left:3px solid var(--cyber-accent); @apply tw:pl-cyber-lg tw:w-[90px] tw:overflow-hidden; }
+.scanBeam { @apply tw:block tw:absolute tw:top-[45%]; @apply tw:left-[0]; @apply tw:right-[0] tw:h-[12px]; background:repeating-linear-gradient(0deg,var(--cyber-accent) 0 2px,transparent 2px 4px); }
+}

@@ -1,10 +1,15 @@
 /* Generated from packages/react/src/ascii-cover.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.cover { position:relative; aspect-ratio:2/3; background:var(--cyber-bg); border:2px solid var(--cyber-ink); overflow:hidden; min-width:0; display:flex; flex-direction:column; clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%); }
-.cover pre { margin:0; padding:5px; flex:1; font:clamp(5px,.7vw,8px)/1.27 var(--cyber-font-mono); letter-spacing:.08em; white-space:pre; width:100%; text-align:center; overflow:hidden; display:flex; flex-direction:column; justify-content:space-around; }
-.cover pre span { display:block; white-space:pre; }
-.coverDecor { display:flex; flex-direction:column; padding:12px 8px 8px; border-bottom:1px solid var(--cyber-line); font:600 13px/1.2 var(--cyber-font-display); text-align:left; letter-spacing:.12em; min-height:50px; overflow-wrap:anywhere; }
-.coverDecor span:last-child { font:8px/1.5 var(--cyber-font-mono); color:var(--cyber-muted); letter-spacing:.1em; margin-top:6px; }
-.coverBadge { position:absolute; right:0; top:0; padding:1px 7px; background:var(--cyber-accent); color:var(--cyber-on-accent); font:12px var(--cyber-font-mono); }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.cover { @apply tw:relative tw:aspect-[2/3]; background:var(--cyber-bg); border:2px solid var(--cyber-ink); @apply tw:overflow-hidden tw:min-w-[0] tw:flex tw:flex-col; clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%); }
+.cover pre { @apply tw:m-[0] tw:p-[5px] tw:flex-[1]; font:clamp(5px,.7vw,8px)/1.27 var(--cyber-font-mono); @apply tw:tracking-[.08em] tw:whitespace-pre tw:w-full tw:text-center tw:overflow-hidden tw:flex tw:flex-col tw:justify-around; }
+.cover pre span { @apply tw:block tw:whitespace-pre; }
+.coverDecor { @apply tw:flex tw:flex-col tw:p-[12px_8px_8px]; border-bottom:1px solid var(--cyber-line); font:600 13px/1.2 var(--cyber-font-display); @apply tw:text-left tw:tracking-[.12em] tw:min-h-[50px] tw:wrap-anywhere; }
+.coverDecor span:last-child { font:8px/1.5 var(--cyber-font-mono); @apply tw:text-cyber-muted tw:tracking-[.1em] tw:mt-cyber-sm; }
+.coverBadge { @apply tw:absolute tw:right-[0]; @apply tw:top-[0] tw:p-[1px_7px]; background:var(--cyber-accent); @apply tw:text-cyber-on-accent; font:12px var(--cyber-font-mono); }
 @media(max-width:600px) {
- .cover pre { font-size:6px; }.coverDecor { font-size:11px; }
+ .cover pre { @apply tw:text-[length:6px]; }.coverDecor { @apply tw:text-[length:11px]; }
+}
 }

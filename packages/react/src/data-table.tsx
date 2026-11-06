@@ -5,6 +5,7 @@ import { useState, useMemo } from 'react';
 import { Input } from './input';
 import s from './data-table.module.css';
 import { Pagination } from './pagination';
+import fieldStyles from './field.module.css';
 export interface DataTableProps<T extends {
     id: string;
 }> extends TableProps<T> {
@@ -47,6 +48,6 @@ export function DataTable<T extends {
       {selectable && <td><input type="checkbox" aria-label={t(`Select ${row.id}`, `选择 ${row.id}`)} checked={selected.includes(row.id)} onChange={e => select(e.target.checked ? [...selected, row.id] : selected.filter(id => id !== row.id))}/></td>}
       {columns.map(c => <td key={c.key}>{c.render ? c.render(row[c.key], row) : String(row[c.key] ?? '')}</td>)}
     </tr>)}{!shown.length && <tr><td colSpan={columns.length + (selectable ? 1 : 0)}>{emptyMessage ?? t('No matching records', '没有匹配的记录')}</td></tr>}</tbody></table></div>
-    <div className={s.tableFooter}><span className={s.helper} role="status">{filtered.length} {t('records', '条记录')}{selectable ? ` · ${selected.length} ${t('selected', '已选')}` : ''}</span><Pagination page={current} totalPages={pages} onChange={setPage}/></div>
+    <div className={s.tableFooter}><span className={fieldStyles.helper} role="status">{filtered.length} {t('records', '条记录')}{selectable ? ` · ${selected.length} ${t('selected', '已选')}` : ''}</span><Pagination page={current} totalPages={pages} onChange={setPage}/></div>
   </div>;
 }

@@ -1,9 +1,10 @@
-.accordion { width: 100%; }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.accordion { @apply tw:w-full; }
 .accordionItem { border-bottom: 1px solid var(--cyber-line); }
-.accordionItem h3 { margin: 0; }
-.accordionTrigger { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 52px; padding: 14px 0; background: transparent; border: 0; color: var(--cyber-ink); font: 500 16px var(--cyber-font-body); text-align: left; }
-.accordionContent { padding: 0 0 20px; color: var(--cyber-muted); font-size: 14px; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+.accordionItem h3 { @apply tw:m-[0]; }
+.accordionTrigger { @apply tw:flex tw:items-center tw:justify-between tw:w-full tw:min-h-[52px] tw:p-[var(--cyber-space-lg)_0]; background: transparent; border: 0; @apply tw:text-cyber-ink; font: 500 16px var(--cyber-font-body); @apply tw:text-left; }
+.accordionContent { @apply tw:p-[0_0_20px] tw:text-cyber-muted tw:text-[length:14px]; }
+}

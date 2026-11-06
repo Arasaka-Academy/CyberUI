@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-05",
+  "status": "passed",
+  "issue": "Merging the prefixed CyberUI utility entry into existing host Tailwind CSS suppresses host utility generation",
+  "fix": "Import host global CSS and a dedicated cyberui.css separately from JS/TS",
+  "regressionBefore": {
+    "framework": "vite",
+    "command": "pnpm test:registry",
+    "hostUtility": "flex",
+    "expectedDisplay": "flex",
+    "actualDisplay": "block"
+  },
+  "checks": {
+    "typecheck": "passed",
+    "eslintAndStylelint": "passed",
+    "unitTests": {
+      "status": "passed",
+      "files": 9,
+      "tests": 45
+    },
+    "productionBuild": "passed",
+    "focusedChromiumSuite": {
+      "status": "passed",
+      "tests": 7,
+      "duration": "10.5s",
+      "files": [
+        "tests/e2e/registry.spec.ts",
+        "tests/e2e/tailwind-foundation.spec.ts"
+      ]
+    },
+    "registryConsumers": {
+      "status": "passed",
+      "frameworks": [
+        "vite",
+        "next"
+      ],
+      "examplesBuiltAndRenderedPerFramework": 65,
+      "sourceAndLicenseFiles": 155,
+      "hostUtilities": [
+        "flex",
+        "gap-4",
+        "p-4",
+        "font-semibold"
+      ],
+      "cyberUtilitiesOverrideComponents": true
+    },
+    "cssSizesMatchMigrationMeasurements": true
+  },
+  "npmRegistry": "https://registry.npmmirror.com",
+  "registrySource": "local fixture through the real shadcn CLI",
+  "browser": "Chromium",
+  "committed": false,
+  "pushed": false
+}

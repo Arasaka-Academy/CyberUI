@@ -1,0 +1,274 @@
+[
+  {
+    "route": "preview",
+    "width": 1440,
+    "locale": "zh-CN",
+    "layout": [
+      {
+        "selector": "[data-metric=\"0\"]",
+        "x": 208,
+        "y": 409.578125,
+        "width": 292.5,
+        "height": 152.78125,
+        "padding": "18px 14px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "[data-metric=\"3\"]",
+        "x": 1121.5,
+        "y": 409.578125,
+        "width": 292.5,
+        "height": 152.78125,
+        "padding": "18px 14px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "input[type=\"search\"]",
+        "x": 208,
+        "y": 1064.046875,
+        "width": 406.953125,
+        "height": 44,
+        "padding": "10px 13px",
+        "color": "rgb(147, 228, 234)"
+      }
+    ]
+  },
+  {
+    "route": "preview",
+    "width": 1440,
+    "locale": "en",
+    "layout": [
+      {
+        "selector": "[data-metric=\"0\"]",
+        "x": 208,
+        "y": 409.578125,
+        "width": 292.5,
+        "height": 152.78125,
+        "padding": "18px 14px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "[data-metric=\"3\"]",
+        "x": 1121.5,
+        "y": 409.578125,
+        "width": 292.5,
+        "height": 152.78125,
+        "padding": "18px 14px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "input[type=\"search\"]",
+        "x": 208,
+        "y": 1064.046875,
+        "width": 406.953125,
+        "height": 44,
+        "padding": "10px 13px",
+        "color": "rgb(147, 228, 234)"
+      }
+    ]
+  },
+  {
+    "route": "preview",
+    "width": 375,
+    "locale": "zh-CN",
+    "layout": [
+      {
+        "selector": "[data-metric=\"0\"]",
+        "x": 16,
+        "y": 524.875,
+        "width": 166.5,
+        "height": 146.78125,
+        "padding": "16px 10px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "[data-metric=\"3\"]",
+        "x": 192.5,
+        "y": 681.65625,
+        "width": 166.5,
+        "height": 146.78125,
+        "padding": "16px 10px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "input[type=\"search\"]",
+        "x": 16,
+        "y": 1706.90625,
+        "width": 343,
+        "height": 47.59375,
+        "padding": "10px 13px",
+        "color": "rgb(147, 228, 234)"
+      }
+    ]
+  },
+  {
+    "route": "preview",
+    "width": 375,
+    "locale": "en",
+    "layout": [
+      {
+        "selector": "[data-metric=\"0\"]",
+        "x": 16,
+        "y": 524.875,
+        "width": 166.5,
+        "height": 146.78125,
+        "padding": "16px 10px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "[data-metric=\"3\"]",
+        "x": 192.5,
+        "y": 681.65625,
+        "width": 166.5,
+        "height": 146.78125,
+        "padding": "16px 10px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "input[type=\"search\"]",
+        "x": 16,
+        "y": 1706.90625,
+        "width": 343,
+        "height": 47.59375,
+        "padding": "10px 13px",
+        "color": "rgb(147, 228, 234)"
+      }
+    ]
+  },
+  {
+    "route": "replica",
+    "width": 1440,
+    "locale": "zh-CN",
+    "layout": [
+      {
+        "selector": "[data-metric=\"0\"]",
+        "x": 469,
+        "y": 660.578125,
+        "width": 216,
+        "height": 152.78125,
+        "padding": "18px 14px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "[data-metric=\"3\"]",
+        "x": 1153,
+        "y": 660.578125,
+        "width": 216,
+        "height": 152.78125,
+        "padding": "18px 14px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "input[type=\"search\"]",
+        "x": 469,
+        "y": 1661.828125,
+        "width": 300.515625,
+        "height": 44,
+        "padding": "10px 13px",
+        "color": "rgb(147, 228, 234)"
+      }
+    ]
+  },
+  {
+    "route": "replica",
+    "width": 1440,
+    "locale": "en",
+    "layout": [
+      {
+        "selector": "[data-metric=\"0\"]",
+        "x": 469,
+        "y": 657.578125,
+        "width": 216,
+        "height": 152.78125,
+        "padding": "18px 14px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "[data-metric=\"3\"]",
+        "x": 1153,
+        "y": 657.578125,
+        "width": 216,
+        "height": 152.78125,
+        "padding": "18px 14px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "input[type=\"search\"]",
+        "x": 469,
+        "y": 1658.828125,
+        "width": 300.515625,
+        "height": 44,
+        "padding": "10px 13px",
+        "color": "rgb(147, 228, 234)"
+      }
+    ]
+  },
+  {
+    "route": "replica",
+    "width": 375,
+    "locale": "zh-CN",
+    "layout": [
+      {
+        "selector": "[data-metric=\"0\"]",
+        "x": 35,
+        "y": 770.0625,
+        "width": 147.5,
+        "height": 146.78125,
+        "padding": "16px 10px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "[data-metric=\"3\"]",
+        "x": 192.5,
+        "y": 926.84375,
+        "width": 147.5,
+        "height": 146.78125,
+        "padding": "16px 10px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "input[type=\"search\"]",
+        "x": 35,
+        "y": 1952.09375,
+        "width": 305,
+        "height": 47.59375,
+        "padding": "10px 13px",
+        "color": "rgb(147, 228, 234)"
+      }
+    ]
+  },
+  {
+    "route": "replica",
+    "width": 375,
+    "locale": "en",
+    "layout": [
+      {
+        "selector": "[data-metric=\"0\"]",
+        "x": 35,
+        "y": 772.84375,
+        "width": 147.5,
+        "height": 146.78125,
+        "padding": "16px 10px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "[data-metric=\"3\"]",
+        "x": 192.5,
+        "y": 929.625,
+        "width": 147.5,
+        "height": 146.78125,
+        "padding": "16px 10px",
+        "color": "rgb(147, 228, 234)"
+      },
+      {
+        "selector": "input[type=\"search\"]",
+        "x": 35,
+        "y": 1954.875,
+        "width": 305,
+        "height": 47.59375,
+        "padding": "10px 13px",
+        "color": "rgb(147, 228, 234)"
+      }
+    ]
+  }
+]

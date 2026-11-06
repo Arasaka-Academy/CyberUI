@@ -1,3 +1,8 @@
-.keyboard { display:grid; gap:6px; min-width:0; }
-.keyboard > div { display:flex; justify-content:center; gap:2px; min-width:0; }
-.keyboard button[data-size] { min-width:24px; flex:1 1 0; padding:8px 2px; letter-spacing:0; gap:0; }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.keyboard { @apply tw:grid tw:gap-cyber-sm tw:min-w-[0]; }
+.keyboard > div { @apply tw:flex tw:justify-center tw:gap-[2px] tw:min-w-[0]; }
+.keyboard button[data-size] { @apply tw:min-w-[24px] tw:flex-[1_1_0] tw:p-[8px_2px] tw:tracking-[0] tw:gap-[0]; }
+}

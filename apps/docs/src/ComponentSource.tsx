@@ -34,16 +34,16 @@ export default function ComponentSource({ name }: { name: string }) {
     <Tabs label={t('Installation method', '安装方式')} items={[
       { id: 'install', label: t('Command', '命令添加'), content: <>
         <p>{t('Add the source to your project. Edit it freely. No CyberUI npm package required.', '将组件源码加入项目，随时修改，无需安装 CyberUI npm 包。')}</p>
-        {version.ref && <SegmentedControl label={t('Source version', '源码版本')} value={track} onChange={setTrack} options={[{ id: 'pinned', label: t('Verified commit', '已验证提交') }, { id: 'latest', label: t('Default branch', '默认分支') }]} />}
+        {version.ref && <SegmentedControl label={t('Source version', '源码版本')} value={track} onChange={setTrack} options={[{ id: 'pinned', label: t('Release version', '发布版本') }, { id: 'latest', label: t('Default branch', '默认分支') }]} />}
         <CodeBlock code={command} language="TERMINAL / PNPM" copyLabel={t('Copy install command', '复制安装命令')} />
-        <p className="doc-note">{t('Run in a React 19 project with components.json configured. The command includes components used by the example below. Files follow your components directory setting.', '在已配置 components.json 的 React 19 项目中运行；命令包含下方示例所用的组合组件。文件位置遵循你的 components 目录配置。')} <Link to="/installation">{t('Vite & Next.js setup →', 'Vite 与 Next.js 接入指南 →')}</Link></p>
+        <p className="doc-note">{t('Current sources require React 19, Tailwind v4 and components.json. The command includes components used by the example below; files follow your components directory setting.', '当前源码需要 React 19、Tailwind v4 和 components.json。命令包含下方示例所用的组合组件，文件位置遵循你的 components 目录配置。')} <Link to="/installation">{t('Vite & Next.js setup →', 'Vite 与 Next.js 接入指南 →')}</Link></p>
       </> },
       { id: 'source', label: t('Source files', '源码文件'), content: <>
-        <p>{t('Copy these files into the same cyberui directory. Shared files only need to be added once.', '将这些文件保存到同一个 cyberui 目录，公共文件只需加入一次。')}</p>
+        <p>{t('Copy these current Tailwind v4 sources into the same cyberui directory. Shared files only need to be added once.', '将这些使用 Tailwind v4 的当前源码保存到同一个 cyberui 目录，公共文件只需加入一次。')}</p>
         <Select label={t('Source file', '源码文件')} value={selected} onChange={setSelected} options={item.files.map(file => ({ id: file.path, label: file.path.split('/').pop()! }))} />
         <p className="source-destination"><code>{item.files.find(file => file.path === selected)?.target}</code></p>
         {failed ? <div role="alert"><p>{t('Unable to load this file.', '暂时无法加载此文件。')}</p><Button onPress={() => setAttempt(value => value + 1)}>{t('Retry', '重试')}</Button></div> : source === null ? <Spinner label={t('Loading source', '加载源码')} /> : <CodeBlock code={source} language={selected.split('/').pop()!} copyLabel={t('Copy selected file', '复制当前文件')} />}
-        <details className="source-dependencies"><summary>{t('Dependencies and setup', '依赖与初始化')}</summary><p>{t('Install the npm dependencies below, then wrap your application in CyberUIProvider. Copy the listed license files too.', '安装下列 npm 依赖，并在应用外层放置 CyberUIProvider；请同时保留清单中的许可证文件。')}</p><CodeBlock code={`pnpm add ${item.dependencies.join(' ')}`} language="TERMINAL / PNPM" copyLabel={t('Copy dependency command', '复制依赖安装命令')} /><Link to="/installation">{t('Complete setup guide →', '查看完整接入指南 →')}</Link></details>
+        <details className="source-dependencies"><summary>{t('Dependencies and setup', '依赖与初始化')}</summary><p>{t('Install runtime and compiler dependencies, configure the Vite or PostCSS plugin, then wrap your application in CyberUIProvider. Copy the listed license files too.', '安装运行与编译依赖，配置 Vite 或 PostCSS 插件，并在应用外层放置 CyberUIProvider；请同时保留清单中的许可证文件。')}</p><CodeBlock code={`pnpm add ${item.dependencies.join(' ')}`} language="TERMINAL / PNPM" copyLabel={t('Copy dependency command', '复制依赖安装命令')} /><CodeBlock code={`pnpm add -D ${item.devDependencies.join(' ')}`} language="COMPILER / PNPM" copyLabel={t('Copy compiler command', '复制编译依赖命令')} /><Link to="/installation">{t('Complete setup guide →', '查看完整接入指南 →')}</Link></details>
       </> }
     ]} />
   </section>;

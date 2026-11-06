@@ -23,9 +23,34 @@ describe('GitHub registry source delivery', () => {
       expect(new Set(targets).size).toBe(targets.length);
       expect(targets).toContain('@components/cyberui/provider.tsx');
       expect(targets).toContain('@components/cyberui/styles.css');
+      expect(targets).toContain('@components/cyberui/tokens.css');
+      expect(targets).toContain('@components/cyberui/motion.css');
+      expect(targets).toContain('@components/cyberui/tailwind-theme.css');
       expect(targets).toContain('@components/cyberui/LICENSE');
       for (const path of paths) {
         const content = readFileSync(path, 'utf8');
+        if (path.endsWith('.css')) {
+          const style = postcss.parse(content);
+          const dependencies: string[] = [];
+          style.walkAtRules(rule => {
+            if (!['import', 'reference'].includes(rule.name)) return;
+            const match = rule.params.match(/^(['"])([^'"]+)\1/);
+            expect(match, `${item.name}: unsupported CSS import`).not.toBeNull();
+            dependencies.push(match![2]);
+          });
+          style.walkDecls('composes', declaration => {
+            const match = declaration.value.match(/\bfrom\s+(['"])([^'"]+)\1/);
+            if (match) dependencies.push(match[2]);
+          });
+          for (const dependency of dependencies) {
+            if (dependency.startsWith('tailwindcss/')) {
+              expect(item.devDependencies).toContain('tailwindcss@4.3.4');
+              continue;
+            }
+            expect(dependency).toMatch(/^\.\/[^/]+\.css$/);
+            expect(paths.has(resolve(dirname(path), dependency)), `${item.name}: missing CSS dependency ${dependency}`).toBe(true);
+          }
+        }
         if (!/\.tsx?$/.test(path)) continue;
         const file = ts.createSourceFile(path, content, ts.ScriptTarget.Latest, true);
         for (const statement of file.statements) {
@@ -40,7 +65,7 @@ describe('GitHub registry source delivery', () => {
           }
         }
       }
-      // Preserve CSS Modules, SVG data and text exactly; Tailwind transforms are inapplicable.
+      // The CLI copies prefixed utilities and CSS Module references verbatim.
       for (const file of item.files) expect(file.type).toBe('registry:file');
     }
   });
@@ -49,6 +74,8 @@ describe('GitHub registry source delivery', () => {
     const button = manifest.items.find((item:{name:string}) => item.name === 'button');
     const chart = manifest.items.find((item:{name:string}) => item.name === 'chart');
     expect(button.dependencies.some((d:string) => d.startsWith('recharts@'))).toBe(false);
+    for (const item of manifest.items) expect(item.dependencies.some((d:string) => /tailwind/i.test(d))).toBe(false);
+    for (const item of manifest.items) expect(item.devDependencies).toEqual(['tailwindcss@4.3.4']);
     expect(chart.dependencies.some((d:string) => d.startsWith('recharts@'))).toBe(true);
     expect(button.files.some((f:{path:string}) => basename(f.path) === 'input.tsx')).toBe(false);
     const all = new Set<string>(manifest.items.flatMap((item:{files:{path:string}[]}) => item.files.map(f=>f.path)));

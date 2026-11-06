@@ -1,6 +1,14 @@
 /* Generated from packages/react/src/styles.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
+@layer theme, base, components, utilities;
+@import './tailwind-theme.css';
+@import 'tailwindcss/utilities.css' layer(utilities) prefix(tw) source(none);
+@source './*.tsx';
+@import './tokens.css' layer(base);
+@import './motion.css' layer(base);
+
+@layer components {
 /* Explicit, scoped baseline. Font loading is opt-in via @cyberui/react/fonts.css. */
-[data-cyberui] {
+:is([data-cyberui], [data-cyberui-portal]) {
   --cyber-bg: #1e1517; --cyber-ink: #93e4ea; --cyber-muted: #c9a19c;
   --cyber-line: #5a3a3c; --cyber-soft: #3e2729; --cyber-accent: #e0574b;
   --cyber-accent2: #93e4ea; --cyber-on-accent: #000; --cyber-on-accent2: #000;
@@ -9,34 +17,31 @@
   --cyber-font-body: 'Oxanium', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   --cyber-font-display: 'Oxanium', 'PingFang SC', sans-serif;
   --cyber-font-mono: 'ShareTechMono', 'PingFang SC', monospace;
-  --cyber-cut: 12px; --cyber-cut-small: 8px; --cyber-stroke: 2px;
-  --cyber-space-xs: 4px; --cyber-space-sm: 6px; --cyber-space-md: 10px;
-  --cyber-space-lg: 14px; --cyber-space-xl: 18px;
-  --cyber-state-duration: 120ms; --cyber-enter-duration: 180ms;
-  color: var(--cyber-ink); background: var(--cyber-bg);
+  @apply tw:text-cyber-ink; background: var(--cyber-bg);
   font: 400 16px/1.6 var(--cyber-font-body);
   color-scheme: dark; accent-color: var(--cyber-accent);
 }
-[data-cyberui][data-mode='light'] { color-scheme: light; }
-:where([data-cyberui], [data-cyberui] *) { box-sizing: border-box; }
-[data-cyberui] :where(button,input,select,textarea) { font: inherit; }
-[data-cyberui] :where(button,[role='button'],a,input,select,textarea,[tabindex]):focus-visible {
+:is([data-cyberui], [data-cyberui-portal])[data-mode='light'] { color-scheme: light; }
+:where(:is([data-cyberui], [data-cyberui-portal]), :is([data-cyberui], [data-cyberui-portal]) *) { box-sizing: border-box; }
+:is([data-cyberui], [data-cyberui-portal]) :where(button,input,select,textarea) { font: inherit; }
+:is([data-cyberui], [data-cyberui-portal]) :where(button,[role='button'],a,input,select,textarea,[tabindex]):focus-visible {
   outline: 2px solid var(--cyber-accent2); outline-offset: 4px;
 }
-[data-cyberui] [data-focus-visible] { outline: 2px solid var(--cyber-accent2); outline-offset: 4px; }
-[data-cyberui] :where(button,[role='button'],[role='option']) { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
-[data-cyberui] :where(button:not(:disabled),[role='button']:not([aria-disabled='true']),select) { cursor: pointer; }
-[data-cyberui] :where(button:disabled,[aria-disabled='true']) { cursor: not-allowed; }
-[data-cyberui] :where(a) { color: inherit; text-underline-offset: 4px; }
-[data-cyberui] :where(h1,h2,h3,h4,p) { margin-top: 0; }
-[data-cyberui] :where(h1,h2,h3,h4) { font-family: var(--cyber-font-display); line-height: 1.25; text-wrap: balance; }
-[data-cyberui] :where(img,svg) { vertical-align: middle; }
-[data-cyberui] :where(input,textarea,select) { max-width: 100%; }
-[data-cyberui] :where(code,kbd,pre) { font-family: var(--cyber-font-mono); }
-[data-cyberui] ::selection { background: var(--cyber-accent); color: var(--cyber-on-accent); }
+:is([data-cyberui], [data-cyberui-portal]) [data-focus-visible] { outline: 2px solid var(--cyber-accent2); outline-offset: 4px; }
+:is([data-cyberui], [data-cyberui-portal]) :where(button,[role='button'],[role='option']) { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+:is([data-cyberui], [data-cyberui-portal]) :where(button:not(:disabled),[role='button']:not([aria-disabled='true']),select) { @apply tw:cursor-pointer; }
+:is([data-cyberui], [data-cyberui-portal]) :where(button:disabled,[aria-disabled='true']) { @apply tw:cursor-not-allowed; }
+:is([data-cyberui], [data-cyberui-portal]) :where(a) { @apply tw:text-inherit; text-underline-offset: 4px; }
+:is([data-cyberui], [data-cyberui-portal]) :where(h1,h2,h3,h4,p) { @apply tw:mt-[0]; }
+:is([data-cyberui], [data-cyberui-portal]) :where(h1,h2,h3,h4) { @apply tw:font-cyber-display; @apply tw:leading-[1.25] tw:text-balance; }
+:is([data-cyberui], [data-cyberui-portal]) :where(img,svg) { @apply tw:align-middle; }
+:is([data-cyberui], [data-cyberui-portal]) :where(input,textarea,select) { @apply tw:max-w-full; }
+:is([data-cyberui], [data-cyberui-portal]) :where(code,kbd,pre) { @apply tw:font-cyber-mono; }
+:is([data-cyberui], [data-cyberui-portal]) ::selection { background: var(--cyber-accent); @apply tw:text-cyber-on-accent; }
 @media (prefers-reduced-motion: reduce) {
-  [data-cyberui] *, [data-cyberui] *::before, [data-cyberui] *::after {
+  :is([data-cyberui], [data-cyberui-portal]) *, :is([data-cyberui], [data-cyberui-portal]) *::before, :is([data-cyberui], [data-cyberui-portal]) *::after {
     animation-duration: .01ms !important; animation-iteration-count: 1 !important;
     transition-duration: .01ms !important; scroll-behavior: auto !important;
   }
+}
 }

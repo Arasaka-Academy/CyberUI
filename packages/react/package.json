@@ -1,9 +1,9 @@
 {
-  "name": "@cyberui/react", "version": "0.1.0", "type": "module", "license": "MIT",
+  "name": "@cyberui/react", "version": "0.2.0", "type": "module", "license": "MIT",
   "files": ["dist"], "sideEffects": ["**/*.css"],
-  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }, "./styles.css": "./dist/cyberui.css", "./fonts.css": "./dist/fonts.css" },
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }, "./styles.css": "./dist/cyberui.css", "./fonts.css": "./dist/fonts.css", "./tailwind.css": "./dist/tailwind.css" },
   "peerDependencies": { "react": "^19.0.0", "react-dom": "^19.0.0" },
-  "dependencies": { "@cyberui/tokens": "workspace:*", "@internationalized/date": "^3.12.4", "react-aria": "3.53.1", "react-aria-components": "^1.12.0", "recharts": "^3.3.0" },
+  "dependencies": { "@cyberui/tokens": "workspace:*", "@internationalized/date": "^3.12.4", "react-aria": "3.53.1", "react-aria-components": "^1.22.1", "recharts": "^3.3.0" },
   "devDependencies": { "react": "^19.2.0", "react-dom": "^19.2.0" },
   "scripts": { "build": "vite build" }
 }

@@ -1,11 +1,12 @@
 /* Generated from packages/react/src/table.module.css. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely. */
-.tableWrap { width: 100%; overflow-x: auto; }
-.table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
-.table th { padding: 13px 14px; color: var(--cyber-muted); font: 12px var(--cyber-font-mono); border-bottom: 1px solid var(--cyber-ink); white-space: nowrap; }
-.table td { padding: 14px; border-bottom: 1px solid var(--cyber-line); }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.tableWrap { @apply tw:w-full tw:overflow-x-auto; }
+.table { @apply tw:w-full; border-collapse: collapse; @apply tw:text-left tw:text-[length:14px]; }
+.table th { @apply tw:p-[13px_var(--cyber-space-lg)] tw:text-cyber-muted; font: 12px var(--cyber-font-mono); border-bottom: 1px solid var(--cyber-ink); @apply tw:whitespace-nowrap; }
+.table td { @apply tw:p-cyber-lg; border-bottom: 1px solid var(--cyber-line); }
 .table tbody tr:hover { background: var(--cyber-soft); }
-.table th button { color: inherit; background: transparent; border: 0; padding: 0; font: inherit; display: flex; align-items: center; gap: 8px; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+.table th button { @apply tw:text-inherit; background: transparent; border: 0; @apply tw:p-[0]; font: inherit; @apply tw:flex tw:items-center tw:gap-[8px]; }
+}

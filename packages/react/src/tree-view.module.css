@@ -1,8 +1,9 @@
-.tree { padding: 4px; }
-.treeRow { display: flex; align-items: center; gap: 8px; min-height: 38px; cursor: pointer; }
-.treeRow[aria-selected='true'] { color: var(--cyber-on-ink); background: var(--cyber-ink); }
-.treeRow button { width: 28px; height: 28px; border: 0; background: transparent; color: inherit; cursor: pointer; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { to { opacity: .45; } }
-@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lift { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@layer theme, base, components, utilities;
+@reference './tailwind-theme.css';
+
+@layer components {
+.tree { @apply tw:p-cyber-xs; }
+.treeRow { @apply tw:flex tw:items-center tw:gap-[8px] tw:min-h-[38px] tw:cursor-pointer; }
+.treeRow[aria-selected='true'] { @apply tw:text-cyber-on-ink; background: var(--cyber-ink); }
+.treeRow button { @apply tw:w-[28px] tw:h-[28px]; border: 0; background: transparent; @apply tw:text-inherit tw:cursor-pointer; }
+}

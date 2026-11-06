@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 import { fileURLToPath } from 'node:url';
-export default defineConfig({ base:'./', publicDir: '../../public', plugins: [react()], resolve: { alias: {
+export default defineConfig({ base:'./', publicDir: '../../public', plugins: [react(), tailwindcss()], resolve: { alias: {
   '@cyberui/react/styles.css': fileURLToPath(new URL('../../packages/react/src/styles.css', import.meta.url)),
   '@cyberui/react': fileURLToPath(new URL('../../packages/react/src/index.ts', import.meta.url)),
   '@cyberui/tokens': fileURLToPath(new URL('../../packages/tokens/src/index.ts', import.meta.url))

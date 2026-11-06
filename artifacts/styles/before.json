@@ -1,0 +1,64 @@
+{
+  "label": "before",
+  "node": "v22.22.0",
+  "buildCommand": "pnpm build",
+  "buildMs": [
+    9455,
+    14779,
+    9009
+  ],
+  "warmMeanMs": 11894,
+  "css": {
+    "packages/react/dist": {
+      "files": [
+        {
+          "path": "packages/react/dist/cyberui.css",
+          "bytes": 60879,
+          "gzipBytes": 9865
+        },
+        {
+          "path": "packages/react/dist/fonts.css",
+          "bytes": 4442,
+          "gzipBytes": 475
+        }
+      ],
+      "bytes": 65321,
+      "gzipBytes": 10340
+    },
+    "apps/docs/dist": {
+      "files": [
+        {
+          "path": "apps/docs/dist/assets/WebScenePage-B2S2VgiE.css",
+          "bytes": 93931,
+          "gzipBytes": 15939
+        },
+        {
+          "path": "apps/docs/dist/assets/index-C42DXcnw.css",
+          "bytes": 85087,
+          "gzipBytes": 14188
+        },
+        {
+          "path": "apps/docs/dist/fonts.css",
+          "bytes": 4442,
+          "gzipBytes": 475
+        }
+      ],
+      "bytes": 183460,
+      "gzipBytes": 30602
+    }
+  },
+  "componentSource": {
+    "spacingReferences": 0,
+    "motionReferences": 0,
+    "keyframes": {
+      "spin": 54,
+      "pulse": 54,
+      "appear": 54,
+      "lift": 54
+    }
+  },
+  "orbit": {
+    "sourceBytes": 17126,
+    "utilityReferences": 0
+  }
+}

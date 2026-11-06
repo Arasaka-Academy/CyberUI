@@ -1,5 +1,6 @@
 import ts from 'typescript';
 import { registrySchema } from 'shadcn/schema';
+import postcss from 'postcss';
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, unlinkSync } from 'node:fs';
 import { resolve, relative, basename, extname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -9,6 +10,7 @@ const reactRoot = resolve(root, 'packages/react/src');
 const tokenRoot = resolve(root, 'packages/tokens/src');
 const destination = 'registry/cyberui';
 const packageInfo = JSON.parse(readFileSync(resolve(root, 'packages/react/package.json'), 'utf8'));
+const toolingInfo = JSON.parse(readFileSync(resolve(root, 'package.json'), 'utf8'));
 const slug = name => name.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 function sourceFile(path) {
@@ -43,6 +45,7 @@ export function createItem(component) {
   const visited = new Set();
   const contents = new Map();
   const dependencies = new Set();
+  const devDependencies = new Set();
   while (pending.length) {
     const path = pending.pop();
     if (visited.has(path)) continue;
@@ -68,6 +71,25 @@ export function createItem(component) {
         }
       }
       for (const edit of replacements.reverse()) content = content.slice(0, edit.start) + edit.text + content.slice(edit.end);
+    } else if (extname(path) === '.css') {
+      const style = postcss.parse(content, { from: path });
+      const rewrite = (value, pattern, allowCompiler = false) => value.replace(pattern, (match, quote, specifier) => {
+        if (allowCompiler && /^tailwindcss(?:\/|$)/.test(specifier)) {
+          devDependencies.add(`tailwindcss@${toolingInfo.devDependencies.tailwindcss}`);
+          return match;
+        }
+        const dependency = resolveImport(specifier, path);
+        if (!dependency || extname(dependency) !== '.css') throw new Error(`Unsupported CSS dependency ${specifier} in ${path}`);
+        pending.push(dependency);
+        return match.replace(quote + specifier + quote, quote + './' + basename(outputPath(dependency)) + quote);
+      });
+      style.walkAtRules(rule => {
+        if (['import', 'reference'].includes(rule.name)) rule.params = rewrite(rule.params, /^(['"])([^'"]+)\1/, true);
+      });
+      style.walkDecls('composes', declaration => {
+        declaration.value = rewrite(declaration.value, /\bfrom\s+(['"])([^'"]+)\1/);
+      });
+      content = style.toString();
     }
     const comment = `Generated from ${relative(root, path)}. Regenerate in CyberUI with pnpm registry:build; after installation, edit this file freely.`;
     contents.set(outputPath(path), (extname(path) === '.css' ? `/* ${comment} */\n` : `// ${comment}\n`) + content);
@@ -80,10 +102,11 @@ export function createItem(component) {
     name: slug(component.name), type: 'registry:ui', title: component.name,
     description: component.enDescription,
     dependencies: [...dependencies].sort(),
+    devDependencies: [...devDependencies].sort(),
     // These sources already have relative imports and client directives. Copy them
     // verbatim so the CLI's Tailwind transforms cannot alter SVG or text literals.
     files: paths.map(path => ({ path, type: 'registry:file', target: '@components/cyberui/' + basename(path) })),
-    docs: 'Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline CSS. React 19 is required. See the repository docs/source-installation.md for Vite, Next.js and optional licensed fonts.',
+    docs: 'Configure Tailwind v4 with @tailwindcss/vite (Vite) or @tailwindcss/postcss (Next.js) before building these sources. Wrap your application in CyberUIProvider from your components/cyberui/provider module. The provider loads the scoped baseline without Preflight. React 19 is required. See docs/source-installation.md for the shared tw: theme, utility overrides and optional licensed fonts.',
     meta: { componentName: component.name, zh: component.zh, zhDescription: component.zhDescription, category: component.category }
   };
   return { item, contents };

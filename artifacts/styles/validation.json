@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-05",
+  "branch": "codex/styles-tailwind-pilot",
+  "environment": {
+    "node": "22.22.0",
+    "pnpm": "11.3.0",
+    "browser": "Chromium"
+  },
+  "checks": [
+    {
+      "command": "pnpm typecheck",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm lint",
+      "status": "passed",
+      "includes": [
+        "ESLint",
+        "Stylelint"
+      ]
+    },
+    {
+      "command": "pnpm test",
+      "status": "passed",
+      "files": 8,
+      "tests": 41
+    },
+    {
+      "command": "node scripts/measure-styles.mjs after",
+      "status": "passed",
+      "productionBuilds": 3
+    },
+    {
+      "command": "pnpm test:e2e --reporter=list",
+      "status": "passed",
+      "tests": 65,
+      "duration": "4.1 minutes"
+    },
+    {
+      "command": "CYBERUI_BASE_URL=http://127.0.0.1:4176 pnpm exec playwright test tests/e2e/orbit-styles.spec.ts --grep \"shared animation\" --reporter=list",
+      "status": "passed",
+      "tests": 1,
+      "production": true
+    },
+    {
+      "command": "pnpm test:consumer",
+      "status": "passed",
+      "examples": 65,
+      "result": "consumer-result.json"
+    },
+    {
+      "command": "CYBERUI_TEST_REGISTRY=https://registry.npmmirror.com pnpm test:registry",
+      "status": "passed",
+      "frameworks": [
+        "Vite",
+        "Next.js"
+      ],
+      "componentsPerFramework": 65,
+      "examplesPerFramework": 65,
+      "sourceFilesPerFramework": 161,
+      "tailwindRequired": false,
+      "source": "local registry fixture with real shadcn CLI",
+      "result": "registry-consumer-result.json"
+    }
+  ],
+  "comparisons": {
+    "viewports": 8,
+    "screenshots": "Neon dark, Chinese/English, 1440/375px, embedded/standalone, first viewport",
+    "changedPixels": 0,
+    "geometryChecks": 24,
+    "geometryDifferences": 0,
+    "componentModules": 70,
+    "originalComponentRules": 458,
+    "missingOrChangedComponentRules": 0
+  },
+  "scope": {
+    "tailwind": "ORBIT HTML page containers only",
+    "preflight": false,
+    "publicComponentAPIs": "unchanged",
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  },
+  "review": ".context/compound-engineering/ce-review/2026-11-05-style-pilot/review.md"
+}
