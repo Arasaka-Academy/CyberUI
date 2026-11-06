@@ -1,0 +1,60 @@
+name: Release CyberUI
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    uses: ./.github/workflows/ci.yml
+
+  publish:
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check version and main ancestry
+        run: |
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/main
+          node --input-type=module <<'JS'
+          import { readFileSync } from 'node:fs';
+          for (const file of ['package.json', 'packages/react/package.json', 'packages/tokens/package.json', 'apps/docs/package.json']) {
+            const { version } = JSON.parse(readFileSync(file, 'utf8'));
+            if (`v${version}` !== process.env.GITHUB_REF_NAME) throw new Error(`${file} version does not match release tag`);
+          }
+          JS
+          test -f "docs/releases/$GITHUB_REF_NAME.md"
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - name: Pack versioned artifacts
+        run: |
+          mkdir -p artifacts/packages
+          pnpm --filter @cyberui/tokens pack --pack-destination ../../artifacts/packages
+          pnpm --filter @cyberui/react pack --pack-destination ../../artifacts/packages
+          cd artifacts/packages
+          sha256sum ./*.tgz > SHA256SUMS
+      - name: Publish verified GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --verify-tag --latest --title "CyberUI $GITHUB_REF_NAME" \
+            --notes-file "docs/releases/$GITHUB_REF_NAME.md" \
+            artifacts/packages/*.tgz artifacts/packages/SHA256SUMS

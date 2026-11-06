@@ -1,0 +1,45 @@
+{
+  "cli": "4.23.0",
+  "components": 65,
+  "githubRef": null,
+  "toolchainTarballCache": [],
+  "consumers": [
+    {
+      "framework": "vite",
+      "components": 65,
+      "examples": 65,
+      "sourceConsistency": {
+        "files": 155,
+        "sha256": "29484642e1a22652fbe8d1e52af24131b7cbcf884e4f7f80f46b287bbcb5b493"
+      },
+      "productionBuild": "passed",
+      "renderedExamples": 65,
+      "browser": "passed",
+      "customComponentsDirectory": "widgets",
+      "tailwindRequired": true,
+      "tailwindVersion": "4.3.4",
+      "utilitiesOverrideComponents": true,
+      "hostTailwindUtilitiesPreserved": true,
+      "utilityEntry": "separate-js-import"
+    },
+    {
+      "framework": "next",
+      "components": 65,
+      "examples": 65,
+      "sourceConsistency": {
+        "files": 155,
+        "sha256": "29484642e1a22652fbe8d1e52af24131b7cbcf884e4f7f80f46b287bbcb5b493"
+      },
+      "productionBuild": "passed",
+      "renderedExamples": 65,
+      "browser": "passed",
+      "customComponentsDirectory": "components",
+      "tailwindRequired": true,
+      "tailwindVersion": "4.3.4",
+      "utilitiesOverrideComponents": true,
+      "hostTailwindUtilitiesPreserved": true,
+      "utilityEntry": "separate-js-import"
+    }
+  ],
+  "status": "passed"
+}

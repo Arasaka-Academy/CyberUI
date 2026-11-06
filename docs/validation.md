@@ -1,10 +1,37 @@
-# 本地验收记录
+# 验收记录
+
+## v0.2.0 本地验收 — 2026-11-06
+
+环境：macOS、Node.js 22.22.0、pnpm 11.3.0、React 19、Playwright Chromium。生产版测试使用实际的 `apps/docs/dist`，测试报告写入独立临时目录，未覆盖下方历史验收档案。
+
+| 检查 | 结果 | 覆盖范围 |
+| --- | --- | --- |
+| 类型、ESLint、Stylelint | 通过 | 工作区类型、CSS 属性与设计变量约定 |
+| Registry 一致性与单元测试 | 48 / 48 通过 | 10 个测试文件；65 个组件、155 份源码与许可文件 |
+| `pnpm build` | 通过 | tokens、React 组件包、展示站生产构建 |
+| 生产预览 Chromium E2E | 70 / 70 通过 | 七套明暗主题、中英双语、嵌入与独立页面、键盘与焦点、快速图表缩放 |
+| axe 自动扫描 | 662 / 662 无违规 | 通用页面 158 次，六类产品 504 次；保留原有 WCAG A/AA 规则 |
+| 375px 全量布局 | 102 / 102 通过 | 组件页、阅读器子页面、六类产品入口与主要页面 |
+| 无 Tailwind 的组件包消费者 | Vite、Next.js 通过 | 真实 `.tgz`；65 份示例、生产构建、Next.js Server Component 导入、样式与弹层交互 |
+| Tailwind Registry 源码消费者 | Vite、Next.js 通过 | 真实 shadcn CLI 安装全部 65 项；155 份文件一致、全部示例渲染、宿主工具类保留与覆盖 |
+
+本次额外回归验证 FileUpload 的拖放、校验、受控清空和回调中即时读取的原生 FormData，body 弹层逃离受限宿主、同步主题与清理，CommandPalette 的搜索／方向键／Enter／Escape，禁用 MultiSelect 的提交行为，以及三类导航的组合键点击。图表绘图区约束异步尺寸更新期间的宽度，并保留键盘焦点轮廓。ORBIT 响应式检查等待浏览器完成视口和容器查询重排，再断言页面宽度；未加入固定时长等待。
+
+源码消费者本地使用受控 HTTP fixture 提供本次生成的 Registry，并从 npm 镜像安装第三方依赖；发布后的 CI 从被检验提交的真实 GitHub 源码重复验收。组件包消费者没有安装 Tailwind；Registry 源码消费者使用 Tailwind 4.3.4。这两种接入方式的编译要求见[源码接入说明](source-installation.md)。
+
+可复核的本次结果与精简报告见 [v0.2.0 验收证据](../artifacts/releases/v0.2.0/validation.json)。`artifacts/styles` 和 `artifacts/tailwind` 是此前迁移阶段的对照数据，不能替代本次发布验收。自动扫描不等于完整 WCAG 认证；VoiceOver、真实触摸设备、Safari 和 Firefox 尚未完成本次人工或浏览器验收。
+
+本节记录本地结果。远端质量检查、GitHub Release 和 Pages 部署分别以 [CI](../.github/workflows/ci.yml)、[Release](../.github/workflows/release.yml) 和 [Pages](../.github/workflows/pages.yml) 的实际执行结果为准。
+
+## v0.1.0 历史验收 — 2026-11-05
+
+以下保留旧版结果；其中的无 Tailwind 源码接入、固定 SHA 和旧文件数量仅适用于当时的版本。当前默认安装目标为 `v0.2.0`。
 
 验收日期：2026-11-05。环境：macOS、Node.js 26.13、pnpm 11.3、React 19、Vite 7.3.7、Playwright Chromium；GitHub CI 使用 Node.js 22。
 
 本次交付包含 65 类公共组件、六个平级产品（阅读器、Dashboard、AI 产品官网、Agent 聊天、移动音乐 App、产品团队博客）、七套独立明暗主题及中英双语展示站。阅读器内部保留全部 27 个页面、19 张参考图片和 31 个独立预览分区。组件库输出 ESM、类型声明、独立 CSS 和可选的本地字体样式。
 
-## 工程结果
+### 工程结果
 
 | 检查 | 结果 | 证据或覆盖范围 |
 | --- | --- | --- |
@@ -32,7 +59,7 @@ CYBERUI_BASE_URL=http://127.0.0.1:4183 node scripts/capture-references.mjs
 
 [GitHub Actions](../.github/workflows/ci.yml) 执行工程、浏览器、独立打包及真实 GitHub 源码接入检查，任务上限为 25 分钟。无障碍矩阵按产品拆分，避免把全部扫描放入单个用例。下文引用的 Registry 工作流属于此前已验收的组件分发版本。
 
-## GitHub 源码分发
+### GitHub 源码分发
 
 65 个 registry 项通过 shadcn 4.23.0 官方格式校验，全部使用明确的文件目标和自身完整依赖闭包。生成一致性检查已加入 `pnpm test`，独立源码接入检查已加入 CI。原始组件为唯一维护来源，生成源码随 registry.json 一并纳入 Git。
 
@@ -44,13 +71,13 @@ CYBERUI_BASE_URL=http://127.0.0.1:4183 node scripts/capture-references.mjs
 
 推送后，Linux CI 从 `84742e5a210c991e5f82ad5bf9c842f096daabd9` 真实读取全部 GitHub 源码，Vite 和 Next.js 均通过完整验收，第三方依赖直接从 npm 安装，未使用框架 tarball 映射或临时 DNS 设置。[验收工作流](https://github.com/Arasaka-Academy/CyberUI/actions/runs/41994368802) 全部通过；原始 [源码接入结果](../artifacts/registry-consumer-result.json) 随工作流产物保存。组件页及接入指南默认提供这一固定 SHA，并可切换到默认分支命令。
 
-## GitHub Pages
+### GitHub Pages
 
 生产构建在本地挂载到 `/CyberUI/` 子目录，验证首页、Button 源码页、参考图对照、接入指南和 NOVA 独立场景五个路由。字体、参考图、favicon、CSS 和动态模块均正常加载；源码复制、中英文切换、Hash 路由刷新及 375px 接入指南布局通过，未出现浏览器运行错误或资源加载错误。
 
 [Pages 工作流](../.github/workflows/pages.yml) 在 `main` 的完整检查成功后检出已通过的提交，构建并上传展示站，再通过 GitHub Pages 的 OIDC 部署。PR 和失败的检查不会触发自动发布，也可以从 `main` 手动重新发布。
 
-## 交互覆盖
+### 交互覆盖
 
 组件文档逐页检查了标题、实际预览、代码复制入口和公共属性表；65 份可复制代码另外在已安装的打包产物上编译。Button、IconButton 和 Avatar 展示独立尺寸示例；颜色与外观变体独立展示。
 
@@ -76,7 +103,7 @@ CYBERUI_BASE_URL=http://127.0.0.1:4183 node scripts/capture-references.mjs
 
 单元测试另外检查了原生输入 ref、FormData、受控选择器不泄漏内部状态、文件类型拒绝与恢复、颜色草稿恢复、树节点键盘导航和禁用命令。状态测试覆盖任务与指标、无截止日期、跨产品重置、点击当前会话不中断、取消后的陈旧更新、重试不重复用户消息、异常存储恢复及生成时钟清理。新增音乐自然结束／手动循环边界、异常数值、播放队列与存储恢复测试，博客收藏去重与无效文章恢复测试，以及旧版本存储迁移和独立重置测试。
 
-## 布局与无障碍
+### 布局与无障碍
 
 中英文在 375、768、1024、1440px 下检查了概览、目录、选择器、身份卡、首页、书库、日历、商店及主题页面，并启用减少动态效果。六类产品在上述四种宽度、两种语言、内嵌及独立布局中分别检查；另覆盖音乐搜索／音乐库／歌单／播放器和博客文章详情。375px 下对全部 102 个页面进行英文全量溢出检查。表格、代码和固定比例参考画布可在自身区域内滚动，看板在窄容器内纵向排列，音乐内容在手机画布内滚动。
 
@@ -88,7 +115,7 @@ CYBERUI_BASE_URL=http://127.0.0.1:4183 node scripts/capture-references.mjs
 
 自动扫描和焦点测试不构成完整 WCAG 认证；原生浏览器缩放、VoiceOver 及真实设备触摸没有人工验收记录。
 
-## 视觉证据与差异
+### 视觉证据与差异
 
 逐图检查依据主题背景、浅青／珊瑚红、切角方向、边框形态、开放角框、条码、刻度、字体层级、主要区域和斜纹。已复核 31 对图的总览，并放大检查首页、日历、组件文档和移动首页。数据与参考时间固定为 `2026-10-30 17:46`；动画减少，字体从本地加载。
 
@@ -107,7 +134,7 @@ CYBERUI_BASE_URL=http://127.0.0.1:4183 node scripts/capture-references.mjs
 
 书籍封面使用本地原创字符图案；浏览器字形、翻译文本、默认装备、演示数据和部分排列与参考图片有差异。参考画布保留 3:4 比例和内部滚动，Web 点击区域、键盘焦点与文字可读性另作适配。这份记录用于逐项复核，并不声明逐像素一致。
 
-## 运行边界
+### 运行边界
 
 阅读器硬件、真实阅读引擎、网络诊断与更新服务使用演示模型。头像上传仅用于当前页面的本地预览。完整语言为简体中文和英文；其他语言以四个样本保留。演示记录在本机 localStorage，可重置。
 

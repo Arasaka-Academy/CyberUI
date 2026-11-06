@@ -1,7 +1,9 @@
 name: Verify CyberUI
 on:
   push:
+    branches: ['**']
   pull_request:
+  workflow_call:
 jobs:
   verify:
     runs-on: ubuntu-latest

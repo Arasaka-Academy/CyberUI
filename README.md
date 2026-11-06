@@ -57,10 +57,10 @@ pnpm dev --port 5174
 
 ## 从 GitHub 按需加入源码
 
-全部 65 类组件支持 shadcn GitHub Registry，无需发布或安装 CyberUI npm 包。组件、CSS Modules 和必要公共源码进入你的项目，之后可以直接修改。已通过真实 GitHub 安装验收的稳定版本：
+全部 65 类组件支持 shadcn GitHub Registry，无需发布或安装 CyberUI npm 包。组件、CSS Modules 和必要公共源码进入你的项目，之后可以直接修改。v0.2.0 发布版本：
 
 ```sh
-pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#84742e5a210c991e5f82ad5bf9c842f096daabd9
+pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#v0.2.0
 ```
 
 也可使用跟随默认分支的尝鲜命令：
@@ -69,7 +69,7 @@ pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#84742e5a210c991e5f82ad
 pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button
 ```
 
-不带 ref 的命令读取默认分支，需该分支已包含 registry；也可在组件地址后追加 `#` 与包含 registry 的完整提交 SHA。已验证的固定版本命令见展示站组件页。React 19 的 Vite 与 Next.js 接入、手动复制、可选字体和更新方式见 [源码接入指南](docs/source-installation.md) 或展示站 `/#/installation`。
+不带 ref 的命令读取默认分支，需该分支已包含 registry；也可在组件地址后追加 `#` 与发布标签或包含 registry 的完整提交 SHA。固定版本命令见展示站组件页。React 19 的 Vite 与 Next.js 接入、手动复制、可选字体和更新方式见 [源码接入指南](docs/source-installation.md) 或展示站 `/#/installation`。
 
 维护原始组件后运行 `pnpm registry:build`，再运行 `pnpm registry:check` 检查生成源码；`pnpm test:registry` 验证独立项目安装。
 
@@ -87,11 +87,11 @@ pnpm --filter @cyberui/react pack --pack-destination ../../artifacts/packages
 
 ```yaml
 overrides:
-  '@cyberui/tokens': file:/absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.1.0.tgz
+  '@cyberui/tokens': file:/absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.0.tgz
 ```
 
 ```sh
-pnpm add react@19 react-dom@19 /absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.1.0.tgz /absolute/path/CyberUI/artifacts/packages/cyberui-react-0.1.0.tgz
+pnpm add react@19 react-dom@19 /absolute/path/CyberUI/artifacts/packages/cyberui-tokens-0.2.0.tgz /absolute/path/CyberUI/artifacts/packages/cyberui-react-0.2.0.tgz
 ```
 
 ```tsx
@@ -122,6 +122,8 @@ export default function App() {
 
 状态控件支持受控与非受控模式，例如 `value/defaultValue/onChange`、`isSelected/defaultSelected/onChange` 或分页的 `page/defaultPage/onChange`。复杂交互基于 React Aria Components，图表基于 Recharts；样式使用 CSS Modules 和 `--cyber-*` CSS 变量。
 
+组件库、展示站与全部产品场景统一使用 Tailwind v4，映射现有 `--cyber-*` 变量并省略 Preflight。CSS Modules 保留语义选择器和精确几何，普通工具类可覆盖组件默认样式。组件包提供成品 CSS；Registry 源码接入需要 Tailwind v4 编译插件。公共样式复用、变量约定与检查见[样式规范](docs/styles.md)，Vite/Next.js 配置见[源码接入](docs/source-installation.md)。
+
 ## 演示数据
 
 演示使用 `localStorage` 的 `cyberui-web-demo-v1`，固定参考时间为 `2026-10-30 17:46`。可以搜索与筛选、重命名、收藏、删除并恢复书籍，推进阅读任务、领取一次性里程碑收益、购买并装备外观、恢复碎片、保存设置。演示页面的“重置演示”可恢复初始数据。
@@ -141,7 +143,7 @@ pnpm test:consumer
 pnpm preview --port 4175
 ```
 
-`test:consumer` 在系统临时目录创建独立 React 项目，安装真实打包产物，编译全部 65 份文档示例，运行 Vite 构建和浏览器交互测试。它优先使用本机 pnpm 离线缓存；新环境需要先完成一次依赖安装以填充缓存。
+`test:consumer` 在系统临时目录创建独立 React 项目，安装真实打包产物，编译全部 65 份文档示例，运行 Vite 与 Next.js App Router 生产构建和浏览器交互测试；Next.js 测试保留 Server Component 直接导入，以检查组件包的客户端边界。它优先使用本机 pnpm 离线缓存；新环境需要先完成一次依赖安装以填充缓存。
 也可用 `CYBERUI_CONSUMER_OFFLINE=0 pnpm test:consumer` 允许独立项目在线安装依赖。
 
 静态产物在 `apps/docs/dist`，可部署到任意支持静态文件的服务器。使用相对资源路径和 HashRouter，支持子目录托管，无需服务端路由回退。通过 HTTP 预览，避免直接以 `file://` 打开模块。
@@ -164,6 +166,10 @@ CYBERUI_BASE_URL=http://127.0.0.1:4175 node scripts/capture-references.mjs
 需要重新发布时，在 Actions 中打开 **Deploy CyberUI to GitHub Pages**，选择 **Run workflow → main**。字体、图标和参考图随静态站点一同发布；组件源码仍通过 GitHub Registry 分发。
 
 组件页和场景使用 `/#/...` 路由，例如 [Button](https://arasaka-academy.github.io/CyberUI/#/components/Button) 和 [NOVA](https://arasaka-academy.github.io/CyberUI/#/preview/agent-chat)。刷新或直接打开这些链接无需配置服务端路由。
+
+## 发布版本
+
+发布记录见 [Changelog](CHANGELOG.md) 和 [v0.2.0 说明](docs/releases/v0.2.0.md)。将版本提交合入 `main` 后，推送对应的 `vX.Y.Z` 标签会触发 [Release CyberUI](.github/workflows/release.yml)：先复用完整质量检查，再检查标签与四份 package.json 版本一致、提交已在 main 上，构建两个 `.tgz`，附上 `SHA256SUMS` 并创建 GitHub Release。发布说明位于 `docs/releases/vX.Y.Z.md`。GitHub Pages 由 main 的质量检查驱动，独立报告部署结果。
 
 ## 许可与使用边界
 
