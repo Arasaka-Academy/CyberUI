@@ -2143,9 +2143,8 @@
       "name": "date-picker",
       "type": "registry:ui",
       "title": "DatePicker",
-      "description": "Locale-aware date segments and calendar.",
+      "description": "Theme-aware date and time input with a keyboard calendar, month/year navigation and range validation.",
       "dependencies": [
-        "@internationalized/date@^3.12.4",
         "react-aria-components@^1.22.1",
         "react-aria@3.53.1",
         "react@^19.0.0"
@@ -2170,24 +2169,9 @@
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
         },
         {
-          "path": "registry/cyberui/button.module.css",
+          "path": "registry/cyberui/calendar-date.ts",
           "type": "registry:file",
-          "target": "@components/cyberui/button.module.css"
-        },
-        {
-          "path": "registry/cyberui/button.tsx",
-          "type": "registry:file",
-          "target": "@components/cyberui/button.tsx"
-        },
-        {
-          "path": "registry/cyberui/calendar-body.module.css",
-          "type": "registry:file",
-          "target": "@components/cyberui/calendar-body.module.css"
-        },
-        {
-          "path": "registry/cyberui/calendar-body.tsx",
-          "type": "registry:file",
-          "target": "@components/cyberui/calendar-body.tsx"
+          "target": "@components/cyberui/calendar-date.ts"
         },
         {
           "path": "registry/cyberui/date-picker.module.css",
@@ -2198,16 +2182,6 @@
           "path": "registry/cyberui/date-picker.tsx",
           "type": "registry:file",
           "target": "@components/cyberui/date-picker.tsx"
-        },
-        {
-          "path": "registry/cyberui/date-utils.tsx",
-          "type": "registry:file",
-          "target": "@components/cyberui/date-utils.tsx"
-        },
-        {
-          "path": "registry/cyberui/field.module.css",
-          "type": "registry:file",
-          "target": "@components/cyberui/field.module.css"
         },
         {
           "path": "registry/cyberui/icon.module.css",
@@ -2228,11 +2202,6 @@
           "path": "registry/cyberui/motion.css",
           "type": "registry:file",
           "target": "@components/cyberui/motion.css"
-        },
-        {
-          "path": "registry/cyberui/popover.module.css",
-          "type": "registry:file",
-          "target": "@components/cyberui/popover.module.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -2269,7 +2238,7 @@
       "meta": {
         "componentName": "DatePicker",
         "zh": "日期选择",
-        "zhDescription": "按语言格式展示日期分段与日历。",
+        "zhDescription": "主题化日期与时间输入，支持键盘日历、月份年份切换和范围校验。",
         "category": "forms"
       }
     },
@@ -2304,24 +2273,9 @@
           "target": "@components/cyberui/UPSTREAM-NOTICE.md"
         },
         {
-          "path": "registry/cyberui/button.module.css",
+          "path": "registry/cyberui/calendar-date.ts",
           "type": "registry:file",
-          "target": "@components/cyberui/button.module.css"
-        },
-        {
-          "path": "registry/cyberui/button.tsx",
-          "type": "registry:file",
-          "target": "@components/cyberui/button.tsx"
-        },
-        {
-          "path": "registry/cyberui/calendar-body.module.css",
-          "type": "registry:file",
-          "target": "@components/cyberui/calendar-body.module.css"
-        },
-        {
-          "path": "registry/cyberui/calendar-body.tsx",
-          "type": "registry:file",
-          "target": "@components/cyberui/calendar-body.tsx"
+          "target": "@components/cyberui/calendar-date.ts"
         },
         {
           "path": "registry/cyberui/date-picker.module.css",
@@ -2362,11 +2316,6 @@
           "path": "registry/cyberui/motion.css",
           "type": "registry:file",
           "target": "@components/cyberui/motion.css"
-        },
-        {
-          "path": "registry/cyberui/popover.module.css",
-          "type": "registry:file",
-          "target": "@components/cyberui/popover.module.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",
@@ -5226,6 +5175,11 @@
           "target": "@components/cyberui/calendar-body.tsx"
         },
         {
+          "path": "registry/cyberui/calendar-date.ts",
+          "type": "registry:file",
+          "target": "@components/cyberui/calendar-date.ts"
+        },
+        {
           "path": "registry/cyberui/calendar.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/calendar.module.css"
@@ -5251,11 +5205,6 @@
           "target": "@components/cyberui/date-utils.tsx"
         },
         {
-          "path": "registry/cyberui/field.module.css",
-          "type": "registry:file",
-          "target": "@components/cyberui/field.module.css"
-        },
-        {
           "path": "registry/cyberui/icon.module.css",
           "type": "registry:file",
           "target": "@components/cyberui/icon.module.css"
@@ -5274,11 +5223,6 @@
           "path": "registry/cyberui/motion.css",
           "type": "registry:file",
           "target": "@components/cyberui/motion.css"
-        },
-        {
-          "path": "registry/cyberui/popover.module.css",
-          "type": "registry:file",
-          "target": "@components/cyberui/popover.module.css"
         },
         {
           "path": "registry/cyberui/provider.tsx",

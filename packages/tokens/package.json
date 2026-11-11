@@ -1,5 +1,5 @@
 {
-  "name": "@cyberui/tokens", "version": "0.2.2", "type": "module", "license": "MIT",
+  "name": "@cyberui/tokens", "version": "0.3.0", "type": "module", "license": "MIT",
   "files": ["dist"], "sideEffects": ["**/*.css"],
   "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }, "./styles.css": "./dist/tokens.css" },
   "scripts": { "build": "vite build" }

@@ -63,10 +63,10 @@ export default { plugins: { '@tailwindcss/postcss': {} } };
 
 ## 加入组件
 
-v0.2.2 使用 Tailwind v4 编译，安装固定发布版本：
+v0.3.0 使用 Tailwind v4 编译，安装固定发布版本：
 
 ```sh
-pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#v0.2.2
+pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#v0.3.0
 ```
 
 默认分支包含 registry 后，可执行：
@@ -77,7 +77,7 @@ pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button
 
 默认保存到 src/components/cyberui/；修改 aliases.components 即可自定义目录。每个 registry 项完整列出自身所需文件，普通组件不安装 Recharts。示例组合其他组件时，组件页的命令会同时列出它们。
 
-在地址后加 `#v0.2.2` 或 `#` 和完整的 40 位 commit SHA，可从包含 registry 的任意提交安装。源码和公共文件都会从同一提交读取；不依赖默认分支的合并进度。展示站“发布版本”会给出已经通过独立项目验收的完整命令。
+在地址后加 `#v0.3.0` 或 `#` 和完整的 40 位 commit SHA，可从包含 registry 的任意提交安装。源码和公共文件都会从同一提交读取；不依赖默认分支的合并进度。展示站“发布版本”会给出已经通过独立项目验收的完整命令。
 
 ## 在项目中使用
 
@@ -142,11 +142,18 @@ Next.js 建议在带 `'use client'` 的 providers.tsx 中声明 Provider 包装�
 
 字体可选。从相同提交复制 public/fonts.css 和 public/fonts/ 到宿主 public/，保留字体 OFL 文件，然后在页面 head 加入 `<link rel="stylesheet" href="/fonts.css">`。不加载字体时使用系统回退。
 
-稳定版本的 [字体样式](https://github.com/Arasaka-Academy/CyberUI/blob/v0.2.2/public/fonts.css) 与 [字体资源及许可证](https://github.com/Arasaka-Academy/CyberUI/tree/v0.2.2/public/fonts) 可单独获取，无需加入字体 npm 包。
+稳定版本的 [字体样式](https://github.com/Arasaka-Academy/CyberUI/blob/v0.3.0/public/fonts.css) 与 [字体资源及许可证](https://github.com/Arasaka-Academy/CyberUI/tree/v0.3.0/public/fonts) 可单独获取，无需加入字体 npm 包。
 
 组件不会自动更新。需要更新时先检查新版本，再执行 add 并逐项审阅覆盖提示。CLI 默认会询问是否覆盖修改过的文件；只有明确希望覆盖时才使用 --overwrite。
 
 ## 仓库维护与验证
+
+`DatePicker` 的日历、月份与年份导航、今天/清除、范围限制和键盘交互由组件统一提供，支持 `includeTime` 选择本地日期时间。日期值为 `YYYY-MM-DD`，日期时间值为 `YYYY-MM-DDTHH:mm`，不自动转为 UTC。已有的 `label`、受控/非受控值、必填、禁用、表单字段名与清除时的 `null` 回调继续支持。主题从 `CyberUIProvider` 继承；在现有字段组件内可用 `hideLabel` 配合 `id` 关联外部标签。`portalContainer` 和 `popoverZIndex` 用于宿主模态或全屏层，宿主只适配语言、字段关联及返回行为，不另写日历样式。日期格在窄屏保持至少 44px，320px 使用 4px 视口边距。
+
+```tsx
+<DatePicker label="开始日期" minValue="2026-01-01" maxValue="2026-12-31" />
+<DatePicker label="开始时间" includeTime defaultValue="2026-11-11T18:30" />
+```
 
 ```sh
 pnpm registry:build

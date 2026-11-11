@@ -119,7 +119,7 @@ Desktop layouts use sidebars, grids, and parallel panels to show more context. N
 CyberUI provides React 19 and TypeScript components through a GitHub Registry. Add source directly to your project, then adapt its geometry, styling, and interactions.
 
 ```sh
-pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#v0.2.2
+pnpm dlx shadcn@4.23.0 add Arasaka-Academy/CyberUI/button#v0.3.0
 ```
 
 The [source installation guide](docs/source-installation.md) covers Vite, Next.js, manual copying, and local packages. The [component catalog](https://arasaka-academy.github.io/CyberUI/#/components) includes adjustable previews, properties, and copyable examples.
@@ -140,7 +140,7 @@ Open the local address printed by Vite. The showcase initially uses Simplified C
 | [Styling guide](docs/styles.md) | Tailwind v4, CSS Modules, and theme variables |
 | [Production readiness](docs/production-readiness.md) · [Validation](docs/validation.md) | Supported use, verification evidence, and manual acceptance boundaries |
 | [Visual references](docs/reference-map.md) | Source references, page mappings, and adaptation differences |
-| [Changelog](CHANGELOG.md) · [v0.2.2](docs/releases/v0.2.2.md) | Changes and release notes |
+| [Changelog](CHANGELOG.md) · [v0.3.0](docs/releases/v0.3.0.md) | Changes and release notes |
 
 Product scenes use local demo data and interactions. NOVA generates sample responses from local templates, FREQ does not connect to an audio service, and trial and subscription forms provide local feedback. See the [scene documentation](docs/web-scenes.md) for details.
 

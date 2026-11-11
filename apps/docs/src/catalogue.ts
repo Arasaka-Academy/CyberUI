@@ -33,7 +33,7 @@ const entries:Record<string,Entry[]>={
     ['Combobox','组合框','Search and select from suggestions.','输入搜索并从建议项中选择。'],
     ['MultiSelect','多选器','Select multiple entries and remove tags.','选择多个项目，并通过标签移除。'],
     ['Slider','滑块','Adjust a continuous or stepped value.','调整连续值或离散步进值。'],
-    ['DatePicker','日期选择','Locale-aware date segments and calendar.','按语言格式展示日期分段与日历。'],
+    ['DatePicker','日期选择','Theme-aware date and time input with a keyboard calendar, month/year navigation and range validation.','主题化日期与时间输入，支持键盘日历、月份年份切换和范围校验。'],
     ['TimePicker','时间选择','Keyboard-editable 24-hour time.','支持键盘编辑的 24 小时时间。'],
     ['ColorPicker','颜色选择','Native color selection and validated HEX.','原生选色与经过校验的 HEX 输入。'],
     ['FileUpload','文件上传','Drop files or use a native file chooser.','拖放文件或使用原生文件选择器。'],

@@ -44,7 +44,7 @@ export function ComponentDemo({name,config=defaultConfig}:{name:string;config?:D
     case 'Combobox':return <C.Combobox label={label} options={options} placeholder={t('Type a theme…','输入主题名称…')} isDisabled={config.disabled}/>;
     case 'MultiSelect':return <C.MultiSelect label={label} options={options} defaultValue={['neon']} isDisabled={config.disabled}/>;
     case 'Slider':return <C.Slider label={label} defaultValue={config.value} isDisabled={config.disabled}/>;
-    case 'DatePicker':return <C.DatePicker label={label} defaultValue="2026-10-30" isDisabled={config.disabled}/>;
+    case 'DatePicker':return <div className="demo-stack"><C.DatePicker label={label} defaultValue="2026-10-30" isDisabled={config.disabled}/><C.DatePicker label={t('Date & time','日期与时间')} includeTime defaultValue="2026-10-30T17:46" isDisabled={config.disabled}/></div>;
     case 'TimePicker':return <C.TimePicker label={label} defaultValue="17:46" isDisabled={config.disabled}/>;
     case 'ColorPicker':return <C.ColorPicker label={label} defaultValue="#E0574B" isDisabled={config.disabled}/>;
     case 'FileUpload':return <C.FileUpload label={label} accept=".epub,.pdf,.txt" multiple description={t('EPUB, PDF or TXT · local demo only','EPUB、PDF 或 TXT · 仅本地演示')} isDisabled={config.disabled} onChange={files=>notify(t(`${files.length} files selected`,`${files.length} 个文件已选择`))}/>;

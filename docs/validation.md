@@ -48,7 +48,7 @@ CI 已改用生产构建 E2E，并在 Vite 成品消费者中默认启用 Chromi
 
 ## v0.1.0 历史验收 — 2026-11-05
 
-以下保留旧版结果；其中的无 Tailwind 源码接入、固定 SHA 和旧文件数量仅适用于当时的版本。当前默认安装目标为 `v0.2.2`。
+以下保留旧版结果；其中的无 Tailwind 源码接入、固定 SHA 和旧文件数量仅适用于当时的版本。当前默认安装目标为 `v0.3.0`，共享日历的接入与验证范围见 [v0.3.0 发布说明](releases/v0.3.0.md)。
 
 验收日期：2026-11-05。环境：macOS、Node.js 26.13、pnpm 11.3、React 19、Vite 7.3.7、Playwright Chromium；GitHub CI 使用 Node.js 22。
 

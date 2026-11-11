@@ -1,5 +1,5 @@
 import { useRef, useState, type CSSProperties } from 'react';
-import { AlertDialog, Button, CyberUIProvider, Dialog, FileUpload, Input, MultiSelect, Select, VirtualKeyboard } from '@cyberui/react';
+import { AlertDialog, Button, CyberUIProvider, DatePicker, Dialog, FileUpload, Input, MultiSelect, Select, VirtualKeyboard } from '@cyberui/react';
 
 export function PackedContracts() {
   const input = useRef<HTMLInputElement>(null);
@@ -9,6 +9,10 @@ export function PackedContracts() {
   const [mounted, setMounted] = useState(true);
   const [keyboard, setKeyboard] = useState('Name 👩🏽‍💻');
   return <section aria-label="Release contracts">
+    <form data-testid="calendar-form">
+      <DatePicker label="Local schedule" name="schedule" includeTime defaultValue="2026-11-11T12:00" />
+      <Button type="reset">Reset schedule</Button>
+    </form>
     <form data-testid="upload-form">
       <FileUpload label="Document" name="document" accept=".txt" ref={input} onChange={() => setReceived((new FormData(input.current!.form!).get('document') as File).name)}/>
       <output data-testid="received-document">{received}</output>
@@ -30,6 +34,7 @@ export function PackedContracts() {
       {mounted && <CyberUIProvider scheme={updated ? 'mono' : 'neon'} mode={updated ? 'dark' : 'light'} locale={updated ? 'en' : 'zh-CN'} customColors={{ accent: updated ? '#6145A3' : '#176B5B' }} style={{ '--cyber-font-body': 'monospace', '--cyber-space-md': updated ? '15px' : '12px' } as CSSProperties}>
         <Dialog title="Clipped settings" trigger={<Button>Open clipped settings</Button>}>
           <Input label="Portal input" autoFocus/>
+          <DatePicker label="Dialog date" defaultValue="2026-11-11" />
           <Button onPress={() => setUpdated(value => !value)}>Update portal theme</Button>
           <Dialog title="Nested settings" trigger={<Button>Open nested settings</Button>}><Input label="Nested input"/></Dialog>
         </Dialog>

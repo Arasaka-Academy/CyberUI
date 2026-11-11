@@ -1,6 +1,19 @@
 import { expect } from '@playwright/test';
 
 export async function verifyConsumerContracts(page) {
+  const calendarForm = page.getByTestId('calendar-form');
+  const schedule = calendarForm.getByRole('textbox', { name: 'Local schedule' });
+  await schedule.press('Alt+ArrowDown');
+  const calendar = page.locator('[data-cyber-date-picker-panel]');
+  await calendar.locator('[data-date="2026-11-12"]').click();
+  await calendar.getByRole('spinbutton', { name: 'Hours', exact: true }).fill('18');
+  await calendar.getByRole('spinbutton', { name: 'Minutes', exact: true }).fill('35');
+  await calendar.getByRole('button', { name: 'Done', exact: true }).click();
+  await expect(schedule).toHaveValue('2026-11-12 18:35');
+  expect(await calendarForm.evaluate(form => new FormData(form).get('schedule'))).toBe('2026-11-12T18:35');
+  await calendarForm.getByRole('button', { name: 'Reset schedule' }).click();
+  await expect(schedule).toHaveValue('2026-11-11 12:00');
+
   const form = page.getByTestId('upload-form');
   const documentInput = page.getByLabel('Document', { exact: true });
   await expect(form.getByRole('button', { name: 'Default roles', exact: true })).toHaveAccessibleDescription('Permissions for this account');
@@ -101,6 +114,18 @@ export async function verifyConsumerContracts(page) {
   await expect(portal).toHaveAttribute('data-mode', 'dark');
   await expect(dialog).toHaveCSS('--cyber-accent', '#6145A3');
   await expect(page.getByLabel('Portal input', { exact: true })).toHaveCSS('padding-top', '15px');
+  const dialogDate = dialog.locator('[data-cyber-date-picker]');
+  await dialogDate.getByRole('button').click();
+  await expect(calendar.locator('[data-date="2026-11-11"]')).toBeFocused();
+  await page.keyboard.press('ArrowRight');
+  await page.keyboard.press('Enter');
+  await expect(dialogDate.getByRole('textbox')).toHaveValue('2026-11-12');
+  await expect(dialogDate.getByRole('button')).toBeFocused();
+  await dialogDate.getByRole('button').click();
+  await page.keyboard.press('Escape');
+  await expect(calendar).toHaveCount(0);
+  await expect(dialog).toBeVisible();
+  await expect(dialogDate.getByRole('button')).toBeFocused();
   await dialog.getByRole('button', { name: 'Open nested settings' }).click();
   const nested = page.getByRole('dialog', { name: 'Nested settings', exact: true });
   await expect(nested).toBeVisible();

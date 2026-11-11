@@ -1059,6 +1059,54 @@
         "description": ""
       },
       {
+        "name": "minValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "maxValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "includeTime",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "hideLabel",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "locale",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "portalContainer",
+        "optional": true,
+        "type": "HTMLElement | (() => HTMLElement | null) | null | undefined",
+        "description": "Host apps may keep overlays inside their current modal or fullscreen layer."
+      },
+      {
+        "name": "popoverZIndex",
+        "optional": true,
+        "type": "number | undefined",
+        "description": ""
+      },
+      {
+        "name": "onOpenChange",
+        "optional": true,
+        "type": "((open: boolean) => void) | undefined",
+        "description": ""
+      },
+      {
         "name": "ref",
         "optional": true,
         "type": "Ref<HTMLDivElement> | undefined",
@@ -1082,51 +1130,15 @@
     "source": "date-fields.tsx",
     "props": [
       {
-        "name": "label",
-        "optional": false,
-        "type": "string",
-        "description": ""
-      },
-      {
-        "name": "value",
+        "name": "ref",
         "optional": true,
-        "type": "string | null | undefined",
-        "description": ""
-      },
-      {
-        "name": "defaultValue",
-        "optional": true,
-        "type": "string | undefined",
-        "description": ""
-      },
-      {
-        "name": "onChange",
-        "optional": true,
-        "type": "((date: string | null) => void) | undefined",
+        "type": "Ref<HTMLDivElement> | undefined",
         "description": ""
       },
       {
         "name": "isDisabled",
         "optional": true,
         "type": "boolean | undefined",
-        "description": ""
-      },
-      {
-        "name": "isRequired",
-        "optional": true,
-        "type": "boolean | undefined",
-        "description": ""
-      },
-      {
-        "name": "name",
-        "optional": true,
-        "type": "string | undefined",
-        "description": ""
-      },
-      {
-        "name": "ref",
-        "optional": true,
-        "type": "Ref<HTMLDivElement> | undefined",
         "description": ""
       },
       {
@@ -1139,6 +1151,54 @@
         "name": "onBlur",
         "optional": true,
         "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "name",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | null | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((date: string | null) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "isRequired",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "minValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "maxValue",
+        "optional": true,
+        "type": "string | undefined",
         "description": ""
       }
     ]
@@ -1147,51 +1207,15 @@
     "source": "date-fields.tsx",
     "props": [
       {
-        "name": "label",
-        "optional": false,
-        "type": "string",
-        "description": ""
-      },
-      {
-        "name": "value",
+        "name": "ref",
         "optional": true,
-        "type": "string | null | undefined",
-        "description": ""
-      },
-      {
-        "name": "defaultValue",
-        "optional": true,
-        "type": "string | undefined",
-        "description": ""
-      },
-      {
-        "name": "onChange",
-        "optional": true,
-        "type": "((date: string | null) => void) | undefined",
+        "type": "Ref<HTMLDivElement> | undefined",
         "description": ""
       },
       {
         "name": "isDisabled",
         "optional": true,
         "type": "boolean | undefined",
-        "description": ""
-      },
-      {
-        "name": "isRequired",
-        "optional": true,
-        "type": "boolean | undefined",
-        "description": ""
-      },
-      {
-        "name": "name",
-        "optional": true,
-        "type": "string | undefined",
-        "description": ""
-      },
-      {
-        "name": "ref",
-        "optional": true,
-        "type": "Ref<HTMLDivElement> | undefined",
         "description": ""
       },
       {
@@ -1204,6 +1228,54 @@
         "name": "onBlur",
         "optional": true,
         "type": "FocusEventHandler<Element> | undefined",
+        "description": ""
+      },
+      {
+        "name": "name",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "optional": true,
+        "type": "string | null | undefined",
+        "description": ""
+      },
+      {
+        "name": "onChange",
+        "optional": true,
+        "type": "((date: string | null) => void) | undefined",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "label",
+        "optional": false,
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "isRequired",
+        "optional": true,
+        "type": "boolean | undefined",
+        "description": ""
+      },
+      {
+        "name": "minValue",
+        "optional": true,
+        "type": "string | undefined",
+        "description": ""
+      },
+      {
+        "name": "maxValue",
+        "optional": true,
+        "type": "string | undefined",
         "description": ""
       }
     ]
